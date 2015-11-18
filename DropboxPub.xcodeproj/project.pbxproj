@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		74876EA0F00CF6C199E16CE3 /* libPods-DropboxPub.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BC9F11D1B6A3B4E1DDAC2DC5 /* libPods-DropboxPub.a */; };
 		EAF67FF81BFC8738003BB06B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EAF67FF71BFC8738003BB06B /* main.m */; };
 		EAF680011BFC8738003BB06B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAF67FFF1BFC8738003BB06B /* Main.storyboard */; };
 		EAF680031BFC8738003BB06B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EAF680021BFC8738003BB06B /* Assets.xcassets */; };
@@ -37,6 +38,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		03B629781A72842A74C4BCFD /* Pods-DropboxPub.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DropboxPub.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DropboxPub/Pods-DropboxPub.debug.xcconfig"; sourceTree = "<group>"; };
+		22F9C32FEE2D0C17100FB3B4 /* Pods-DropboxPub.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DropboxPub.release.xcconfig"; path = "Pods/Target Support Files/Pods-DropboxPub/Pods-DropboxPub.release.xcconfig"; sourceTree = "<group>"; };
+		BC9F11D1B6A3B4E1DDAC2DC5 /* libPods-DropboxPub.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DropboxPub.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAF67FF31BFC8738003BB06B /* DropboxPub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DropboxPub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAF67FF71BFC8738003BB06B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		EAF680001BFC8738003BB06B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -61,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74876EA0F00CF6C199E16CE3 /* libPods-DropboxPub.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +86,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D3E4E6999D7DC7B8CDD8ED88 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				03B629781A72842A74C4BCFD /* Pods-DropboxPub.debug.xcconfig */,
+				22F9C32FEE2D0C17100FB3B4 /* Pods-DropboxPub.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		DACAFA66306BE2E95D545B36 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BC9F11D1B6A3B4E1DDAC2DC5 /* libPods-DropboxPub.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		EAF67FEA1BFC8737003BB06B = {
 			isa = PBXGroup;
 			children = (
@@ -88,6 +110,8 @@
 				EAF6800F1BFC8738003BB06B /* DropboxPubTests */,
 				EAF6801A1BFC8738003BB06B /* DropboxPubUITests */,
 				EAF67FF41BFC8738003BB06B /* Products */,
+				D3E4E6999D7DC7B8CDD8ED88 /* Pods */,
+				DACAFA66306BE2E95D545B36 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -167,9 +191,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EAF680201BFC8738003BB06B /* Build configuration list for PBXNativeTarget "DropboxPub" */;
 			buildPhases = (
+				DB080AED17755014C6EDDB2F /* Check Pods Manifest.lock */,
 				EAF67FEF1BFC8737003BB06B /* Sources */,
 				EAF67FF01BFC8737003BB06B /* Frameworks */,
 				EAF67FF11BFC8737003BB06B /* Resources */,
+				D16C08BE900A2AD60982D230 /* Embed Pods Frameworks */,
+				FFFCC930F0EE7B391249591A /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -288,6 +315,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		D16C08BE900A2AD60982D230 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DropboxPub/Pods-DropboxPub-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DB080AED17755014C6EDDB2F /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		FFFCC930F0EE7B391249591A /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DropboxPub/Pods-DropboxPub-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		EAF67FEF1BFC8737003BB06B /* Sources */ = {
@@ -435,6 +510,7 @@
 		};
 		EAF680211BFC8738003BB06B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 03B629781A72842A74C4BCFD /* Pods-DropboxPub.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PREFIX_HEADER = DropboxPub/DPBPrefixHeader.pch;
@@ -447,6 +523,7 @@
 		};
 		EAF680221BFC8738003BB06B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 22F9C32FEE2D0C17100FB3B4 /* Pods-DropboxPub.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PREFIX_HEADER = DropboxPub/DPBPrefixHeader.pch;
@@ -524,6 +601,7 @@
 				EAF680221BFC8738003BB06B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EAF680231BFC8738003BB06B /* Build configuration list for PBXNativeTarget "DropboxPubTests" */ = {
 			isa = XCConfigurationList;
@@ -532,6 +610,7 @@
 				EAF680251BFC8738003BB06B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EAF680261BFC8738003BB06B /* Build configuration list for PBXNativeTarget "DropboxPubUITests" */ = {
 			isa = XCConfigurationList;
@@ -540,6 +619,7 @@
 				EAF680281BFC8738003BB06B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

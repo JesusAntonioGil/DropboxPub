@@ -9,6 +9,8 @@
 #ifndef DPBPrefixHeader_pch
 #define DPBPrefixHeader_pch
 
+#import <UIKit/UIKit.h>
+
 #import "DPBConfig.h"
 
 #endif /* DPBPrefixHeader_pch */

@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		74876EA0F00CF6C199E16CE3 /* libPods-DropboxPub.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BC9F11D1B6A3B4E1DDAC2DC5 /* libPods-DropboxPub.a */; };
+		EA0CFF741BFC9F10002A90BA /* DPBStartCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = EA0CFF731BFC9F10002A90BA /* DPBStartCoordinator.m */; };
+		EA0CFF751BFC9F10002A90BA /* DPBStartCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = EA0CFF731BFC9F10002A90BA /* DPBStartCoordinator.m */; };
+		EA0CFF761BFC9F10002A90BA /* DPBStartCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = EA0CFF731BFC9F10002A90BA /* DPBStartCoordinator.m */; };
 		EAF67FF81BFC8738003BB06B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EAF67FF71BFC8738003BB06B /* main.m */; };
 		EAF680011BFC8738003BB06B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAF67FFF1BFC8738003BB06B /* Main.storyboard */; };
 		EAF680031BFC8738003BB06B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EAF680021BFC8738003BB06B /* Assets.xcassets */; };
@@ -41,6 +44,8 @@
 		03B629781A72842A74C4BCFD /* Pods-DropboxPub.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DropboxPub.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DropboxPub/Pods-DropboxPub.debug.xcconfig"; sourceTree = "<group>"; };
 		22F9C32FEE2D0C17100FB3B4 /* Pods-DropboxPub.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DropboxPub.release.xcconfig"; path = "Pods/Target Support Files/Pods-DropboxPub/Pods-DropboxPub.release.xcconfig"; sourceTree = "<group>"; };
 		BC9F11D1B6A3B4E1DDAC2DC5 /* libPods-DropboxPub.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DropboxPub.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA0CFF721BFC9F10002A90BA /* DPBStartCoordinator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPBStartCoordinator.h; sourceTree = "<group>"; };
+		EA0CFF731BFC9F10002A90BA /* DPBStartCoordinator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPBStartCoordinator.m; sourceTree = "<group>"; };
 		EAF67FF31BFC8738003BB06B /* DropboxPub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DropboxPub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAF67FF71BFC8738003BB06B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		EAF680001BFC8738003BB06B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -101,6 +106,15 @@
 				BC9F11D1B6A3B4E1DDAC2DC5 /* libPods-DropboxPub.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EA0CFF711BFC9F01002A90BA /* StartCoordinator */ = {
+			isa = PBXGroup;
+			children = (
+				EA0CFF721BFC9F10002A90BA /* DPBStartCoordinator.h */,
+				EA0CFF731BFC9F10002A90BA /* DPBStartCoordinator.m */,
+			);
+			path = StartCoordinator;
 			sourceTree = "<group>";
 		};
 		EAF67FEA1BFC8737003BB06B = {
@@ -171,6 +185,7 @@
 				EAF6802E1BFC8BBE003BB06B /* Config */,
 				EAF6802B1BFC8A1A003BB06B /* DPBAppDelegate.h */,
 				EAF6802C1BFC8A1A003BB06B /* DPBAppDelegate.m */,
+				EA0CFF711BFC9F01002A90BA /* StartCoordinator */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -369,6 +384,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA0CFF741BFC9F10002A90BA /* DPBStartCoordinator.m in Sources */,
 				EAF67FF81BFC8738003BB06B /* main.m in Sources */,
 				EAF680311BFC8BCF003BB06B /* DPBConfig.m in Sources */,
 				EAF6802D1BFC8A1A003BB06B /* DPBAppDelegate.m in Sources */,
@@ -379,6 +395,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA0CFF751BFC9F10002A90BA /* DPBStartCoordinator.m in Sources */,
 				EAF680321BFC8BCF003BB06B /* DPBConfig.m in Sources */,
 				EAF680111BFC8738003BB06B /* DropboxPubTests.m in Sources */,
 			);
@@ -388,6 +405,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA0CFF761BFC9F10002A90BA /* DPBStartCoordinator.m in Sources */,
 				EAF680331BFC8BCF003BB06B /* DPBConfig.m in Sources */,
 				EAF6801C1BFC8738003BB06B /* DropboxPubUITests.m in Sources */,
 			);

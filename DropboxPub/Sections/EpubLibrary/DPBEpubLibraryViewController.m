@@ -17,6 +17,7 @@
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *segmentedHeightConstraint;
 @property (weak, nonatomic) IBOutlet UIButton *logoutButton;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *logoutHeightConstraint;
 
 
 @property (strong, nonatomic) DPBEpubLibraryPresenter *presenter;
@@ -75,6 +76,8 @@
     {
         self.segmentedHeightConstraint.constant = 0.0f;
         self.segmentedControl.hidden = YES;
+        self.logoutHeightConstraint.constant = 0.0f;
+        self.logoutButton.hidden = YES;
     }
 }
 

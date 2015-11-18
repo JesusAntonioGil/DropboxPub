@@ -95,7 +95,7 @@
                                 </connections>
                             </segmentedControl>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="G4l-WZ-EwB">
-                                <rect key="frame" x="0.0" y="44" width="320" height="460"/>
+                                <rect key="frame" x="0.0" y="44" width="320" height="420"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="separatorColor" red="0.0" green="0.47843137250000001" blue="0.58823529409999997" alpha="1" colorSpace="calibratedRGB"/>
@@ -161,22 +161,39 @@
                                     <outlet property="delegate" destination="av7-Aq-b5l" id="Sws-Jv-quw"/>
                                 </connections>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g3A-Ik-df6">
+                                <rect key="frame" x="0.0" y="464" width="320" height="40"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="0.58823529409999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="uZG-Tv-iUk"/>
+                                </constraints>
+                                <state key="normal" title="Logout"/>
+                                <connections>
+                                    <action selector="onLogoutButtonTap:" destination="av7-Aq-b5l" eventType="touchUpInside" id="6Wi-KA-Nz0"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="G4l-WZ-EwB" secondAttribute="trailing" id="9fI-WX-ECl"/>
                             <constraint firstAttribute="trailing" secondItem="kvI-dg-80I" secondAttribute="trailing" constant="20" id="Mhg-kY-cvm"/>
-                            <constraint firstItem="G4l-WZ-EwB" firstAttribute="top" secondItem="kvI-dg-80I" secondAttribute="bottom" constant="8" id="UcG-bl-373"/>
+                            <constraint firstItem="ZrS-vd-aW8" firstAttribute="top" secondItem="g3A-Ik-df6" secondAttribute="bottom" id="XcB-Yw-YMf"/>
+                            <constraint firstItem="g3A-Ik-df6" firstAttribute="top" secondItem="G4l-WZ-EwB" secondAttribute="bottom" id="dAu-hW-Xbp"/>
                             <constraint firstItem="kvI-dg-80I" firstAttribute="top" secondItem="HJA-Uf-hgm" secondAttribute="bottom" constant="8" id="h8W-RU-CfN"/>
-                            <constraint firstAttribute="trailing" secondItem="G4l-WZ-EwB" secondAttribute="trailing" id="lQh-ji-SaS"/>
+                            <constraint firstItem="g3A-Ik-df6" firstAttribute="leading" secondItem="pQq-5n-kZn" secondAttribute="leading" id="jR9-zJ-8VD"/>
+                            <constraint firstItem="G4l-WZ-EwB" firstAttribute="leading" secondItem="pQq-5n-kZn" secondAttribute="leading" id="mDM-Wy-YXk"/>
                             <constraint firstItem="kvI-dg-80I" firstAttribute="leading" secondItem="pQq-5n-kZn" secondAttribute="leading" constant="20" id="qq2-6v-uPt"/>
-                            <constraint firstItem="G4l-WZ-EwB" firstAttribute="leading" secondItem="pQq-5n-kZn" secondAttribute="leading" id="sUy-6O-jpG"/>
-                            <constraint firstItem="ZrS-vd-aW8" firstAttribute="top" secondItem="G4l-WZ-EwB" secondAttribute="bottom" id="vBr-CE-Yq1"/>
+                            <constraint firstAttribute="trailing" secondItem="g3A-Ik-df6" secondAttribute="trailing" id="rW2-aw-RXs"/>
+                            <constraint firstItem="G4l-WZ-EwB" firstAttribute="top" secondItem="kvI-dg-80I" secondAttribute="bottom" constant="8" id="u7c-ei-VgD"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="IJF-J8-WyB"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
+                        <outlet property="logoutButton" destination="g3A-Ik-df6" id="aA8-sy-2WN"/>
+                        <outlet property="logoutHeightConstraint" destination="uZG-Tv-iUk" id="QDe-Dv-0GQ"/>
                         <outlet property="segmentedControl" destination="kvI-dg-80I" id="nfD-ZF-lar"/>
                         <outlet property="segmentedHeightConstraint" destination="O4h-oW-LyM" id="ODD-mH-bQ0"/>
                         <outlet property="tableView" destination="G4l-WZ-EwB" id="3bc-T7-lw0"/>

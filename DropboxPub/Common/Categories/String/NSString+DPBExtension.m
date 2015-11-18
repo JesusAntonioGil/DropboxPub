@@ -17,4 +17,12 @@
     return components.lastObject;
 }
 
+- (NSString *)getFolderName
+{
+    NSArray *components = [self componentsSeparatedByString:@"/"];
+    if([components.lastObject isEqualToString:@""])
+        return @"Root";
+    return components.lastObject;
+}
+
 @end

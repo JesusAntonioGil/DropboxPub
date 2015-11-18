@@ -72,6 +72,8 @@
 
 - (void)customizeView
 {
+    self.title = [self.pathDirectory getFolderName];
+    
     if(self.navigationController.viewControllers.firstObject != self)
     {
         self.segmentedHeightConstraint.constant = 0.0f;

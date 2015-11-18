@@ -12,5 +12,6 @@
 @interface NSString (DPBExtension)
 
 - (NSString *)getExtensionFileName;
+- (NSString *)getFolderName;
 
 @end

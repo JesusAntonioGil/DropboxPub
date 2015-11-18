@@ -8,8 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		EAF67FF81BFC8738003BB06B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EAF67FF71BFC8738003BB06B /* main.m */; };
-		EAF67FFB1BFC8738003BB06B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EAF67FFA1BFC8738003BB06B /* AppDelegate.m */; };
-		EAF67FFE1BFC8738003BB06B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAF67FFD1BFC8738003BB06B /* ViewController.m */; };
+		EAF67FFB1BFC8738003BB06B /* DPBAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EAF67FFA1BFC8738003BB06B /* DPBAppDelegate.m */; };
 		EAF680011BFC8738003BB06B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAF67FFF1BFC8738003BB06B /* Main.storyboard */; };
 		EAF680031BFC8738003BB06B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EAF680021BFC8738003BB06B /* Assets.xcassets */; };
 		EAF680061BFC8738003BB06B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAF680041BFC8738003BB06B /* LaunchScreen.storyboard */; };
@@ -37,10 +36,8 @@
 /* Begin PBXFileReference section */
 		EAF67FF31BFC8738003BB06B /* DropboxPub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DropboxPub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAF67FF71BFC8738003BB06B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		EAF67FF91BFC8738003BB06B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		EAF67FFA1BFC8738003BB06B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		EAF67FFC1BFC8738003BB06B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		EAF67FFD1BFC8738003BB06B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		EAF67FF91BFC8738003BB06B /* DPBAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DPBAppDelegate.h; sourceTree = "<group>"; };
+		EAF67FFA1BFC8738003BB06B /* DPBAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DPBAppDelegate.m; sourceTree = "<group>"; };
 		EAF680001BFC8738003BB06B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EAF680021BFC8738003BB06B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EAF680051BFC8738003BB06B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -102,10 +99,8 @@
 		EAF67FF51BFC8738003BB06B /* DropboxPub */ = {
 			isa = PBXGroup;
 			children = (
-				EAF67FF91BFC8738003BB06B /* AppDelegate.h */,
-				EAF67FFA1BFC8738003BB06B /* AppDelegate.m */,
-				EAF67FFC1BFC8738003BB06B /* ViewController.h */,
-				EAF67FFD1BFC8738003BB06B /* ViewController.m */,
+				EAF67FF91BFC8738003BB06B /* DPBAppDelegate.h */,
+				EAF67FFA1BFC8738003BB06B /* DPBAppDelegate.m */,
 				EAF67FFF1BFC8738003BB06B /* Main.storyboard */,
 				EAF680021BFC8738003BB06B /* Assets.xcassets */,
 				EAF680041BFC8738003BB06B /* LaunchScreen.storyboard */,
@@ -276,8 +271,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EAF67FFE1BFC8738003BB06B /* ViewController.m in Sources */,
-				EAF67FFB1BFC8738003BB06B /* AppDelegate.m in Sources */,
+				EAF67FFB1BFC8738003BB06B /* DPBAppDelegate.m in Sources */,
 				EAF67FF81BFC8738003BB06B /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

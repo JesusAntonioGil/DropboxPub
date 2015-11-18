@@ -18,38 +18,44 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dropbox_icon" translatesAutoresizingMaskIntoConstraints="NO" id="i8n-L3-dPd">
-                                <rect key="frame" x="88" y="35" width="145" height="145"/>
+                                <rect key="frame" x="88" y="211" width="145" height="145"/>
                                 <animations/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="145" id="B80-Vg-FXC"/>
-                                    <constraint firstAttribute="width" constant="145" id="SZT-uo-3bE"/>
+                                    <constraint firstAttribute="width" constant="145" id="IGW-IM-SWV"/>
+                                    <constraint firstAttribute="height" constant="145" id="YLi-TJ-ROW"/>
                                 </constraints>
                             </imageView>
-                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" animating="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="ARP-g6-kLX">
-                                <rect key="frame" x="150" y="193" width="20" height="20"/>
-                                <animations/>
-                                <color key="color" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                            </activityIndicatorView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xbd-1B-rM4">
-                                <rect key="frame" x="81" y="188" width="158" height="30"/>
+                                <rect key="frame" x="81" y="364" width="158" height="30"/>
                                 <animations/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="158" id="bTv-gC-Ago"/>
-                                    <constraint firstAttribute="height" constant="30" id="xts-02-BfK"/>
+                                    <constraint firstAttribute="height" constant="30" id="NSx-2z-dLj"/>
+                                    <constraint firstAttribute="width" constant="158" id="n1i-hT-6Sm"/>
                                 </constraints>
                                 <state key="normal" title="Login with Dropbox"/>
                                 <connections>
                                     <action selector="onLoginButtonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="y93-Ay-G3d"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="ARP-g6-kLX">
+                                <rect key="frame" x="150" y="369" width="20" height="20"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="3AZ-ba-pDd"/>
+                                    <constraint firstAttribute="height" constant="20" id="yYa-ZE-dX2"/>
+                                </constraints>
+                                <color key="color" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="0.34901960784313724" green="0.6588235294117647" blue="0.92156862745098034" alpha="0.34765625" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="i8n-L3-dPd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BVo-f9-Xid"/>
-                            <constraint firstItem="i8n-L3-dPd" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="15" id="C4v-FP-KqN"/>
-                            <constraint firstItem="Xbd-1B-rM4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="IsA-Kl-flX"/>
-                            <constraint firstItem="Xbd-1B-rM4" firstAttribute="top" secondItem="i8n-L3-dPd" secondAttribute="bottom" constant="8" id="Uwz-Qb-7NK"/>
+                            <constraint firstItem="ARP-g6-kLX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3hw-cA-9hB"/>
+                            <constraint firstItem="i8n-L3-dPd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Hjn-fL-hfO"/>
+                            <constraint firstItem="i8n-L3-dPd" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Nk5-72-dej"/>
+                            <constraint firstItem="Xbd-1B-rM4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RMI-37-Pzp"/>
+                            <constraint firstItem="Xbd-1B-rM4" firstAttribute="top" secondItem="i8n-L3-dPd" secondAttribute="bottom" constant="8" id="bea-dE-A7c"/>
+                            <constraint firstItem="ARP-g6-kLX" firstAttribute="top" secondItem="i8n-L3-dPd" secondAttribute="bottom" constant="13" id="lM8-Oc-aaq"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>

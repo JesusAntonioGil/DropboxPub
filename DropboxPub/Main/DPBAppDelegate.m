@@ -29,29 +29,11 @@
     return YES;
 }
 
-- (void)applicationWillResignActive:(UIApplication *)application
-{
-    
-}
+#pragma mark - URL
 
-- (void)applicationDidEnterBackground:(UIApplication *)application
+- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<NSString *,id> *)options
 {
-    
-}
-
-- (void)applicationWillEnterForeground:(UIApplication *)application
-{
-    
-}
-
-- (void)applicationDidBecomeActive:(UIApplication *)application
-{
-    
-}
-
-- (void)applicationWillTerminate:(UIApplication *)application
-{
-    
+    return [self.startCoordinator application:app openURL:url options:options];
 }
 
 @end

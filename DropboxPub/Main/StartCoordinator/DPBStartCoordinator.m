@@ -22,4 +22,19 @@
     [DBSession setSharedSession:dbSession];
 }
 
+- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<NSString *,id> *)options
+{
+    if ([[DBSession sharedSession] handleOpenURL:url])
+    {
+        if ([[DBSession sharedSession] isLinked])
+        {
+            NSLog(@"App linked successfully!");
+        }
+        
+        return YES;
+    }
+    
+    return NO;
+}
+
 @end

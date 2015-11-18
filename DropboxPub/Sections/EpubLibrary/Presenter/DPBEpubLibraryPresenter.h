@@ -18,5 +18,6 @@
 
 - (instancetype)initWithViewController:(UIViewController<DPBEpubLibraryPresenterDelegate> *)viewController;
 - (void)viewIsReady;
+- (void)logoutDropboxAccount;
 
 @end

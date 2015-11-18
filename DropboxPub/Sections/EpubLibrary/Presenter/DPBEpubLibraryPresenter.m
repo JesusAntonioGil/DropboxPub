@@ -7,6 +7,7 @@
 //
 
 #import "DPBEpubLibraryPresenter.h"
+#import "DPBDropboxManager.h"
 
 
 @interface DPBEpubLibraryPresenter ()
@@ -34,6 +35,16 @@
 - (void)viewIsReady
 {
     
+}
+
+- (void)logoutDropboxAccount
+{
+    [[DPBDropboxManager shared] dropboxUnlinkedAll];
+    
+    if(![[DPBDropboxManager shared] dropboxIsLinked])
+    {
+        [self.viewController.navigationController dismissViewControllerAnimated:YES completion:nil];
+    }
 }
 
 @end

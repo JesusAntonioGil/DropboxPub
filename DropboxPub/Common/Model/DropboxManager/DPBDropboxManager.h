@@ -20,5 +20,6 @@
 //Login
 - (BOOL)dropboxIsLinked;
 - (void)dropboxLinkFromController:(UIViewController *)viewController;
+- (void)dropboxUnlinkedAll;
 
 @end

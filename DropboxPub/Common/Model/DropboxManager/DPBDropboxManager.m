@@ -51,4 +51,9 @@
     [[DBSession sharedSession] linkFromController:viewController];
 }
 
+- (void)dropboxUnlinkedAll
+{
+    [[DBSession sharedSession] unlinkAll];
+}
+
 @end

@@ -32,6 +32,13 @@
     [super didReceiveMemoryWarning];
 }
 
+#pragma mark - ACTIONS
+
+- (IBAction)onLogoutButtonTap:(id)sender
+{
+    [self.presenter logoutDropboxAccount];
+}
+
 #pragma mark - PROTOCOLS & DELEGATES
 
 @end

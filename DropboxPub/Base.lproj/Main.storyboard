@@ -88,7 +88,11 @@
                                 <rect key="frame" x="16" y="7" width="71" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <state key="normal" title="Logout"/>
+                                <connections>
+                                    <action selector="onLogoutButtonTap:" destination="av7-Aq-b5l" eventType="touchUpInside" id="BR5-bq-XB6"/>
+                                </connections>
                             </button>
                         </barButtonItem>
                     </navigationItem>

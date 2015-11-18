@@ -189,9 +189,22 @@
                             <constraint firstItem="G4l-WZ-EwB" firstAttribute="top" secondItem="kvI-dg-80I" secondAttribute="bottom" constant="8" id="u7c-ei-VgD"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="IJF-J8-WyB"/>
+                    <navigationItem key="navigationItem" id="IJF-J8-WyB">
+                        <barButtonItem key="rightBarButtonItem" id="eIU-4G-CiS">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="2Bq-4J-tsG">
+                                <rect key="frame" x="276" y="11" width="28" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <animations/>
+                                <state key="normal" image="list_icon"/>
+                                <connections>
+                                    <action selector="onListButtonTap:" destination="av7-Aq-b5l" eventType="touchUpInside" id="sSn-id-Ghs"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
+                        <outlet property="listButton" destination="2Bq-4J-tsG" id="WOS-Uz-awb"/>
                         <outlet property="logoutButton" destination="g3A-Ik-df6" id="aA8-sy-2WN"/>
                         <outlet property="logoutHeightConstraint" destination="uZG-Tv-iUk" id="QDe-Dv-0GQ"/>
                         <outlet property="segmentedControl" destination="kvI-dg-80I" id="nfD-ZF-lar"/>
@@ -228,5 +241,6 @@
     </scenes>
     <resources>
         <image name="dropbox_icon" width="256" height="256"/>
+        <image name="list_icon" width="75" height="47"/>
     </resources>
 </document>

@@ -9,8 +9,15 @@
 #import <UIKit/UIKit.h>
 
 
+typedef NS_ENUM(NSUInteger, DPBFileOrder) {
+    DPBFileOrderByName     = 0,
+    DPBFileOrderByDate     = 1
+};
+
+
 @interface DPBEpubLibraryViewController : UIViewController
 
 @property (strong, nonatomic) NSString *pathDirectory;
+@property (assign, nonatomic) DPBFileOrder fileOrder;
 
 @end

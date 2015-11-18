@@ -14,6 +14,7 @@
 @interface DPBEpubLibraryPresenter ()
 
 @property (strong, nonatomic) UIViewController<DPBEpubLibraryPresenterDelegate> *viewController;
+@property (strong, nonatomic) UIAlertController *alertController;
 
 @end
 
@@ -31,12 +32,37 @@
     return self;
 }
 
+#pragma mark - ACCESSORS
+
+- (UIAlertController *)alertController
+{
+    if(!_alertController)
+    {
+        _alertController = [UIAlertController alertControllerWithTitle:@"Choose order" message:@"" preferredStyle:UIAlertControllerStyleActionSheet];
+        UIAlertAction *nameAction = [UIAlertAction actionWithTitle:@"By name" style:UIAlertActionStyleDefault handler:^(UIAlertAction * action)
+        {
+            [self.viewController presenterOrderList:DPBFileOrderByName];
+        }];
+        UIAlertAction *dateAction = [UIAlertAction actionWithTitle:@"By date" style: UIAlertActionStyleDefault handler:^(UIAlertAction * action)
+        {
+            [self.viewController presenterOrderList:DPBFileOrderByDate];
+        }];
+        
+        [_alertController addAction:nameAction];
+        [_alertController addAction:dateAction];
+    }
+    
+    return _alertController;
+}
+
 #pragma mark - PUBLIC
 
 - (void)viewIsReady
 {
     [self getDropboxFileListFromPathDirectory:self.pathDirectory];
 }
+
+#pragma mark - Dropbox
 
 - (void)logoutDropboxAccount
 {
@@ -58,11 +84,39 @@
     }];
 }
 
-- (void)pushEpubLibraryWithPathDirectory:(NSString *)pathDirectory
+#pragma mark - Sort
+
+- (void)showOrderActionController
+{
+    [self.viewController presentViewController:self.alertController animated:YES completion:nil];
+}
+
+- (NSArray *)sortList:(NSArray *)list order:(DPBFileOrder)fileOrder
+{
+    NSArray *sortDescriptors = [NSArray new];
+    
+    switch (fileOrder) {
+        case DPBFileOrderByName:
+            sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"filename" ascending:YES selector:@selector(caseInsensitiveCompare:)]];
+            break;
+        case DPBFileOrderByDate:
+            sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"lastModifiedDate" ascending:YES]];
+            break;
+        default:
+            break;
+    }
+    
+    return [list sortedArrayUsingDescriptors:sortDescriptors];
+}
+
+#pragma mark - Directory
+
+- (void)pushEpubLibraryWithPathDirectory:(NSString *)pathDirectory order:(DPBFileOrder)fileOrder
 {
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
     DPBEpubLibraryViewController *epubLibraryViewController = [storyboard instantiateViewControllerWithIdentifier:@"DPBEpubLibraryViewController"];
     epubLibraryViewController.pathDirectory = pathDirectory;
+    epubLibraryViewController.fileOrder = fileOrder;
     [self.viewController.navigationController pushViewController:epubLibraryViewController animated:YES];
 }
 

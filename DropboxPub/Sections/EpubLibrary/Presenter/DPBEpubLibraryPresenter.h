@@ -8,10 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
+#import "DPBEpubLibraryViewController.h"
+
 
 @protocol DPBEpubLibraryPresenterDelegate <NSObject>
 
 - (void)presenterFileList:(NSArray *)files error:(NSError *)error;
+- (void)presenterOrderList:(NSInteger)order;
 
 @end
 
@@ -24,6 +27,8 @@
 - (void)viewIsReady;
 - (void)logoutDropboxAccount;
 - (void)getDropboxFileListFromPathDirectory:(NSString *)pathDirectory;
-- (void)pushEpubLibraryWithPathDirectory:(NSString *)pathDirectory;
+- (void)showOrderActionController;
+- (NSArray *)sortList:(NSArray *)list order:(DPBFileOrder)fileOrder;
+- (void)pushEpubLibraryWithPathDirectory:(NSString *)pathDirectory order:(DPBFileOrder)fileOrder;
 
 @end

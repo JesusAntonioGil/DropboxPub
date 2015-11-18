@@ -15,6 +15,7 @@
 
 @property (weak, nonatomic) IBOutlet UISegmentedControl *segmentedControl;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet UIButton *listButton;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *segmentedHeightConstraint;
 @property (weak, nonatomic) IBOutlet UIButton *logoutButton;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *logoutHeightConstraint;
@@ -68,6 +69,11 @@
     NSLog(@"AQUI");
 }
 
+- (IBAction)onListButtonTap:(id)sender
+{
+    [self.presenter showOrderActionController];
+}
+
 #pragma mark - PRIVATE
 
 - (void)customizeView
@@ -77,6 +83,7 @@
     self.refreshControl = [[UIRefreshControl alloc] init];
     [self.refreshControl addTarget:self action:@selector(refreshControlValueChanged) forControlEvents:UIControlEventValueChanged];
     [self.tableView addSubview:self.refreshControl];
+    [self.refreshControl beginRefreshing];
     
     if(self.navigationController.viewControllers.firstObject != self)
     {
@@ -84,6 +91,7 @@
         self.segmentedControl.hidden = YES;
         self.logoutHeightConstraint.constant = 0.0f;
         self.logoutButton.hidden = YES;
+        self.listButton.hidden = YES;
     }
 }
 
@@ -92,14 +100,25 @@
     [self.presenter getDropboxFileListFromPathDirectory:self.pathDirectory];
 }
 
+- (void)sortFileList:(NSArray *)files
+{
+    self.files = [self.presenter sortList:files order:self.fileOrder];
+    [self.refreshControl endRefreshing];
+    [self.tableView reloadData];
+}
+
 #pragma mark - PROTOCOLS & DELEGATES
 #pragma mark - Presenter Delegate
 
 - (void)presenterFileList:(NSArray *)files error:(NSError *)error
 {
-    self.files = files;
-    [self.refreshControl endRefreshing];
-    [self.tableView reloadData];
+    [self sortFileList:files];
+}
+
+- (void)presenterOrderList:(NSInteger)order
+{
+    self.fileOrder = order;
+    [self sortFileList:self.files];
 }
 
 #pragma mark - UITableView Delegate
@@ -135,7 +154,7 @@
     DBMetadata *metadata = self.files[indexPath.row];
     if(metadata.isDirectory)
     {
-        [self.presenter pushEpubLibraryWithPathDirectory:metadata.path];
+        [self.presenter pushEpubLibraryWithPathDirectory:metadata.path order:self.fileOrder];
     }
 }
 

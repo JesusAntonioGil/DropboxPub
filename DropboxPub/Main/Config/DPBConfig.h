@@ -16,3 +16,4 @@ extern NSString * const DPBAppVersion;
 //Dropbox
 extern NSString * const DPBDropbpxAppKey;
 extern NSString * const DPBDropboxAppSecret;
+extern NSString * const DPBDropboxFileExtension;

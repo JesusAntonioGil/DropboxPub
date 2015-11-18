@@ -89,7 +89,14 @@
 
 - (void)restClient:(DBRestClient *)client loadedMetadata:(DBMetadata *)metadata
 {
-    self.completion(metadata.contents, nil);
+    NSMutableArray *mutableMetadatas = [NSMutableArray new];
+    
+    for(DBMetadata *metadataFile in metadata.contents)
+    {
+        if(metadataFile.isDirectory || [[metadataFile.filename getExtensionFileName] isEqualToString:DPBDropboxFileExtension]) [mutableMetadatas addObject:metadataFile];
+    }
+    
+    self.completion(mutableMetadatas, nil);
 }
 
 - (void)restClient:(DBRestClient *)client loadMetadataFailedWithError:(NSError *)error

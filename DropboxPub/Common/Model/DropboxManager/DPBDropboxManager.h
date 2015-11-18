@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 
-typedef void (^DPBDropboxManagerEpubsCompletion)(NSArray *epubs, NSError *error);
+typedef void (^DPBDropboxManagerFilesCompletion)(NSArray *files, NSError *error);
 
 
 @interface DPBDropboxManager : NSObject
@@ -26,6 +26,6 @@ typedef void (^DPBDropboxManagerEpubsCompletion)(NSArray *epubs, NSError *error)
 - (void)dropboxUnlinkedAll;
 
 //Files
-- (void)loadEpubsWithCompletion:(DPBDropboxManagerEpubsCompletion)completion;
+- (void)loadFilesWithPathDirectory:(NSString *)pathDirectory completion:(DPBDropboxManagerFilesCompletion)completion;
 
 @end

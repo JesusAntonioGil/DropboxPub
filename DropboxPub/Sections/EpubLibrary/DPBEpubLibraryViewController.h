@@ -11,4 +11,6 @@
 
 @interface DPBEpubLibraryViewController : UIViewController
 
+@property (strong, nonatomic) NSString *pathDirectory;
+
 @end

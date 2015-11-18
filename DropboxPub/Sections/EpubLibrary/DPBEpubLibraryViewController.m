@@ -17,7 +17,7 @@
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @property (strong, nonatomic) DPBEpubLibraryPresenter *presenter;
-@property (strong, nonatomic) NSArray *epubs;
+@property (strong, nonatomic) NSArray *files;
 
 @end
 
@@ -29,12 +29,25 @@
     [super viewDidLoad];
     
     self.presenter = [[DPBEpubLibraryPresenter alloc] initWithViewController:self];
+    self.presenter.pathDirectory = self.pathDirectory;
     [self.presenter viewIsReady];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
+}
+
+#pragma mark - ACCESSORS
+
+- (NSString *)pathDirectory
+{
+    if(!_pathDirectory)
+    {
+        _pathDirectory = @"/";
+    }
+    
+    return _pathDirectory;
 }
 
 #pragma mark - ACTIONS
@@ -52,9 +65,9 @@
 #pragma mark - PROTOCOLS & DELEGATES
 #pragma mark - Presenter Delegate
 
-- (void)presenterEpubLibraryList:(NSArray *)epubs error:(NSError *)error
+- (void)presenterFileList:(NSArray *)files error:(NSError *)error
 {
-    self.epubs = epubs;
+    self.files = files;
     [self.tableView reloadData];
 }
 
@@ -62,7 +75,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return self.epubs.count;
+    return self.files.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -74,7 +87,7 @@
         cell = [topLevelObjects objectAtIndex:0];
     }
     
-    cell.metadata = self.epubs[indexPath.row];
+    cell.metadata = self.files[indexPath.row];
     
     return cell;
 }
@@ -87,6 +100,12 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    DBMetadata *metadata = self.files[indexPath.row];
+    if(metadata.isDirectory)
+    {
+        [self.presenter pushEpubLibraryWithPathDirectory:metadata.path];
+    }
 }
 
 @end

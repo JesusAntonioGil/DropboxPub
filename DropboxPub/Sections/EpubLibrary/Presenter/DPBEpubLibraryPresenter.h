@@ -11,16 +11,19 @@
 
 @protocol DPBEpubLibraryPresenterDelegate <NSObject>
 
-- (void)presenterEpubLibraryList:(NSArray *)epubs error:(NSError *)error;
+- (void)presenterFileList:(NSArray *)files error:(NSError *)error;
 
 @end
 
 
 @interface DPBEpubLibraryPresenter : NSObject
 
+@property (strong, nonatomic) NSString *pathDirectory;
+
 - (instancetype)initWithViewController:(UIViewController<DPBEpubLibraryPresenterDelegate> *)viewController;
 - (void)viewIsReady;
 - (void)logoutDropboxAccount;
-- (void)getDropboxEpubList;
+- (void)getDropboxFileListFromPathDirectory:(NSString *)pathDirectory;
+- (void)pushEpubLibraryWithPathDirectory:(NSString *)pathDirectory;
 
 @end

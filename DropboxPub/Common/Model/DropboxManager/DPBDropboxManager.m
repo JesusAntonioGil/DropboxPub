@@ -14,7 +14,7 @@
 @interface DPBDropboxManager  () <DBRestClientDelegate>
 
 @property (strong, nonatomic) DBRestClient *restClient;
-@property (copy, nonatomic) DPBDropboxManagerEpubsCompletion completion;
+@property (copy, nonatomic) DPBDropboxManagerFilesCompletion completion;
 
 @end
 
@@ -79,10 +79,10 @@
 
 #pragma mark - Files
 
-- (void)loadEpubsWithCompletion:(DPBDropboxManagerEpubsCompletion)completion
+- (void)loadFilesWithPathDirectory:(NSString *)pathDirectory completion:(DPBDropboxManagerFilesCompletion)completion
 {
     self.completion = completion;
-    [self.restClient loadMetadata:@"/"];
+    [self.restClient loadMetadata:pathDirectory];
 }
 
 #pragma mark - PROTOCOLS & DELEGATES

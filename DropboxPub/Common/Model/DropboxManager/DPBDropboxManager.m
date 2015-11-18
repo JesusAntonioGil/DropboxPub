@@ -14,6 +14,7 @@
 @interface DPBDropboxManager  () <DBRestClientDelegate>
 
 @property (strong, nonatomic) DBRestClient *restClient;
+@property (copy, nonatomic) DPBDropboxManagerEpubsCompletion completion;
 
 @end
 
@@ -80,6 +81,7 @@
 
 - (void)loadEpubsWithCompletion:(DPBDropboxManagerEpubsCompletion)completion
 {
+    self.completion = completion;
     [self.restClient loadMetadata:@"/"];
 }
 
@@ -87,18 +89,12 @@
 
 - (void)restClient:(DBRestClient *)client loadedMetadata:(DBMetadata *)metadata
 {
-    if (metadata.isDirectory)
-    {
-        for (DBMetadata *file in metadata.contents)
-        {
-            NSLog(@"	%@", file.filename);
-        }
-    }
+    self.completion(metadata.contents, nil);
 }
 
 - (void)restClient:(DBRestClient *)client loadMetadataFailedWithError:(NSError *)error
 {
-    NSLog(@"Error loading metadata: %@", error);
+    self.completion(nil, error);
 }
 
 @end

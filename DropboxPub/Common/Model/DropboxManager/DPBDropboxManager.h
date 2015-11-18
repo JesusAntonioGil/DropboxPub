@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 
-typedef void (^DPBDropboxManagerEpubsCompletion)(NSArray *epubs);
+typedef void (^DPBDropboxManagerEpubsCompletion)(NSArray *epubs, NSError *error);
 
 
 @interface DPBDropboxManager : NSObject

@@ -49,8 +49,11 @@
 
 - (void)getDropboxEpubList
 {
-    [[DPBDropboxManager shared] loadEpubsWithCompletion:^(NSArray *epubs) {
-        
+    __weak typeof(self) weakSelf = self;
+    [[DPBDropboxManager shared] loadEpubsWithCompletion:^(NSArray *epubs, NSError *error)
+    {
+        __strong typeof(self) strongSelf = weakSelf;
+        [strongSelf.viewController presenterEpubLibraryList:epubs error:error];
     }];
 }
 

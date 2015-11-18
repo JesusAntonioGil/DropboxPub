@@ -11,6 +11,8 @@
 
 @protocol DPBEpubLibraryPresenterDelegate <NSObject>
 
+- (void)presenterEpubLibraryList:(NSArray *)epubs error:(NSError *)error;
+
 @end
 
 

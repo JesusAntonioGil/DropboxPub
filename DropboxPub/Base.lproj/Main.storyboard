@@ -98,8 +98,9 @@
                                 <rect key="frame" x="0.0" y="44" width="320" height="460"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="separatorColor" red="0.0" green="0.47843137250000001" blue="0.58823529409999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="60" id="aN3-K0-3Uv">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="DPBEpubLibraryTableViewCell" rowHeight="60" id="aN3-K0-3Uv" customClass="DPBEpubLibraryTableViewCell">
                                         <rect key="frame" x="0.0" y="28" width="320" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="aN3-K0-3Uv" id="f9T-iW-zQX">
@@ -148,6 +149,11 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <animations/>
+                                        <connections>
+                                            <outlet property="dateFileLabel" destination="Nsc-EZ-XzM" id="A5V-vb-xYB"/>
+                                            <outlet property="iconImageView" destination="uMw-K3-fVc" id="E7H-mq-u7z"/>
+                                            <outlet property="nameFileLabel" destination="Ile-jc-wT7" id="dMk-ID-ecw"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -157,7 +163,7 @@
                             </tableView>
                         </subviews>
                         <animations/>
-                        <color key="backgroundColor" red="0.34901960780000002" green="0.6588235294" blue="0.92156862750000001" alpha="0.34765625" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="kvI-dg-80I" secondAttribute="trailing" constant="20" id="Mhg-kY-cvm"/>
                             <constraint firstItem="G4l-WZ-EwB" firstAttribute="top" secondItem="kvI-dg-80I" secondAttribute="bottom" constant="8" id="UcG-bl-373"/>

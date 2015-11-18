@@ -8,12 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		EAF67FF81BFC8738003BB06B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EAF67FF71BFC8738003BB06B /* main.m */; };
-		EAF67FFB1BFC8738003BB06B /* DPBAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EAF67FFA1BFC8738003BB06B /* DPBAppDelegate.m */; };
 		EAF680011BFC8738003BB06B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAF67FFF1BFC8738003BB06B /* Main.storyboard */; };
 		EAF680031BFC8738003BB06B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EAF680021BFC8738003BB06B /* Assets.xcassets */; };
 		EAF680061BFC8738003BB06B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAF680041BFC8738003BB06B /* LaunchScreen.storyboard */; };
 		EAF680111BFC8738003BB06B /* DropboxPubTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EAF680101BFC8738003BB06B /* DropboxPubTests.m */; };
 		EAF6801C1BFC8738003BB06B /* DropboxPubUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = EAF6801B1BFC8738003BB06B /* DropboxPubUITests.m */; };
+		EAF6802D1BFC8A1A003BB06B /* DPBAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EAF6802C1BFC8A1A003BB06B /* DPBAppDelegate.m */; };
+		EAF680311BFC8BCF003BB06B /* DPBConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = EAF680301BFC8BCF003BB06B /* DPBConfig.m */; };
+		EAF680321BFC8BCF003BB06B /* DPBConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = EAF680301BFC8BCF003BB06B /* DPBConfig.m */; };
+		EAF680331BFC8BCF003BB06B /* DPBConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = EAF680301BFC8BCF003BB06B /* DPBConfig.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,8 +39,6 @@
 /* Begin PBXFileReference section */
 		EAF67FF31BFC8738003BB06B /* DropboxPub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DropboxPub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAF67FF71BFC8738003BB06B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		EAF67FF91BFC8738003BB06B /* DPBAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DPBAppDelegate.h; sourceTree = "<group>"; };
-		EAF67FFA1BFC8738003BB06B /* DPBAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DPBAppDelegate.m; sourceTree = "<group>"; };
 		EAF680001BFC8738003BB06B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EAF680021BFC8738003BB06B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EAF680051BFC8738003BB06B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +50,10 @@
 		EAF6801B1BFC8738003BB06B /* DropboxPubUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DropboxPubUITests.m; sourceTree = "<group>"; };
 		EAF6801D1BFC8738003BB06B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EAF680291BFC8919003BB06B /* DPBPrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPBPrefixHeader.pch; sourceTree = "<group>"; };
+		EAF6802B1BFC8A1A003BB06B /* DPBAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPBAppDelegate.h; sourceTree = "<group>"; };
+		EAF6802C1BFC8A1A003BB06B /* DPBAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPBAppDelegate.m; sourceTree = "<group>"; };
+		EAF6802F1BFC8BCF003BB06B /* DPBConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPBConfig.h; sourceTree = "<group>"; };
+		EAF680301BFC8BCF003BB06B /* DPBConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPBConfig.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,8 +104,7 @@
 		EAF67FF51BFC8738003BB06B /* DropboxPub */ = {
 			isa = PBXGroup;
 			children = (
-				EAF67FF91BFC8738003BB06B /* DPBAppDelegate.h */,
-				EAF67FFA1BFC8738003BB06B /* DPBAppDelegate.m */,
+				EAF6802A1BFC8A1A003BB06B /* Main */,
 				EAF67FFF1BFC8738003BB06B /* Main.storyboard */,
 				EAF680021BFC8738003BB06B /* Assets.xcassets */,
 				EAF680041BFC8738003BB06B /* LaunchScreen.storyboard */,
@@ -135,6 +139,25 @@
 				EAF6801D1BFC8738003BB06B /* Info.plist */,
 			);
 			path = DropboxPubUITests;
+			sourceTree = "<group>";
+		};
+		EAF6802A1BFC8A1A003BB06B /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				EAF6802E1BFC8BBE003BB06B /* Config */,
+				EAF6802B1BFC8A1A003BB06B /* DPBAppDelegate.h */,
+				EAF6802C1BFC8A1A003BB06B /* DPBAppDelegate.m */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		EAF6802E1BFC8BBE003BB06B /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				EAF6802F1BFC8BCF003BB06B /* DPBConfig.h */,
+				EAF680301BFC8BCF003BB06B /* DPBConfig.m */,
+			);
+			path = Config;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -271,8 +294,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EAF67FFB1BFC8738003BB06B /* DPBAppDelegate.m in Sources */,
 				EAF67FF81BFC8738003BB06B /* main.m in Sources */,
+				EAF680311BFC8BCF003BB06B /* DPBConfig.m in Sources */,
+				EAF6802D1BFC8A1A003BB06B /* DPBAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,6 +304,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAF680321BFC8BCF003BB06B /* DPBConfig.m in Sources */,
 				EAF680111BFC8738003BB06B /* DropboxPubTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -288,6 +313,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAF680331BFC8BCF003BB06B /* DPBConfig.m in Sources */,
 				EAF6801C1BFC8738003BB06B /* DropboxPubUITests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

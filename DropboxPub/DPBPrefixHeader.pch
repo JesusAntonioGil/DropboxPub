@@ -9,7 +9,6 @@
 #ifndef DPBPrefixHeader_pch
 #define DPBPrefixHeader_pch
 
-// Include any system framework and library headers here that should be included in all compilation units.
-// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+#import "DPBConfig.h"
 
 #endif /* DPBPrefixHeader_pch */

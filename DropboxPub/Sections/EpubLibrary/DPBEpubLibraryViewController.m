@@ -19,9 +19,9 @@
 @property (weak, nonatomic) IBOutlet UIButton *logoutButton;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *logoutHeightConstraint;
 
-
 @property (strong, nonatomic) DPBEpubLibraryPresenter *presenter;
 @property (strong, nonatomic) NSArray *files;
+@property (strong, nonatomic) UIRefreshControl *refreshControl;
 
 @end
 
@@ -74,6 +74,10 @@
 {
     self.title = [self.pathDirectory getFolderName];
     
+    self.refreshControl = [[UIRefreshControl alloc] init];
+    [self.refreshControl addTarget:self action:@selector(refreshControlValueChanged) forControlEvents:UIControlEventValueChanged];
+    [self.tableView addSubview:self.refreshControl];
+    
     if(self.navigationController.viewControllers.firstObject != self)
     {
         self.segmentedHeightConstraint.constant = 0.0f;
@@ -83,12 +87,18 @@
     }
 }
 
+- (void)refreshControlValueChanged
+{
+    [self.presenter getDropboxFileListFromPathDirectory:self.pathDirectory];
+}
+
 #pragma mark - PROTOCOLS & DELEGATES
 #pragma mark - Presenter Delegate
 
 - (void)presenterFileList:(NSArray *)files error:(NSError *)error
 {
     self.files = files;
+    [self.refreshControl endRefreshing];
     [self.tableView reloadData];
 }
 

@@ -174,23 +174,11 @@
                             <constraint firstItem="ZrS-vd-aW8" firstAttribute="top" secondItem="G4l-WZ-EwB" secondAttribute="bottom" id="vBr-CE-Yq1"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="IJF-J8-WyB">
-                        <barButtonItem key="rightBarButtonItem" style="done" id="mZ0-i8-X3K">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="I3j-Ip-BWD">
-                                <rect key="frame" x="233" y="7" width="71" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <state key="normal" title="Logout"/>
-                                <connections>
-                                    <action selector="onLogoutButtonTap:" destination="av7-Aq-b5l" eventType="touchUpInside" id="BR5-bq-XB6"/>
-                                </connections>
-                            </button>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="IJF-J8-WyB"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="segmentedControl" destination="kvI-dg-80I" id="nfD-ZF-lar"/>
+                        <outlet property="segmentedHeightConstraint" destination="O4h-oW-LyM" id="ODD-mH-bQ0"/>
                         <outlet property="tableView" destination="G4l-WZ-EwB" id="3bc-T7-lw0"/>
                     </connections>
                 </viewController>

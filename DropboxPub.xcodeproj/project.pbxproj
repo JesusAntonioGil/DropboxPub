@@ -29,6 +29,12 @@
 		EA5370B51BFCD29000AD0A0D /* DPBEpubLibraryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5370B41BFCD29000AD0A0D /* DPBEpubLibraryTableViewCell.m */; };
 		EA5370B61BFCD29000AD0A0D /* DPBEpubLibraryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5370B41BFCD29000AD0A0D /* DPBEpubLibraryTableViewCell.m */; };
 		EA5370B71BFCD29000AD0A0D /* DPBEpubLibraryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5370B41BFCD29000AD0A0D /* DPBEpubLibraryTableViewCell.m */; };
+		EA5370C11BFD222F00AD0A0D /* NSString+DPBExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5370C01BFD222F00AD0A0D /* NSString+DPBExtension.m */; };
+		EA5370C21BFD222F00AD0A0D /* NSString+DPBExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5370C01BFD222F00AD0A0D /* NSString+DPBExtension.m */; };
+		EA5370C31BFD222F00AD0A0D /* NSString+DPBExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5370C01BFD222F00AD0A0D /* NSString+DPBExtension.m */; };
+		EA5370C71BFD258200AD0A0D /* NSDate+DPBExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5370C61BFD258200AD0A0D /* NSDate+DPBExtension.m */; };
+		EA5370C81BFD258200AD0A0D /* NSDate+DPBExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5370C61BFD258200AD0A0D /* NSDate+DPBExtension.m */; };
+		EA5370C91BFD258200AD0A0D /* NSDate+DPBExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5370C61BFD258200AD0A0D /* NSDate+DPBExtension.m */; };
 		EAF67FF81BFC8738003BB06B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EAF67FF71BFC8738003BB06B /* main.m */; };
 		EAF680011BFC8738003BB06B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAF67FFF1BFC8738003BB06B /* Main.storyboard */; };
 		EAF680031BFC8738003BB06B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EAF680021BFC8738003BB06B /* Assets.xcassets */; };
@@ -76,6 +82,10 @@
 		EA5370AE1BFCC2FA00AD0A0D /* DPBEpubLibraryPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPBEpubLibraryPresenter.m; sourceTree = "<group>"; };
 		EA5370B31BFCD29000AD0A0D /* DPBEpubLibraryTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPBEpubLibraryTableViewCell.h; sourceTree = "<group>"; };
 		EA5370B41BFCD29000AD0A0D /* DPBEpubLibraryTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPBEpubLibraryTableViewCell.m; sourceTree = "<group>"; };
+		EA5370BF1BFD222F00AD0A0D /* NSString+DPBExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+DPBExtension.h"; sourceTree = "<group>"; };
+		EA5370C01BFD222F00AD0A0D /* NSString+DPBExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+DPBExtension.m"; sourceTree = "<group>"; };
+		EA5370C51BFD258200AD0A0D /* NSDate+DPBExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+DPBExtension.h"; sourceTree = "<group>"; };
+		EA5370C61BFD258200AD0A0D /* NSDate+DPBExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+DPBExtension.m"; sourceTree = "<group>"; };
 		EAF67FF31BFC8738003BB06B /* DropboxPub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DropboxPub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAF67FF71BFC8738003BB06B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		EAF680001BFC8738003BB06B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -179,6 +189,7 @@
 			isa = PBXGroup;
 			children = (
 				EA53709F1BFCB4E900AD0A0D /* Model */,
+				EA5370B81BFD20A400AD0A0D /* Categories */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -227,6 +238,33 @@
 				EA5370B41BFCD29000AD0A0D /* DPBEpubLibraryTableViewCell.m */,
 			);
 			path = TableCell;
+			sourceTree = "<group>";
+		};
+		EA5370B81BFD20A400AD0A0D /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				EA5370C41BFD256E00AD0A0D /* Date */,
+				EA5370B91BFD20A400AD0A0D /* String */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		EA5370B91BFD20A400AD0A0D /* String */ = {
+			isa = PBXGroup;
+			children = (
+				EA5370BF1BFD222F00AD0A0D /* NSString+DPBExtension.h */,
+				EA5370C01BFD222F00AD0A0D /* NSString+DPBExtension.m */,
+			);
+			path = String;
+			sourceTree = "<group>";
+		};
+		EA5370C41BFD256E00AD0A0D /* Date */ = {
+			isa = PBXGroup;
+			children = (
+				EA5370C51BFD258200AD0A0D /* NSDate+DPBExtension.h */,
+				EA5370C61BFD258200AD0A0D /* NSDate+DPBExtension.m */,
+			);
+			path = Date;
 			sourceTree = "<group>";
 		};
 		EAF67FEA1BFC8737003BB06B = {
@@ -499,7 +537,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA5370A31BFCB4FF00AD0A0D /* DPBDropboxManager.m in Sources */,
+				EA5370C71BFD258200AD0A0D /* NSDate+DPBExtension.m in Sources */,
 				EA0CFF741BFC9F10002A90BA /* DPBStartCoordinator.m in Sources */,
+				EA5370C11BFD222F00AD0A0D /* NSString+DPBExtension.m in Sources */,
 				EA5370951BFCA27B00AD0A0D /* DPBLoginViewController.m in Sources */,
 				EAF67FF81BFC8738003BB06B /* main.m in Sources */,
 				EA5370B51BFCD29000AD0A0D /* DPBEpubLibraryTableViewCell.m in Sources */,
@@ -515,10 +555,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA5370C81BFD258200AD0A0D /* NSDate+DPBExtension.m in Sources */,
 				EA0CFF751BFC9F10002A90BA /* DPBStartCoordinator.m in Sources */,
 				EA5370AA1BFCC0B600AD0A0D /* DPBEpubLibraryViewController.m in Sources */,
 				EA5370961BFCA27B00AD0A0D /* DPBLoginViewController.m in Sources */,
 				EA5370B01BFCC2FA00AD0A0D /* DPBEpubLibraryPresenter.m in Sources */,
+				EA5370C21BFD222F00AD0A0D /* NSString+DPBExtension.m in Sources */,
 				EA53709C1BFCA32800AD0A0D /* DPBLoginPresenter.m in Sources */,
 				EAF680321BFC8BCF003BB06B /* DPBConfig.m in Sources */,
 				EAF680111BFC8738003BB06B /* DropboxPubTests.m in Sources */,
@@ -531,10 +573,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA5370C91BFD258200AD0A0D /* NSDate+DPBExtension.m in Sources */,
 				EA0CFF761BFC9F10002A90BA /* DPBStartCoordinator.m in Sources */,
 				EA5370AB1BFCC0B600AD0A0D /* DPBEpubLibraryViewController.m in Sources */,
 				EA5370971BFCA27B00AD0A0D /* DPBLoginViewController.m in Sources */,
 				EA5370B11BFCC2FA00AD0A0D /* DPBEpubLibraryPresenter.m in Sources */,
+				EA5370C31BFD222F00AD0A0D /* NSString+DPBExtension.m in Sources */,
 				EA53709D1BFCA32800AD0A0D /* DPBLoginPresenter.m in Sources */,
 				EAF680331BFC8BCF003BB06B /* DPBConfig.m in Sources */,
 				EAF6801C1BFC8738003BB06B /* DropboxPubUITests.m in Sources */,

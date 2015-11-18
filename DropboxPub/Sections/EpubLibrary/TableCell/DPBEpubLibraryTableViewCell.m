@@ -41,10 +41,7 @@
     if(self.metadata.isDirectory) self.iconImageView.image = [UIImage imageNamed:@"folder_icon"];else self.iconImageView.image = [UIImage imageNamed:@"epub_icon"];
     
     self.nameFileLabel.text = self.metadata.filename;
-    
-    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    [formatter setDateFormat:@"dd/MM/yyyy hh:mm"];
-    self.dateFileLabel.text = [formatter stringFromDate:self.metadata.lastModifiedDate];
+    self.dateFileLabel.text = [self.metadata.lastModifiedDate stringDateWithFormat:@"dd/MM/yyyy hh:mm"];
 }
 
 @end

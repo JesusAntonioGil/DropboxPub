@@ -12,5 +12,7 @@
 #import <UIKit/UIKit.h>
 
 #import "DPBConfig.h"
+#import "NSString+DPBExtension.h"
+#import "NSDate+DPBExtension.h"
 
 #endif /* DPBPrefixHeader_pch */

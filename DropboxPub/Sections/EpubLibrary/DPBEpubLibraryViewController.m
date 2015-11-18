@@ -15,6 +15,9 @@
 
 @property (weak, nonatomic) IBOutlet UISegmentedControl *segmentedControl;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *segmentedHeightConstraint;
+@property (weak, nonatomic) IBOutlet UIButton *logoutButton;
+
 
 @property (strong, nonatomic) DPBEpubLibraryPresenter *presenter;
 @property (strong, nonatomic) NSArray *files;
@@ -27,6 +30,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    [self customizeView];
     
     self.presenter = [[DPBEpubLibraryPresenter alloc] initWithViewController:self];
     self.presenter.pathDirectory = self.pathDirectory;
@@ -60,6 +65,17 @@
 - (IBAction)onSegmentedControlValueChanged:(id)sender
 {
     NSLog(@"AQUI");
+}
+
+#pragma mark - PRIVATE
+
+- (void)customizeView
+{
+    if(self.navigationController.viewControllers.firstObject != self)
+    {
+        self.segmentedHeightConstraint.constant = 0.0f;
+        self.segmentedControl.hidden = YES;
+    }
 }
 
 #pragma mark - PROTOCOLS & DELEGATES

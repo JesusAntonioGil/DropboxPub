@@ -1,0 +1,15 @@
+//
+//  DPBPrefixHeader.pch
+//  DropboxPub
+//
+//  Created by Jesus Antonio Gil on 18/11/15.
+//  Copyright © 2015 Jesus Antonio Gil. All rights reserved.
+//
+
+#ifndef DPBPrefixHeader_pch
+#define DPBPrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* DPBPrefixHeader_pch */

@@ -13,6 +13,8 @@
 @interface DPBLoginViewController () <DPBLoginPresenterDelegate>
 
 @property (strong, nonatomic) DPBLoginPresenter *presenter;
+@property (weak, nonatomic) IBOutlet UIButton *loginButton;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 
 @end
 
@@ -22,8 +24,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
     
-    self.presenter = [[DPBLoginPresenter alloc] initWithViewController:self];
     [self.presenter viewIsReady];
 }
 
@@ -32,11 +38,39 @@
     [super didReceiveMemoryWarning];
 }
 
+#pragma mark - ACCESSORS
+
+- (DPBLoginPresenter *)presenter
+{
+    if(!_presenter)
+    {
+        self.presenter = [[DPBLoginPresenter alloc] initWithViewController:self];
+    }
+    
+    return _presenter;
+}
+
 #pragma mark - ACTIONS
 
 - (IBAction)onLoginButtonTap:(id)sender
 {
-    [self.presenter loginDropbox];
+    [self.presenter presentLoginViewController];
+}
+
+#pragma mark - PRIVATE
+
+- (void)dropboxLinked:(BOOL)linked
+{
+    self.activityIndicator.hidden = !linked;
+    self.loginButton.hidden = linked;
+}
+
+#pragma mark - PROTOCOLS & DELEGATES
+#pragma mark - Presenter Delegate
+
+- (void)presenterDropboxLinked:(BOOL)linked
+{
+    [self dropboxLinked:linked];
 }
 
 @end

@@ -25,7 +25,7 @@
                                     <constraint firstAttribute="height" constant="145" id="YLi-TJ-ROW"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xbd-1B-rM4">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xbd-1B-rM4">
                                 <rect key="frame" x="81" y="364" width="158" height="30"/>
                                 <animations/>
                                 <constraints>
@@ -37,7 +37,7 @@
                                     <action selector="onLoginButtonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="y93-Ay-G3d"/>
                                 </connections>
                             </button>
-                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="ARP-g6-kLX">
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="ARP-g6-kLX">
                                 <rect key="frame" x="150" y="369" width="20" height="20"/>
                                 <animations/>
                                 <constraints>
@@ -59,10 +59,56 @@
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="ARP-g6-kLX" id="BbL-eb-3OW"/>
+                        <outlet property="loginButton" destination="Xbd-1B-rM4" id="Ghu-d3-nT8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="239" y="290"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="gsp-4K-yrd">
+            <objects>
+                <viewController storyboardIdentifier="wqewqe" id="av7-Aq-b5l" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="HJA-Uf-hgm"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZrS-vd-aW8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pQq-5n-kZn">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" red="0.34901960780000002" green="0.6588235294" blue="0.92156862750000001" alpha="0.34765625" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="IJF-J8-WyB"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fRG-YF-6xc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="658" y="990"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="dz4-FT-TlS">
+            <objects>
+                <navigationController storyboardIdentifier="asd" automaticallyAdjustsScrollViewInsets="NO" id="5My-JZ-yWs" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="gEQ-Yl-Dc7">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                        <color key="barTintColor" red="0.0" green="0.47843137254901957" blue="0.58823529411764708" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="av7-Aq-b5l" kind="relationship" relationship="rootViewController" id="p6n-KV-bnf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tSI-YF-n14" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="239" y="990"/>
         </scene>
     </scenes>
     <resources>

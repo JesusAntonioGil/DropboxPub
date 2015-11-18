@@ -7,6 +7,7 @@
 //
 
 #import "DPBLoginPresenter.h"
+#import "DPBDropboxManager.h"
 
 
 @interface DPBLoginPresenter ()
@@ -33,12 +34,16 @@
 
 - (void)viewIsReady
 {
-    
+    [self.viewController presenterDropboxLinked:[[DPBDropboxManager shared] dropboxIsLinked]];
 }
 
-- (void)loginDropbox
+- (void)presentLoginViewController
 {
-    
+    if(![[DPBDropboxManager shared] dropboxIsLinked])
+    {
+        [[DPBDropboxManager shared] dropboxLinkFromController:self.viewController];
+    }
 }
+
 
 @end

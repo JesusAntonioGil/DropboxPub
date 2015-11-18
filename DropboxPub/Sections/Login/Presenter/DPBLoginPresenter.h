@@ -11,6 +11,8 @@
 
 @protocol DPBLoginPresenterDelegate <NSObject>
 
+- (void)presenterDropboxLinked:(BOOL)linked;
+
 @end
 
 
@@ -18,6 +20,6 @@
 
 - (instancetype)initWithViewController:(UIViewController<DPBLoginPresenterDelegate> *)viewController;
 - (void)viewIsReady;
-- (void)loginDropbox;
+- (void)presentLoginViewController;
 
 @end

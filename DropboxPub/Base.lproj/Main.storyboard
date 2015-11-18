@@ -68,10 +68,10 @@
             </objects>
             <point key="canvasLocation" x="239" y="290"/>
         </scene>
-        <!--View Controller-->
+        <!--Epub Library View Controller-->
         <scene sceneID="gsp-4K-yrd">
             <objects>
-                <viewController storyboardIdentifier="wqewqe" id="av7-Aq-b5l" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DPBEpubLibraryViewController" id="av7-Aq-b5l" customClass="DPBEpubLibraryViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="HJA-Uf-hgm"/>
                         <viewControllerLayoutGuide type="bottom" id="ZrS-vd-aW8"/>
@@ -82,7 +82,16 @@
                         <animations/>
                         <color key="backgroundColor" red="0.34901960780000002" green="0.6588235294" blue="0.92156862750000001" alpha="0.34765625" colorSpace="calibratedRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" id="IJF-J8-WyB"/>
+                    <navigationItem key="navigationItem" id="IJF-J8-WyB">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="mZ0-i8-X3K">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="I3j-Ip-BWD">
+                                <rect key="frame" x="16" y="7" width="71" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <animations/>
+                                <state key="normal" title="Logout"/>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fRG-YF-6xc" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -92,7 +101,7 @@
         <!--Navigation Controller-->
         <scene sceneID="dz4-FT-TlS">
             <objects>
-                <navigationController storyboardIdentifier="asd" automaticallyAdjustsScrollViewInsets="NO" id="5My-JZ-yWs" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="DPBEpubLibraryNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="5My-JZ-yWs" sceneMemberID="viewController">
                     <toolbarItems/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="gEQ-Yl-Dc7">

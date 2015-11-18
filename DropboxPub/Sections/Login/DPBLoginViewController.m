@@ -54,7 +54,7 @@
 
 - (IBAction)onLoginButtonTap:(id)sender
 {
-    [self.presenter presentLoginViewController];
+    [self.presenter presentDropboxLoginViewController];
 }
 
 #pragma mark - PRIVATE
@@ -63,6 +63,8 @@
 {
     self.activityIndicator.hidden = !linked;
     self.loginButton.hidden = linked;
+    
+    if(linked) [self.presenter presentEpubLibraryController];
 }
 
 #pragma mark - PROTOCOLS & DELEGATES

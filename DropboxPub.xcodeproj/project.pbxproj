@@ -20,6 +20,12 @@
 		EA5370A31BFCB4FF00AD0A0D /* DPBDropboxManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5370A21BFCB4FF00AD0A0D /* DPBDropboxManager.m */; };
 		EA5370A41BFCB4FF00AD0A0D /* DPBDropboxManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5370A21BFCB4FF00AD0A0D /* DPBDropboxManager.m */; };
 		EA5370A51BFCB4FF00AD0A0D /* DPBDropboxManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5370A21BFCB4FF00AD0A0D /* DPBDropboxManager.m */; };
+		EA5370A91BFCC0B600AD0A0D /* DPBEpubLibraryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5370A81BFCC0B600AD0A0D /* DPBEpubLibraryViewController.m */; };
+		EA5370AA1BFCC0B600AD0A0D /* DPBEpubLibraryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5370A81BFCC0B600AD0A0D /* DPBEpubLibraryViewController.m */; };
+		EA5370AB1BFCC0B600AD0A0D /* DPBEpubLibraryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5370A81BFCC0B600AD0A0D /* DPBEpubLibraryViewController.m */; };
+		EA5370AF1BFCC2FA00AD0A0D /* DPBEpubLibraryPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5370AE1BFCC2FA00AD0A0D /* DPBEpubLibraryPresenter.m */; };
+		EA5370B01BFCC2FA00AD0A0D /* DPBEpubLibraryPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5370AE1BFCC2FA00AD0A0D /* DPBEpubLibraryPresenter.m */; };
+		EA5370B11BFCC2FA00AD0A0D /* DPBEpubLibraryPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5370AE1BFCC2FA00AD0A0D /* DPBEpubLibraryPresenter.m */; };
 		EAF67FF81BFC8738003BB06B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EAF67FF71BFC8738003BB06B /* main.m */; };
 		EAF680011BFC8738003BB06B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAF67FFF1BFC8738003BB06B /* Main.storyboard */; };
 		EAF680031BFC8738003BB06B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EAF680021BFC8738003BB06B /* Assets.xcassets */; };
@@ -61,6 +67,10 @@
 		EA53709A1BFCA32700AD0A0D /* DPBLoginPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPBLoginPresenter.m; sourceTree = "<group>"; };
 		EA5370A11BFCB4FF00AD0A0D /* DPBDropboxManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPBDropboxManager.h; sourceTree = "<group>"; };
 		EA5370A21BFCB4FF00AD0A0D /* DPBDropboxManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPBDropboxManager.m; sourceTree = "<group>"; };
+		EA5370A71BFCC0B600AD0A0D /* DPBEpubLibraryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPBEpubLibraryViewController.h; sourceTree = "<group>"; };
+		EA5370A81BFCC0B600AD0A0D /* DPBEpubLibraryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPBEpubLibraryViewController.m; sourceTree = "<group>"; };
+		EA5370AD1BFCC2FA00AD0A0D /* DPBEpubLibraryPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPBEpubLibraryPresenter.h; sourceTree = "<group>"; };
+		EA5370AE1BFCC2FA00AD0A0D /* DPBEpubLibraryPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPBEpubLibraryPresenter.m; sourceTree = "<group>"; };
 		EAF67FF31BFC8738003BB06B /* DropboxPub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DropboxPub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAF67FF71BFC8738003BB06B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		EAF680001BFC8738003BB06B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -136,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				EA5370921BFCA24300AD0A0D /* Login */,
+				EA5370A61BFCC0A000AD0A0D /* EpubLibrary */,
 			);
 			path = Sections;
 			sourceTree = "<group>";
@@ -182,6 +193,25 @@
 				EA5370A21BFCB4FF00AD0A0D /* DPBDropboxManager.m */,
 			);
 			path = DropboxManager;
+			sourceTree = "<group>";
+		};
+		EA5370A61BFCC0A000AD0A0D /* EpubLibrary */ = {
+			isa = PBXGroup;
+			children = (
+				EA5370AC1BFCC10200AD0A0D /* Presenter */,
+				EA5370A71BFCC0B600AD0A0D /* DPBEpubLibraryViewController.h */,
+				EA5370A81BFCC0B600AD0A0D /* DPBEpubLibraryViewController.m */,
+			);
+			path = EpubLibrary;
+			sourceTree = "<group>";
+		};
+		EA5370AC1BFCC10200AD0A0D /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				EA5370AD1BFCC2FA00AD0A0D /* DPBEpubLibraryPresenter.h */,
+				EA5370AE1BFCC2FA00AD0A0D /* DPBEpubLibraryPresenter.m */,
+			);
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 		EAF67FEA1BFC8737003BB06B = {
@@ -457,9 +487,11 @@
 				EA0CFF741BFC9F10002A90BA /* DPBStartCoordinator.m in Sources */,
 				EA5370951BFCA27B00AD0A0D /* DPBLoginViewController.m in Sources */,
 				EAF67FF81BFC8738003BB06B /* main.m in Sources */,
+				EA5370AF1BFCC2FA00AD0A0D /* DPBEpubLibraryPresenter.m in Sources */,
 				EA53709B1BFCA32700AD0A0D /* DPBLoginPresenter.m in Sources */,
 				EAF680311BFC8BCF003BB06B /* DPBConfig.m in Sources */,
 				EAF6802D1BFC8A1A003BB06B /* DPBAppDelegate.m in Sources */,
+				EA5370A91BFCC0B600AD0A0D /* DPBEpubLibraryViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -468,7 +500,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA0CFF751BFC9F10002A90BA /* DPBStartCoordinator.m in Sources */,
+				EA5370AA1BFCC0B600AD0A0D /* DPBEpubLibraryViewController.m in Sources */,
 				EA5370961BFCA27B00AD0A0D /* DPBLoginViewController.m in Sources */,
+				EA5370B01BFCC2FA00AD0A0D /* DPBEpubLibraryPresenter.m in Sources */,
 				EA53709C1BFCA32800AD0A0D /* DPBLoginPresenter.m in Sources */,
 				EAF680321BFC8BCF003BB06B /* DPBConfig.m in Sources */,
 				EAF680111BFC8738003BB06B /* DropboxPubTests.m in Sources */,
@@ -481,7 +515,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA0CFF761BFC9F10002A90BA /* DPBStartCoordinator.m in Sources */,
+				EA5370AB1BFCC0B600AD0A0D /* DPBEpubLibraryViewController.m in Sources */,
 				EA5370971BFCA27B00AD0A0D /* DPBLoginViewController.m in Sources */,
+				EA5370B11BFCC2FA00AD0A0D /* DPBEpubLibraryPresenter.m in Sources */,
 				EA53709D1BFCA32800AD0A0D /* DPBLoginPresenter.m in Sources */,
 				EAF680331BFC8BCF003BB06B /* DPBConfig.m in Sources */,
 				EAF6801C1BFC8738003BB06B /* DropboxPubUITests.m in Sources */,

@@ -20,6 +20,7 @@
 
 - (instancetype)initWithViewController:(UIViewController<DPBLoginPresenterDelegate> *)viewController;
 - (void)viewIsReady;
-- (void)presentLoginViewController;
+- (void)presentDropboxLoginViewController;
+- (void)presentEpubLibraryController;
 
 @end

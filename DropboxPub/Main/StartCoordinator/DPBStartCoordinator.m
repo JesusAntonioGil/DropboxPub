@@ -22,7 +22,7 @@
     [DBSession setSharedSession:dbSession];
 }
 
-- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<NSString *,id> *)options
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
 {
     if ([[DBSession sharedSession] handleOpenURL:url])
     {

@@ -11,6 +11,15 @@
 		EA0CFF741BFC9F10002A90BA /* DPBStartCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = EA0CFF731BFC9F10002A90BA /* DPBStartCoordinator.m */; };
 		EA0CFF751BFC9F10002A90BA /* DPBStartCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = EA0CFF731BFC9F10002A90BA /* DPBStartCoordinator.m */; };
 		EA0CFF761BFC9F10002A90BA /* DPBStartCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = EA0CFF731BFC9F10002A90BA /* DPBStartCoordinator.m */; };
+		EA5370951BFCA27B00AD0A0D /* DPBLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5370941BFCA27B00AD0A0D /* DPBLoginViewController.m */; };
+		EA5370961BFCA27B00AD0A0D /* DPBLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5370941BFCA27B00AD0A0D /* DPBLoginViewController.m */; };
+		EA5370971BFCA27B00AD0A0D /* DPBLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5370941BFCA27B00AD0A0D /* DPBLoginViewController.m */; };
+		EA53709B1BFCA32700AD0A0D /* DPBLoginPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = EA53709A1BFCA32700AD0A0D /* DPBLoginPresenter.m */; };
+		EA53709C1BFCA32800AD0A0D /* DPBLoginPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = EA53709A1BFCA32700AD0A0D /* DPBLoginPresenter.m */; };
+		EA53709D1BFCA32800AD0A0D /* DPBLoginPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = EA53709A1BFCA32700AD0A0D /* DPBLoginPresenter.m */; };
+		EA5370A31BFCB4FF00AD0A0D /* DPBDropboxManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5370A21BFCB4FF00AD0A0D /* DPBDropboxManager.m */; };
+		EA5370A41BFCB4FF00AD0A0D /* DPBDropboxManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5370A21BFCB4FF00AD0A0D /* DPBDropboxManager.m */; };
+		EA5370A51BFCB4FF00AD0A0D /* DPBDropboxManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5370A21BFCB4FF00AD0A0D /* DPBDropboxManager.m */; };
 		EAF67FF81BFC8738003BB06B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EAF67FF71BFC8738003BB06B /* main.m */; };
 		EAF680011BFC8738003BB06B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAF67FFF1BFC8738003BB06B /* Main.storyboard */; };
 		EAF680031BFC8738003BB06B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EAF680021BFC8738003BB06B /* Assets.xcassets */; };
@@ -46,6 +55,12 @@
 		BC9F11D1B6A3B4E1DDAC2DC5 /* libPods-DropboxPub.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DropboxPub.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA0CFF721BFC9F10002A90BA /* DPBStartCoordinator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPBStartCoordinator.h; sourceTree = "<group>"; };
 		EA0CFF731BFC9F10002A90BA /* DPBStartCoordinator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPBStartCoordinator.m; sourceTree = "<group>"; };
+		EA5370931BFCA27B00AD0A0D /* DPBLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPBLoginViewController.h; sourceTree = "<group>"; };
+		EA5370941BFCA27B00AD0A0D /* DPBLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPBLoginViewController.m; sourceTree = "<group>"; };
+		EA5370991BFCA32700AD0A0D /* DPBLoginPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPBLoginPresenter.h; sourceTree = "<group>"; };
+		EA53709A1BFCA32700AD0A0D /* DPBLoginPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPBLoginPresenter.m; sourceTree = "<group>"; };
+		EA5370A11BFCB4FF00AD0A0D /* DPBDropboxManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPBDropboxManager.h; sourceTree = "<group>"; };
+		EA5370A21BFCB4FF00AD0A0D /* DPBDropboxManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPBDropboxManager.m; sourceTree = "<group>"; };
 		EAF67FF31BFC8738003BB06B /* DropboxPub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DropboxPub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAF67FF71BFC8738003BB06B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		EAF680001BFC8738003BB06B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -128,8 +143,45 @@
 		EA5370921BFCA24300AD0A0D /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				EA5370981BFCA31700AD0A0D /* Presenter */,
+				EA5370931BFCA27B00AD0A0D /* DPBLoginViewController.h */,
+				EA5370941BFCA27B00AD0A0D /* DPBLoginViewController.m */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		EA5370981BFCA31700AD0A0D /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				EA5370991BFCA32700AD0A0D /* DPBLoginPresenter.h */,
+				EA53709A1BFCA32700AD0A0D /* DPBLoginPresenter.m */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		EA53709E1BFCB4E900AD0A0D /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				EA53709F1BFCB4E900AD0A0D /* Model */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		EA53709F1BFCB4E900AD0A0D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EA5370A01BFCB4E900AD0A0D /* DropboxManager */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EA5370A01BFCB4E900AD0A0D /* DropboxManager */ = {
+			isa = PBXGroup;
+			children = (
+				EA5370A11BFCB4FF00AD0A0D /* DPBDropboxManager.h */,
+				EA5370A21BFCB4FF00AD0A0D /* DPBDropboxManager.m */,
+			);
+			path = DropboxManager;
 			sourceTree = "<group>";
 		};
 		EAF67FEA1BFC8737003BB06B = {
@@ -159,6 +211,7 @@
 			children = (
 				EAF6802A1BFC8A1A003BB06B /* Main */,
 				EA5370911BFCA24300AD0A0D /* Sections */,
+				EA53709E1BFCB4E900AD0A0D /* Common */,
 				EAF67FFF1BFC8738003BB06B /* Main.storyboard */,
 				EAF680021BFC8738003BB06B /* Assets.xcassets */,
 				EAF680041BFC8738003BB06B /* LaunchScreen.storyboard */,
@@ -400,8 +453,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA5370A31BFCB4FF00AD0A0D /* DPBDropboxManager.m in Sources */,
 				EA0CFF741BFC9F10002A90BA /* DPBStartCoordinator.m in Sources */,
+				EA5370951BFCA27B00AD0A0D /* DPBLoginViewController.m in Sources */,
 				EAF67FF81BFC8738003BB06B /* main.m in Sources */,
+				EA53709B1BFCA32700AD0A0D /* DPBLoginPresenter.m in Sources */,
 				EAF680311BFC8BCF003BB06B /* DPBConfig.m in Sources */,
 				EAF6802D1BFC8A1A003BB06B /* DPBAppDelegate.m in Sources */,
 			);
@@ -412,8 +468,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA0CFF751BFC9F10002A90BA /* DPBStartCoordinator.m in Sources */,
+				EA5370961BFCA27B00AD0A0D /* DPBLoginViewController.m in Sources */,
+				EA53709C1BFCA32800AD0A0D /* DPBLoginPresenter.m in Sources */,
 				EAF680321BFC8BCF003BB06B /* DPBConfig.m in Sources */,
 				EAF680111BFC8738003BB06B /* DropboxPubTests.m in Sources */,
+				EA5370A41BFCB4FF00AD0A0D /* DPBDropboxManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,8 +481,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA0CFF761BFC9F10002A90BA /* DPBStartCoordinator.m in Sources */,
+				EA5370971BFCA27B00AD0A0D /* DPBLoginViewController.m in Sources */,
+				EA53709D1BFCA32800AD0A0D /* DPBLoginPresenter.m in Sources */,
 				EAF680331BFC8BCF003BB06B /* DPBConfig.m in Sources */,
 				EAF6801C1BFC8738003BB06B /* DropboxPubUITests.m in Sources */,
+				EA5370A51BFCB4FF00AD0A0D /* DPBDropboxManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

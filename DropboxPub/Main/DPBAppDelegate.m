@@ -31,9 +31,9 @@
 
 #pragma mark - URL
 
-- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<NSString *,id> *)options
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
 {
-    return [self.startCoordinator application:app openURL:url options:options];
+    return [self.startCoordinator application:application openURL:url sourceApplication:sourceApplication annotation:annotation];
 }
 
 @end

@@ -9,6 +9,9 @@
 #import <Foundation/Foundation.h>
 
 
+typedef void (^DPBDropboxManagerEpubsCompletion)(NSArray *epubs);
+
+
 @interface DPBDropboxManager : NSObject
 
 + (DPBDropboxManager *)shared;
@@ -21,5 +24,8 @@
 - (BOOL)dropboxIsLinked;
 - (void)dropboxLinkFromController:(UIViewController *)viewController;
 - (void)dropboxUnlinkedAll;
+
+//Files
+- (void)loadEpubsWithCompletion:(DPBDropboxManagerEpubsCompletion)completion;
 
 @end

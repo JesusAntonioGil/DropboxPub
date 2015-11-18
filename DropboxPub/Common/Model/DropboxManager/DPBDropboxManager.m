@@ -11,6 +11,13 @@
 #import <DropboxSDK/DropboxSDK.h>
 
 
+@interface DPBDropboxManager  () <DBRestClientDelegate>
+
+@property (strong, nonatomic) DBRestClient *restClient;
+
+@end
+
+
 @implementation DPBDropboxManager
 
 + (DPBDropboxManager *)shared
@@ -23,6 +30,19 @@
     });
     
     return instance;
+}
+
+#pragma mark - ACCESSORS
+
+- (DBRestClient *)restClient
+{
+    if(!_restClient)
+    {
+        _restClient = [[DBRestClient alloc] initWithSession:[DBSession sharedSession]];
+        _restClient.delegate = self;
+    }
+    
+    return _restClient;
 }
 
 #pragma mark - PUBLIC
@@ -54,6 +74,31 @@
 - (void)dropboxUnlinkedAll
 {
     [[DBSession sharedSession] unlinkAll];
+}
+
+#pragma mark - Files
+
+- (void)loadEpubsWithCompletion:(DPBDropboxManagerEpubsCompletion)completion
+{
+    [self.restClient loadMetadata:@"/"];
+}
+
+#pragma mark - PROTOCOLS & DELEGATES
+
+- (void)restClient:(DBRestClient *)client loadedMetadata:(DBMetadata *)metadata
+{
+    if (metadata.isDirectory)
+    {
+        for (DBMetadata *file in metadata.contents)
+        {
+            NSLog(@"	%@", file.filename);
+        }
+    }
+}
+
+- (void)restClient:(DBRestClient *)client loadMetadataFailedWithError:(NSError *)error
+{
+    NSLog(@"Error loading metadata: %@", error);
 }
 
 @end

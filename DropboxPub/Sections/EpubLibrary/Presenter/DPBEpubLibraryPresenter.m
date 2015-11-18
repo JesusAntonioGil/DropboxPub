@@ -34,7 +34,7 @@
 
 - (void)viewIsReady
 {
-    
+    [self getDropboxEpubList];
 }
 
 - (void)logoutDropboxAccount
@@ -45,6 +45,13 @@
     {
         [self.viewController.navigationController dismissViewControllerAnimated:YES completion:nil];
     }
+}
+
+- (void)getDropboxEpubList
+{
+    [[DPBDropboxManager shared] loadEpubsWithCompletion:^(NSArray *epubs) {
+        
+    }];
 }
 
 @end

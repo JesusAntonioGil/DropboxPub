@@ -11,6 +11,8 @@
 
 
 @interface DPBEpubLibraryViewController () <DPBEpubLibraryPresenterDelegate>
+@property (weak, nonatomic) IBOutlet UISegmentedControl *segmentedControl;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @property (strong, nonatomic) DPBEpubLibraryPresenter *presenter;
 
@@ -37,6 +39,11 @@
 - (IBAction)onLogoutButtonTap:(id)sender
 {
     [self.presenter logoutDropboxAccount];
+}
+
+- (IBAction)onSegmentedControlValueChanged:(id)sender
+{
+    NSLog(@"AQUI");
 }
 
 #pragma mark - PROTOCOLS & DELEGATES

@@ -39,14 +39,4 @@
     [self.presenter loginDropbox];
 }
 
-#pragma mark - NOTIFICATIONS
-
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    if([segue.identifier isEqualToString:DPBDropboxBrowserSegueIdentifier])
-    {
-        NSLog(@"AQUI");
-    }
-}
-
 @end

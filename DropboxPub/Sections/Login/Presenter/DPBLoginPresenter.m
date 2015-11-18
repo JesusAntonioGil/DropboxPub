@@ -8,8 +8,6 @@
 
 #import "DPBLoginPresenter.h"
 
-#import <DropboxSDK/DropboxSDK.h>
-
 
 @interface DPBLoginPresenter ()
 
@@ -40,10 +38,7 @@
 
 - (void)loginDropbox
 {
-    if (![[DBSession sharedSession] isLinked])
-    {
-        [[DBSession sharedSession] linkFromController:self.viewController];
-    }
+    
 }
 
 @end

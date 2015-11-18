@@ -7,8 +7,7 @@
 //
 
 #import "DPBStartCoordinator.h"
-
-#import <DropboxSDK/DropboxSDK.h>
+#import "DPBDropboxManager.h"
 
 
 @implementation DPBStartCoordinator
@@ -18,23 +17,12 @@
 - (void)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     //Dropbox
-    DBSession *dbSession = [[DBSession alloc] initWithAppKey:DPBDropbpxAppKey appSecret:DPBDropboxAppSecret root:kDBRootAppFolder];
-    [DBSession setSharedSession:dbSession];
+    [[DPBDropboxManager shared] initDropboxSession];
 }
 
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
 {
-    if ([[DBSession sharedSession] handleOpenURL:url])
-    {
-        if ([[DBSession sharedSession] isLinked])
-        {
-            NSLog(@"App linked successfully!");
-        }
-        
-        return YES;
-    }
-    
-    return NO;
+    return[[DPBDropboxManager shared] handleOpenURL:url];
 }
 
 @end

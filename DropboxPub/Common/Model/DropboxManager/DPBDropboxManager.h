@@ -11,4 +11,14 @@
 
 @interface DPBDropboxManager : NSObject
 
++ (DPBDropboxManager *)shared;
+
+//Configure
+- (void)initDropboxSession;
+- (BOOL)handleOpenURL:(NSURL *)url;
+
+//Login
+- (BOOL)dropboxIsLinked;
+- (void)dropboxLinkFromController:(UIViewController *)viewController;
+
 @end

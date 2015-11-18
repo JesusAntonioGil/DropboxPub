@@ -17,17 +17,40 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xbd-1B-rM4">
-                                <rect key="frame" x="114" y="44" width="92" height="30"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dropbox_icon" translatesAutoresizingMaskIntoConstraints="NO" id="i8n-L3-dPd">
+                                <rect key="frame" x="88" y="35" width="145" height="145"/>
                                 <animations/>
-                                <state key="normal" title="Login"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="145" id="B80-Vg-FXC"/>
+                                    <constraint firstAttribute="width" constant="145" id="SZT-uo-3bE"/>
+                                </constraints>
+                            </imageView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" animating="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="ARP-g6-kLX">
+                                <rect key="frame" x="150" y="193" width="20" height="20"/>
+                                <animations/>
+                                <color key="color" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xbd-1B-rM4">
+                                <rect key="frame" x="81" y="188" width="158" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="158" id="bTv-gC-Ago"/>
+                                    <constraint firstAttribute="height" constant="30" id="xts-02-BfK"/>
+                                </constraints>
+                                <state key="normal" title="Login with Dropbox"/>
                                 <connections>
                                     <action selector="onLoginButtonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="y93-Ay-G3d"/>
                                 </connections>
                             </button>
                         </subviews>
                         <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.34901960784313724" green="0.6588235294117647" blue="0.92156862745098034" alpha="0.34765625" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="i8n-L3-dPd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BVo-f9-Xid"/>
+                            <constraint firstItem="i8n-L3-dPd" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="15" id="C4v-FP-KqN"/>
+                            <constraint firstItem="Xbd-1B-rM4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="IsA-Kl-flX"/>
+                            <constraint firstItem="Xbd-1B-rM4" firstAttribute="top" secondItem="i8n-L3-dPd" secondAttribute="bottom" constant="8" id="Uwz-Qb-7NK"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
@@ -36,4 +59,7 @@
             <point key="canvasLocation" x="239" y="290"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="dropbox_icon" width="256" height="256"/>
+    </resources>
 </document>

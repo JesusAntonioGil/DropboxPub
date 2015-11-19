@@ -191,7 +191,7 @@
                                                         <constraint firstAttribute="height" constant="21" id="PIR-Wo-qPn"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DZh-IP-mdl">
@@ -201,7 +201,7 @@
                                                         <constraint firstAttribute="height" constant="21" id="6kl-sG-Dk7"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -287,6 +287,57 @@
             </objects>
             <point key="canvasLocation" x="658" y="990"/>
         </scene>
+        <!--Epub Viewer View Controller-->
+        <scene sceneID="ZFw-Hl-8Go">
+            <objects>
+                <viewController storyboardIdentifier="DPBEpubViewerViewController" id="wIf-rz-dpL" customClass="DPBEpubViewerViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="z3S-Wb-e87"/>
+                        <viewControllerLayoutGuide type="bottom" id="gD3-PN-ERJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="CDP-BW-fiK">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F6k-ut-cJG">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VgR-oa-bwZ">
+                                        <rect key="frame" x="291" y="26" width="21" height="21"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="21" id="C8f-rd-Zpg"/>
+                                            <constraint firstAttribute="height" constant="21" id="p7C-8t-nvX"/>
+                                        </constraints>
+                                        <state key="normal" image="close_icon"/>
+                                        <connections>
+                                            <action selector="onCloseButtonTap:" destination="wIf-rz-dpL" eventType="touchUpInside" id="Dth-RS-Sid"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <animations/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="0.58823529409999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="VgR-oa-bwZ" secondAttribute="bottom" constant="13" id="L7P-1b-Fsf"/>
+                                    <constraint firstAttribute="trailing" secondItem="VgR-oa-bwZ" secondAttribute="trailing" constant="8" id="W1X-Ue-MWo"/>
+                                    <constraint firstAttribute="height" constant="60" id="wRz-Xa-2Zo"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="F6k-ut-cJG" secondAttribute="trailing" id="Uji-BN-5ai"/>
+                            <constraint firstItem="F6k-ut-cJG" firstAttribute="top" secondItem="CDP-BW-fiK" secondAttribute="top" id="W1l-El-Vtk"/>
+                            <constraint firstItem="F6k-ut-cJG" firstAttribute="leading" secondItem="CDP-BW-fiK" secondAttribute="leading" id="yIz-K6-qgX"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="frH-oR-RoY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1176" y="997"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="dz4-FT-TlS">
             <objects>
@@ -311,6 +362,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="close_icon" width="75" height="75"/>
         <image name="dropbox_icon" width="256" height="256"/>
         <image name="list_icon" width="75" height="47"/>
     </resources>

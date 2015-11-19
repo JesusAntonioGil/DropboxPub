@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <DropboxSDK/DBMetadata.h>
 
 #import "DPBEpubLibraryViewController.h"
 
@@ -30,5 +31,6 @@
 - (void)showOrderActionController;
 - (NSArray *)sortList:(NSArray *)list order:(DPBFileOrder)fileOrder;
 - (void)pushEpubLibraryWithPathDirectory:(NSString *)pathDirectory order:(DPBFileOrder)fileOrder showType:(DPBFileShowType)showType;
+- (void)presentEpubReaderWithMetadata:(DBMetadata *)metadata;
 
 @end

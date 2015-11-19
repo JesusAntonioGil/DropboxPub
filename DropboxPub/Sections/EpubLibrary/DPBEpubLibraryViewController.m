@@ -157,6 +157,10 @@
     {
         [self.presenter pushEpubLibraryWithPathDirectory:metadata.path order:self.fileOrder showType:self.fileShowType];
     }
+    else
+    {
+        [self.presenter presentEpubReaderWithMetadata:metadata];
+    }
 }
 
 @end

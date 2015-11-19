@@ -9,6 +9,7 @@
 #import "DPBEpubLibraryPresenter.h"
 #import "DPBDropboxManager.h"
 #import "DPBEpubLibraryViewController.h"
+#import "DPBEpubViewerViewController.h"
 
 
 @interface DPBEpubLibraryPresenter ()
@@ -119,6 +120,16 @@
     epubLibraryViewController.fileOrder = fileOrder;
     epubLibraryViewController.fileShowType = showType;
     [self.viewController.navigationController pushViewController:epubLibraryViewController animated:YES];
+}
+
+#pragma mark - Epub
+
+- (void)presentEpubReaderWithMetadata:(DBMetadata *)metadata
+{
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+    DPBEpubViewerViewController *epubViewerViewController = [storyboard instantiateViewControllerWithIdentifier:@"DPBEpubViewerViewController"];
+    epubViewerViewController.metadata = metadata;
+    [self.viewController.navigationController presentViewController:epubViewerViewController animated:YES completion:nil];
 }
 
 @end

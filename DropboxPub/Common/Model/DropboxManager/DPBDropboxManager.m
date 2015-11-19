@@ -92,7 +92,7 @@
 - (void)downloadFileWithPath:(NSString *)filePath completion:(DPBDropboxManagerDownloadFileCompletion)completion
 {
     self.downloadCompletion = completion;
-    [self.restClient loadFile:filePath intoPath:[self generateLocalPathWithName:filePath]];
+    [self.restClient loadFile:filePath intoPath:[self generateLocalPathWithName:[filePath getExtensionFileName]]];
 }
 
 #pragma mark - PRIVATE

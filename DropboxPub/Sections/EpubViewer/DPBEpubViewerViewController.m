@@ -13,7 +13,7 @@
 #import <KFEpubContentModel.h>
 
 
-@interface DPBEpubViewerViewController () <DPBEpubViewerPresenterDelegate , KFEpubControllerDelegate>
+@interface DPBEpubViewerViewController () <DPBEpubViewerPresenterDelegate , KFEpubControllerDelegate, UIGestureRecognizerDelegate>
 
 @property (strong, nonatomic) DPBEpubViewerPresenter *presenter;
 @property (strong, nonatomic) KFEpubController *epubController;
@@ -31,8 +31,17 @@
 {
     [super viewDidLoad];
     
+    UISwipeGestureRecognizer *rightSwipeRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(didSwipeRight:)];
+    rightSwipeRecognizer.direction = UISwipeGestureRecognizerDirectionRight;
+    rightSwipeRecognizer.delegate = self;
+    [self.webView addGestureRecognizer:rightSwipeRecognizer];
+    
+    UISwipeGestureRecognizer *leftSwipeRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(didSwipeLeft:)];
+    leftSwipeRecognizer.direction = UISwipeGestureRecognizerDirectionLeft;
+    leftSwipeRecognizer.delegate = self;
+    [self.webView addGestureRecognizer:leftSwipeRecognizer];
+    
     self.presenter = [[DPBEpubViewerPresenter alloc] initWithViewController:self];
-    [self.presenter viewIsReady];
     [self.presenter downloadFileWithMetadata:self.metadata];
 }
 
@@ -60,13 +69,33 @@
     [self.epubController openAsynchronous:YES];
 }
 
+#pragma mark - Gestures
+
+- (void)didSwipeRight:(UIGestureRecognizer *)recognizer
+{
+    if (self.spineIndex > 1)
+    {
+        self.spineIndex--;
+        [self updateContentForSpineIndex:self.spineIndex];
+    }
+}
+
+
+- (void)didSwipeLeft:(UIGestureRecognizer *)recognizer
+{
+    if (self.spineIndex < self.epubContentModel.spine.count)
+    {
+        self.spineIndex++;
+        [self updateContentForSpineIndex:self.spineIndex];
+    }
+}
+
 #pragma mark - Epub content
 
 - (void)updateContentForSpineIndex:(NSUInteger)currentSpineIndex
 {
     NSString *contentFile = self.epubContentModel.manifest[self.epubContentModel.spine[currentSpineIndex]][@"href"];
     NSURL *contentURL = [self.epubController.epubContentBaseURL URLByAppendingPathComponent:contentFile];
-    NSLog(@"content URL :%@", contentURL);
     
     NSURLRequest *request = [[NSURLRequest alloc] initWithURL:contentURL];
     [self.webView loadRequest:request];
@@ -83,25 +112,25 @@
 
 #pragma mark KFEpubControllerDelegate Delegate
 
-
-- (void)epubController:(KFEpubController *)controller willOpenEpub:(NSURL *)epubURL
-{
-    NSLog(@"will open epub");
-}
-
-
 - (void)epubController:(KFEpubController *)controller didOpenEpub:(KFEpubContentModel *)contentModel
 {
-    NSLog(@"opened: %@", contentModel.metaData[@"title"]);
     self.epubContentModel = contentModel;
-    self.spineIndex = 4;
+    self.spineIndex = 1;
     [self updateContentForSpineIndex:self.spineIndex];
 }
 
 
 - (void)epubController:(KFEpubController *)controller didFailWithError:(NSError *)error
 {
-    NSLog(@"epubController:didFailWithError: %@", error.description);
+
+}
+
+#pragma mark - UIGestureRecognizer Delegate
+
+
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer
+{
+    return YES;
 }
 
 @end

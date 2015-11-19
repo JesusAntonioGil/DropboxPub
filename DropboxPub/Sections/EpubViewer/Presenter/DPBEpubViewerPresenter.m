@@ -32,13 +32,6 @@
 
 #pragma mark - PUBLIC
 
-- (void)viewIsReady
-{
-    
-}
-
-#pragma mark - PRIVATE
-
 - (void)downloadFileWithMetadata:(DBMetadata *)metadata
 {
     __weak typeof(self) weakSelf = self;

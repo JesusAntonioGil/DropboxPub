@@ -20,7 +20,6 @@
 @interface DPBEpubViewerPresenter : NSObject
 
 - (instancetype)initWithViewController:(UIViewController<DPBEpubViewerPresenterDelegate> *)viewController;
-- (void)viewIsReady;
 - (void)downloadFileWithMetadata:(DBMetadata *)metadata;
 
 @end

@@ -13,7 +13,9 @@
 
 - (NSString *)getExtensionFileName
 {
-    NSArray *components = [self componentsSeparatedByString:@"."];
+    NSString *folderName = [self getFolderName];
+    
+    NSArray *components = [folderName componentsSeparatedByString:@"."];
     return components.lastObject;
 }
 

@@ -50,6 +50,9 @@
 		EA5370C71BFD258200AD0A0D /* NSDate+DPBExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5370C61BFD258200AD0A0D /* NSDate+DPBExtension.m */; };
 		EA5370C81BFD258200AD0A0D /* NSDate+DPBExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5370C61BFD258200AD0A0D /* NSDate+DPBExtension.m */; };
 		EA5370C91BFD258200AD0A0D /* NSDate+DPBExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5370C61BFD258200AD0A0D /* NSDate+DPBExtension.m */; };
+		EA92A9C31BFE2508003F1221 /* DPBAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = EA92A9C21BFE2508003F1221 /* DPBAlert.m */; };
+		EA92A9C41BFE2508003F1221 /* DPBAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = EA92A9C21BFE2508003F1221 /* DPBAlert.m */; };
+		EA92A9C51BFE2508003F1221 /* DPBAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = EA92A9C21BFE2508003F1221 /* DPBAlert.m */; };
 		EAF67FF81BFC8738003BB06B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EAF67FF71BFC8738003BB06B /* main.m */; };
 		EAF680011BFC8738003BB06B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAF67FFF1BFC8738003BB06B /* Main.storyboard */; };
 		EAF680031BFC8738003BB06B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EAF680021BFC8738003BB06B /* Assets.xcassets */; };
@@ -111,6 +114,8 @@
 		EA5370C01BFD222F00AD0A0D /* NSString+DPBExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+DPBExtension.m"; sourceTree = "<group>"; };
 		EA5370C51BFD258200AD0A0D /* NSDate+DPBExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+DPBExtension.h"; sourceTree = "<group>"; };
 		EA5370C61BFD258200AD0A0D /* NSDate+DPBExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+DPBExtension.m"; sourceTree = "<group>"; };
+		EA92A9C11BFE2508003F1221 /* DPBAlert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPBAlert.h; sourceTree = "<group>"; };
+		EA92A9C21BFE2508003F1221 /* DPBAlert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPBAlert.m; sourceTree = "<group>"; };
 		EAF67FF31BFC8738003BB06B /* DropboxPub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DropboxPub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAF67FF71BFC8738003BB06B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		EAF680001BFC8738003BB06B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -254,6 +259,7 @@
 			isa = PBXGroup;
 			children = (
 				EA5370A01BFCB4E900AD0A0D /* DropboxManager */,
+				EA92A9C01BFE24F8003F1221 /* AlertManager */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -324,6 +330,15 @@
 				EA5370C61BFD258200AD0A0D /* NSDate+DPBExtension.m */,
 			);
 			path = Date;
+			sourceTree = "<group>";
+		};
+		EA92A9C01BFE24F8003F1221 /* AlertManager */ = {
+			isa = PBXGroup;
+			children = (
+				EA92A9C11BFE2508003F1221 /* DPBAlert.h */,
+				EA92A9C21BFE2508003F1221 /* DPBAlert.m */,
+			);
+			path = AlertManager;
 			sourceTree = "<group>";
 		};
 		EAF67FEA1BFC8737003BB06B = {
@@ -598,6 +613,7 @@
 				EA5370A31BFCB4FF00AD0A0D /* DPBDropboxManager.m in Sources */,
 				EA5370C71BFD258200AD0A0D /* NSDate+DPBExtension.m in Sources */,
 				EA0CFF741BFC9F10002A90BA /* DPBStartCoordinator.m in Sources */,
+				EA92A9C31BFE2508003F1221 /* DPBAlert.m in Sources */,
 				EA1E6F161BFDE17E001B9F22 /* DPBEpubLibraryCollectionViewCell.m in Sources */,
 				EA1E6F111BFDE115001B9F22 /* DPBEpubLibraryCollectionView.m in Sources */,
 				EA5370C11BFD222F00AD0A0D /* NSString+DPBExtension.m in Sources */,
@@ -632,6 +648,7 @@
 				EA1E6F171BFDE17E001B9F22 /* DPBEpubLibraryCollectionViewCell.m in Sources */,
 				EAF680111BFC8738003BB06B /* DropboxPubTests.m in Sources */,
 				EA5370B61BFCD29000AD0A0D /* DPBEpubLibraryTableViewCell.m in Sources */,
+				EA92A9C41BFE2508003F1221 /* DPBAlert.m in Sources */,
 				EA5370A41BFCB4FF00AD0A0D /* DPBDropboxManager.m in Sources */,
 				EA1E6F121BFDE115001B9F22 /* DPBEpubLibraryCollectionView.m in Sources */,
 				EA1E6F231BFE0BFD001B9F22 /* DPBEpubViewerPresenter.m in Sources */,
@@ -655,6 +672,7 @@
 				EA1E6F181BFDE17E001B9F22 /* DPBEpubLibraryCollectionViewCell.m in Sources */,
 				EAF6801C1BFC8738003BB06B /* DropboxPubUITests.m in Sources */,
 				EA5370B71BFCD29000AD0A0D /* DPBEpubLibraryTableViewCell.m in Sources */,
+				EA92A9C51BFE2508003F1221 /* DPBAlert.m in Sources */,
 				EA5370A51BFCB4FF00AD0A0D /* DPBDropboxManager.m in Sources */,
 				EA1E6F131BFDE115001B9F22 /* DPBEpubLibraryCollectionView.m in Sources */,
 				EA1E6F241BFE0BFD001B9F22 /* DPBEpubViewerPresenter.m in Sources */,

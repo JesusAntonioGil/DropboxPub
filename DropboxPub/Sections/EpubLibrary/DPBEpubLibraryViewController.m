@@ -139,8 +139,17 @@
 
 - (void)presenterFileList:(NSArray *)files error:(NSError *)error
 {
-    self.files = files;
-    [self sortFileList:files];
+    if(!error)
+    {
+        self.files = files;
+        [self sortFileList:files];
+    }
+    else
+    {
+        [self.tableRefreshControl endRefreshing];
+        [self.collectionRefreshControl endRefreshing];
+        [[DPBAlert defaultAlert] alert:error.description viewController:self];
+    }
 }
 
 - (void)presenterOrderList:(NSInteger)order

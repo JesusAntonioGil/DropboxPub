@@ -106,8 +106,15 @@
 
 - (void)presenterDownloadEpubWithPath:(NSString *)localPath contentType:(NSString *)contentType metadata:(DBMetadata *)metadata error:(NSError *)error
 {
-    self.metadata = metadata;
-    [self createEpubControllerWithLocalPath:localPath];
+    if(!error)
+    {
+        self.metadata = metadata;
+        [self createEpubControllerWithLocalPath:localPath];
+    }
+    else
+    {
+        [[DPBAlert defaultAlert] alert:error.description viewController:self];
+    }
 }
 
 #pragma mark KFEpubControllerDelegate Delegate
@@ -122,7 +129,7 @@
 
 - (void)epubController:(KFEpubController *)controller didFailWithError:(NSError *)error
 {
-
+    [[DPBAlert defaultAlert] alert:error.description viewController:self];
 }
 
 #pragma mark - UIGestureRecognizer Delegate

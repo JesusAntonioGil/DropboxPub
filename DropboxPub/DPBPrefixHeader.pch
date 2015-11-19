@@ -14,5 +14,6 @@
 #import "DPBConfig.h"
 #import "NSString+DPBExtension.h"
 #import "NSDate+DPBExtension.h"
+#import "DPBAlert.h"
 
 #endif /* DPBPrefixHeader_pch */

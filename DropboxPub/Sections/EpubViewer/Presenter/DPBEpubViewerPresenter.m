@@ -7,6 +7,7 @@
 //
 
 #import "DPBEpubViewerPresenter.h"
+#import "DPBDropboxManager.h"
 
 
 @interface DPBEpubViewerPresenter ()
@@ -34,6 +35,17 @@
 - (void)viewIsReady
 {
     
+}
+
+#pragma mark - PRIVATE
+
+- (void)downloadFileWithMetadata:(DBMetadata *)metadata
+{
+    __weak typeof(self) weakSelf = self;
+    [[DPBDropboxManager shared] downloadFileWithPath:metadata.path completion:^(NSString *localPath, NSString *contentType, DBMetadata *metadata, NSError *error) {
+        __strong typeof(self) strongSelf = weakSelf;
+        [strongSelf.viewController presenterDownloadEpubWithPath:localPath contentType:contentType metadata:metadata error:error];
+    }];
 }
 
 @end

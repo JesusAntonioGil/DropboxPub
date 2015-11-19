@@ -7,10 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <UIKit/UIKit.h>
+#import <DropboxSDK/DBMetadata.h>
 
 
 @protocol DPBEpubViewerPresenterDelegate <NSObject>
+
+- (void)presenterDownloadEpubWithPath:(NSString *)localPath contentType:(NSString *)contentType metadata:(DBMetadata *)metadata error:(NSError *)error;
 
 @end
 
@@ -19,5 +21,6 @@
 
 - (instancetype)initWithViewController:(UIViewController<DPBEpubViewerPresenterDelegate> *)viewController;
 - (void)viewIsReady;
+- (void)downloadFileWithMetadata:(DBMetadata *)metadata;
 
 @end

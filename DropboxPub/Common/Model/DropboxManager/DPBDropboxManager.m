@@ -99,7 +99,7 @@
 
 - (NSString *)generateLocalPathWithName:(NSString *)name
 {
-    NSString *localDir = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
+    NSString *localDir = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
     return [localDir stringByAppendingPathComponent:name];
 }
 

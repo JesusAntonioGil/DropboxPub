@@ -57,7 +57,10 @@
 
 - (BOOL)handleOpenURL:(NSURL *)url
 {
-    return [[DBSession sharedSession] handleOpenURL:url];
+    if([[DBSession sharedSession] handleOpenURL:url])
+        if([self dropboxIsLinked]) return YES;
+    
+    return NO;
 }
 
 #pragma mark - Login

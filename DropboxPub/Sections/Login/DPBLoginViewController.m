@@ -24,6 +24,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(enterForegroundnotification) name:UIApplicationWillEnterForegroundNotification object:[UIApplication sharedApplication]];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -38,6 +40,11 @@
     [super didReceiveMemoryWarning];
 }
 
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
 #pragma mark - ACCESSORS
 
 - (DPBLoginPresenter *)presenter
@@ -48,6 +55,16 @@
     }
     
     return _presenter;
+}
+
+#pragma mark - NOTIFICATIONS
+
+- (void)enterForegroundnotification
+{
+    self.activityIndicator.hidden = NO;
+    self.loginButton.hidden = YES;
+    
+    [self.presenter performSelector:@selector(presentEpubLibraryController) withObject:nil afterDelay:1.0];
 }
 
 #pragma mark - ACTIONS

@@ -43,16 +43,27 @@
     {
         [[DPBDropboxManager shared] dropboxLinkFromController:self.viewController];
     }
+    else
+    {
+        [self.viewController presenterDropboxLinked:[[DPBDropboxManager shared] dropboxIsLinked]];
+    }
 }
 
 #pragma mark - PRIVATE
 
 - (void)presentEpubLibraryController
 {
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
-    UINavigationController *epubLibraryNavigationController = [storyboard instantiateViewControllerWithIdentifier:@"DPBEpubLibraryNavigationController"];
-    epubLibraryNavigationController.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
-    [self.viewController presentViewController:epubLibraryNavigationController animated:YES completion:nil];
+    if([[DPBDropboxManager shared] dropboxIsLinked])
+    {
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+        UINavigationController *epubLibraryNavigationController = [storyboard instantiateViewControllerWithIdentifier:@"DPBEpubLibraryNavigationController"];
+        epubLibraryNavigationController.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+        [self.viewController presentViewController:epubLibraryNavigationController animated:YES completion:nil];
+    }
+    else
+    {
+        [self.viewController presenterDropboxLinked:[[DPBDropboxManager shared] dropboxIsLinked]];
+    }
 }
 
 @end

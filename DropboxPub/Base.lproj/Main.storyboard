@@ -94,7 +94,7 @@
                                     <action selector="onSegmentedControlValueChanged:" destination="av7-Aq-b5l" eventType="valueChanged" id="Uuu-6Z-Z7Z"/>
                                 </connections>
                             </segmentedControl>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="G4l-WZ-EwB">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="G4l-WZ-EwB" customClass="DPBEpubLibraryTableView">
                                 <rect key="frame" x="0.0" y="44" width="320" height="420"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -156,10 +156,6 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
-                                <connections>
-                                    <outlet property="dataSource" destination="av7-Aq-b5l" id="9k9-UD-djE"/>
-                                    <outlet property="delegate" destination="av7-Aq-b5l" id="Sws-Jv-quw"/>
-                                </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g3A-Ik-df6">
                                 <rect key="frame" x="0.0" y="464" width="320" height="40"/>
@@ -209,7 +205,7 @@
                         <outlet property="logoutHeightConstraint" destination="uZG-Tv-iUk" id="QDe-Dv-0GQ"/>
                         <outlet property="segmentedControl" destination="kvI-dg-80I" id="nfD-ZF-lar"/>
                         <outlet property="segmentedHeightConstraint" destination="O4h-oW-LyM" id="ODD-mH-bQ0"/>
-                        <outlet property="tableView" destination="G4l-WZ-EwB" id="3bc-T7-lw0"/>
+                        <outlet property="tableView" destination="G4l-WZ-EwB" id="qbu-eY-WtC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fRG-YF-6xc" userLabel="First Responder" sceneMemberID="firstResponder"/>

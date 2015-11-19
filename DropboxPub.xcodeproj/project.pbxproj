@@ -11,6 +11,9 @@
 		EA0CFF741BFC9F10002A90BA /* DPBStartCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = EA0CFF731BFC9F10002A90BA /* DPBStartCoordinator.m */; };
 		EA0CFF751BFC9F10002A90BA /* DPBStartCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = EA0CFF731BFC9F10002A90BA /* DPBStartCoordinator.m */; };
 		EA0CFF761BFC9F10002A90BA /* DPBStartCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = EA0CFF731BFC9F10002A90BA /* DPBStartCoordinator.m */; };
+		EA1E6F0B1BFDD9D2001B9F22 /* DPBEpubLibraryTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA1E6F0A1BFDD9D2001B9F22 /* DPBEpubLibraryTableView.m */; };
+		EA1E6F0C1BFDD9D2001B9F22 /* DPBEpubLibraryTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA1E6F0A1BFDD9D2001B9F22 /* DPBEpubLibraryTableView.m */; };
+		EA1E6F0D1BFDD9D2001B9F22 /* DPBEpubLibraryTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA1E6F0A1BFDD9D2001B9F22 /* DPBEpubLibraryTableView.m */; };
 		EA5370951BFCA27B00AD0A0D /* DPBLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5370941BFCA27B00AD0A0D /* DPBLoginViewController.m */; };
 		EA5370961BFCA27B00AD0A0D /* DPBLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5370941BFCA27B00AD0A0D /* DPBLoginViewController.m */; };
 		EA5370971BFCA27B00AD0A0D /* DPBLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5370941BFCA27B00AD0A0D /* DPBLoginViewController.m */; };
@@ -70,6 +73,8 @@
 		BC9F11D1B6A3B4E1DDAC2DC5 /* libPods-DropboxPub.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DropboxPub.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA0CFF721BFC9F10002A90BA /* DPBStartCoordinator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPBStartCoordinator.h; sourceTree = "<group>"; };
 		EA0CFF731BFC9F10002A90BA /* DPBStartCoordinator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPBStartCoordinator.m; sourceTree = "<group>"; };
+		EA1E6F091BFDD9D2001B9F22 /* DPBEpubLibraryTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPBEpubLibraryTableView.h; sourceTree = "<group>"; };
+		EA1E6F0A1BFDD9D2001B9F22 /* DPBEpubLibraryTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPBEpubLibraryTableView.m; sourceTree = "<group>"; };
 		EA5370931BFCA27B00AD0A0D /* DPBLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPBLoginViewController.h; sourceTree = "<group>"; };
 		EA5370941BFCA27B00AD0A0D /* DPBLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPBLoginViewController.m; sourceTree = "<group>"; };
 		EA5370991BFCA32700AD0A0D /* DPBLoginPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPBLoginPresenter.h; sourceTree = "<group>"; };
@@ -234,6 +239,8 @@
 		EA5370B21BFCD27000AD0A0D /* TableCell */ = {
 			isa = PBXGroup;
 			children = (
+				EA1E6F091BFDD9D2001B9F22 /* DPBEpubLibraryTableView.h */,
+				EA1E6F0A1BFDD9D2001B9F22 /* DPBEpubLibraryTableView.m */,
 				EA5370B31BFCD29000AD0A0D /* DPBEpubLibraryTableViewCell.h */,
 				EA5370B41BFCD29000AD0A0D /* DPBEpubLibraryTableViewCell.m */,
 			);
@@ -546,6 +553,7 @@
 				EA5370AF1BFCC2FA00AD0A0D /* DPBEpubLibraryPresenter.m in Sources */,
 				EA53709B1BFCA32700AD0A0D /* DPBLoginPresenter.m in Sources */,
 				EAF680311BFC8BCF003BB06B /* DPBConfig.m in Sources */,
+				EA1E6F0B1BFDD9D2001B9F22 /* DPBEpubLibraryTableView.m in Sources */,
 				EAF6802D1BFC8A1A003BB06B /* DPBAppDelegate.m in Sources */,
 				EA5370A91BFCC0B600AD0A0D /* DPBEpubLibraryViewController.m in Sources */,
 			);
@@ -557,6 +565,7 @@
 			files = (
 				EA5370C81BFD258200AD0A0D /* NSDate+DPBExtension.m in Sources */,
 				EA0CFF751BFC9F10002A90BA /* DPBStartCoordinator.m in Sources */,
+				EA1E6F0C1BFDD9D2001B9F22 /* DPBEpubLibraryTableView.m in Sources */,
 				EA5370AA1BFCC0B600AD0A0D /* DPBEpubLibraryViewController.m in Sources */,
 				EA5370961BFCA27B00AD0A0D /* DPBLoginViewController.m in Sources */,
 				EA5370B01BFCC2FA00AD0A0D /* DPBEpubLibraryPresenter.m in Sources */,
@@ -575,6 +584,7 @@
 			files = (
 				EA5370C91BFD258200AD0A0D /* NSDate+DPBExtension.m in Sources */,
 				EA0CFF761BFC9F10002A90BA /* DPBStartCoordinator.m in Sources */,
+				EA1E6F0D1BFDD9D2001B9F22 /* DPBEpubLibraryTableView.m in Sources */,
 				EA5370AB1BFCC0B600AD0A0D /* DPBEpubLibraryViewController.m in Sources */,
 				EA5370971BFCA27B00AD0A0D /* DPBLoginViewController.m in Sources */,
 				EA5370B11BFCC2FA00AD0A0D /* DPBEpubLibraryPresenter.m in Sources */,

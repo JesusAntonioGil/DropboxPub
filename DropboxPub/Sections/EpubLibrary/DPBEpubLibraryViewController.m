@@ -8,13 +8,14 @@
 
 #import "DPBEpubLibraryViewController.h"
 #import "DPBEpubLibraryPresenter.h"
+#import "DPBEpubLibraryTableView.h"
 #import "DPBEpubLibraryTableViewCell.h"
 
 
-@interface DPBEpubLibraryViewController () <DPBEpubLibraryPresenterDelegate, UITableViewDelegate, UITableViewDataSource>
+@interface DPBEpubLibraryViewController () <DPBEpubLibraryPresenterDelegate, DPBEpubLibraryTableViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UISegmentedControl *segmentedControl;
-@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet DPBEpubLibraryTableView *tableView;
 @property (weak, nonatomic) IBOutlet UIButton *listButton;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *segmentedHeightConstraint;
 @property (weak, nonatomic) IBOutlet UIButton *logoutButton;
@@ -34,6 +35,8 @@
     [super viewDidLoad];
     
     [self customizeView];
+    [self addRefreshControlToView];
+    self.tableView.epubLibraryTableViewDelegate = self;
     
     self.presenter = [[DPBEpubLibraryPresenter alloc] initWithViewController:self];
     self.presenter.pathDirectory = self.pathDirectory;
@@ -80,11 +83,6 @@
 {
     self.title = [self.pathDirectory getFolderName];
     
-    self.refreshControl = [[UIRefreshControl alloc] init];
-    [self.refreshControl addTarget:self action:@selector(refreshControlValueChanged) forControlEvents:UIControlEventValueChanged];
-    [self.tableView addSubview:self.refreshControl];
-    [self.refreshControl beginRefreshing];
-    
     if(self.navigationController.viewControllers.firstObject != self)
     {
         self.segmentedHeightConstraint.constant = 0.0f;
@@ -95,6 +93,16 @@
     }
 }
 
+#pragma mark - UIRefreshControl
+
+- (void)addRefreshControlToView
+{
+    self.refreshControl = [[UIRefreshControl alloc] init];
+    [self.refreshControl addTarget:self action:@selector(refreshControlValueChanged) forControlEvents:UIControlEventValueChanged];
+    [self.tableView addSubview:self.refreshControl];
+    [self.refreshControl beginRefreshing];
+}
+
 - (void)refreshControlValueChanged
 {
     [self.presenter getDropboxFileListFromPathDirectory:self.pathDirectory];
@@ -102,9 +110,8 @@
 
 - (void)sortFileList:(NSArray *)files
 {
-    self.files = [self.presenter sortList:files order:self.fileOrder];
+    self.tableView.files = [self.presenter sortList:files order:self.fileOrder];
     [self.refreshControl endRefreshing];
-    [self.tableView reloadData];
 }
 
 #pragma mark - PROTOCOLS & DELEGATES
@@ -121,37 +128,10 @@
     [self sortFileList:self.files];
 }
 
-#pragma mark - UITableView Delegate
+#pragma mark - DPBEpubLibraryTableView Delegate
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+- (void)didSelectMetadata:(DBMetadata *)metadata
 {
-    return self.files.count;
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    DPBEpubLibraryTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"DPBEpubLibraryTableViewCell"];
-    if (cell == nil)
-    {
-        NSArray *topLevelObjects = [[NSBundle mainBundle] loadNibNamed:@"DPBEpubLibraryTableViewCell" owner:self options:nil];
-        cell = [topLevelObjects objectAtIndex:0];
-    }
-    
-    cell.metadata = self.files[indexPath.row];
-    
-    return cell;
-}
-
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    return 60.0f;
-}
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    
-    DBMetadata *metadata = self.files[indexPath.row];
     if(metadata.isDirectory)
     {
         [self.presenter pushEpubLibraryWithPathDirectory:metadata.path order:self.fileOrder];

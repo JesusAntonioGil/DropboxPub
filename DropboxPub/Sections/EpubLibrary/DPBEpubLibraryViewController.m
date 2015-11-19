@@ -9,13 +9,14 @@
 #import "DPBEpubLibraryViewController.h"
 #import "DPBEpubLibraryPresenter.h"
 #import "DPBEpubLibraryTableView.h"
-#import "DPBEpubLibraryTableViewCell.h"
+#import "DPBEpubLibraryCollectionView.h"
 
 
-@interface DPBEpubLibraryViewController () <DPBEpubLibraryPresenterDelegate, DPBEpubLibraryTableViewDelegate>
+@interface DPBEpubLibraryViewController () <DPBEpubLibraryPresenterDelegate, DPBEpubLibraryTableViewDelegate, DPBEpubLibraryCollectionViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UISegmentedControl *segmentedControl;
 @property (weak, nonatomic) IBOutlet DPBEpubLibraryTableView *tableView;
+@property (weak, nonatomic) IBOutlet DPBEpubLibraryCollectionView *collectionView;
 @property (weak, nonatomic) IBOutlet UIButton *listButton;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *segmentedHeightConstraint;
 @property (weak, nonatomic) IBOutlet UIButton *logoutButton;
@@ -37,6 +38,7 @@
     [self customizeView];
     [self addRefreshControlToView];
     self.tableView.epubLibraryTableViewDelegate = self;
+    self.collectionView.epubLibraryCollectionViewDelegate = self;
     
     self.presenter = [[DPBEpubLibraryPresenter alloc] initWithViewController:self];
     self.presenter.pathDirectory = self.pathDirectory;
@@ -100,6 +102,7 @@
     self.refreshControl = [[UIRefreshControl alloc] init];
     [self.refreshControl addTarget:self action:@selector(refreshControlValueChanged) forControlEvents:UIControlEventValueChanged];
     [self.tableView addSubview:self.refreshControl];
+    [self.collectionView addSubview:self.refreshControl];
     [self.refreshControl beginRefreshing];
 }
 
@@ -110,7 +113,9 @@
 
 - (void)sortFileList:(NSArray *)files
 {
-    self.tableView.files = [self.presenter sortList:files order:self.fileOrder];
+    NSArray *sortedFiles = [self.presenter sortList:files order:self.fileOrder];
+    self.tableView.files = sortedFiles;
+    self.collectionView.files = sortedFiles;
     [self.refreshControl endRefreshing];
 }
 
@@ -129,7 +134,7 @@
     [self sortFileList:self.files];
 }
 
-#pragma mark - DPBEpubLibraryTableView Delegate
+#pragma mark - DPBEpubLibraryTableView & DPBEpubLibraryCollectionView Delegate
 
 - (void)didSelectMetadata:(DBMetadata *)metadata
 {

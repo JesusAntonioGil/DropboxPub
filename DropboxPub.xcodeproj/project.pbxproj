@@ -14,6 +14,12 @@
 		EA1E6F0B1BFDD9D2001B9F22 /* DPBEpubLibraryTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA1E6F0A1BFDD9D2001B9F22 /* DPBEpubLibraryTableView.m */; };
 		EA1E6F0C1BFDD9D2001B9F22 /* DPBEpubLibraryTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA1E6F0A1BFDD9D2001B9F22 /* DPBEpubLibraryTableView.m */; };
 		EA1E6F0D1BFDD9D2001B9F22 /* DPBEpubLibraryTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA1E6F0A1BFDD9D2001B9F22 /* DPBEpubLibraryTableView.m */; };
+		EA1E6F111BFDE115001B9F22 /* DPBEpubLibraryCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA1E6F101BFDE115001B9F22 /* DPBEpubLibraryCollectionView.m */; };
+		EA1E6F121BFDE115001B9F22 /* DPBEpubLibraryCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA1E6F101BFDE115001B9F22 /* DPBEpubLibraryCollectionView.m */; };
+		EA1E6F131BFDE115001B9F22 /* DPBEpubLibraryCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA1E6F101BFDE115001B9F22 /* DPBEpubLibraryCollectionView.m */; };
+		EA1E6F161BFDE17E001B9F22 /* DPBEpubLibraryCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EA1E6F151BFDE17E001B9F22 /* DPBEpubLibraryCollectionViewCell.m */; };
+		EA1E6F171BFDE17E001B9F22 /* DPBEpubLibraryCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EA1E6F151BFDE17E001B9F22 /* DPBEpubLibraryCollectionViewCell.m */; };
+		EA1E6F181BFDE17E001B9F22 /* DPBEpubLibraryCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EA1E6F151BFDE17E001B9F22 /* DPBEpubLibraryCollectionViewCell.m */; };
 		EA5370951BFCA27B00AD0A0D /* DPBLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5370941BFCA27B00AD0A0D /* DPBLoginViewController.m */; };
 		EA5370961BFCA27B00AD0A0D /* DPBLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5370941BFCA27B00AD0A0D /* DPBLoginViewController.m */; };
 		EA5370971BFCA27B00AD0A0D /* DPBLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5370941BFCA27B00AD0A0D /* DPBLoginViewController.m */; };
@@ -75,6 +81,10 @@
 		EA0CFF731BFC9F10002A90BA /* DPBStartCoordinator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPBStartCoordinator.m; sourceTree = "<group>"; };
 		EA1E6F091BFDD9D2001B9F22 /* DPBEpubLibraryTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPBEpubLibraryTableView.h; sourceTree = "<group>"; };
 		EA1E6F0A1BFDD9D2001B9F22 /* DPBEpubLibraryTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPBEpubLibraryTableView.m; sourceTree = "<group>"; };
+		EA1E6F0F1BFDE115001B9F22 /* DPBEpubLibraryCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPBEpubLibraryCollectionView.h; sourceTree = "<group>"; };
+		EA1E6F101BFDE115001B9F22 /* DPBEpubLibraryCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPBEpubLibraryCollectionView.m; sourceTree = "<group>"; };
+		EA1E6F141BFDE17E001B9F22 /* DPBEpubLibraryCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPBEpubLibraryCollectionViewCell.h; sourceTree = "<group>"; };
+		EA1E6F151BFDE17E001B9F22 /* DPBEpubLibraryCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPBEpubLibraryCollectionViewCell.m; sourceTree = "<group>"; };
 		EA5370931BFCA27B00AD0A0D /* DPBLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPBLoginViewController.h; sourceTree = "<group>"; };
 		EA5370941BFCA27B00AD0A0D /* DPBLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPBLoginViewController.m; sourceTree = "<group>"; };
 		EA5370991BFCA32700AD0A0D /* DPBLoginPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPBLoginPresenter.h; sourceTree = "<group>"; };
@@ -162,6 +172,17 @@
 			path = StartCoordinator;
 			sourceTree = "<group>";
 		};
+		EA1E6F0E1BFDE0F2001B9F22 /* CollectionCell */ = {
+			isa = PBXGroup;
+			children = (
+				EA1E6F0F1BFDE115001B9F22 /* DPBEpubLibraryCollectionView.h */,
+				EA1E6F101BFDE115001B9F22 /* DPBEpubLibraryCollectionView.m */,
+				EA1E6F141BFDE17E001B9F22 /* DPBEpubLibraryCollectionViewCell.h */,
+				EA1E6F151BFDE17E001B9F22 /* DPBEpubLibraryCollectionViewCell.m */,
+			);
+			path = CollectionCell;
+			sourceTree = "<group>";
+		};
 		EA5370911BFCA24300AD0A0D /* Sections */ = {
 			isa = PBXGroup;
 			children = (
@@ -223,6 +244,7 @@
 				EA5370A71BFCC0B600AD0A0D /* DPBEpubLibraryViewController.h */,
 				EA5370A81BFCC0B600AD0A0D /* DPBEpubLibraryViewController.m */,
 				EA5370B21BFCD27000AD0A0D /* TableCell */,
+				EA1E6F0E1BFDE0F2001B9F22 /* CollectionCell */,
 			);
 			path = EpubLibrary;
 			sourceTree = "<group>";
@@ -546,6 +568,8 @@
 				EA5370A31BFCB4FF00AD0A0D /* DPBDropboxManager.m in Sources */,
 				EA5370C71BFD258200AD0A0D /* NSDate+DPBExtension.m in Sources */,
 				EA0CFF741BFC9F10002A90BA /* DPBStartCoordinator.m in Sources */,
+				EA1E6F161BFDE17E001B9F22 /* DPBEpubLibraryCollectionViewCell.m in Sources */,
+				EA1E6F111BFDE115001B9F22 /* DPBEpubLibraryCollectionView.m in Sources */,
 				EA5370C11BFD222F00AD0A0D /* NSString+DPBExtension.m in Sources */,
 				EA5370951BFCA27B00AD0A0D /* DPBLoginViewController.m in Sources */,
 				EAF67FF81BFC8738003BB06B /* main.m in Sources */,
@@ -572,9 +596,11 @@
 				EA5370C21BFD222F00AD0A0D /* NSString+DPBExtension.m in Sources */,
 				EA53709C1BFCA32800AD0A0D /* DPBLoginPresenter.m in Sources */,
 				EAF680321BFC8BCF003BB06B /* DPBConfig.m in Sources */,
+				EA1E6F171BFDE17E001B9F22 /* DPBEpubLibraryCollectionViewCell.m in Sources */,
 				EAF680111BFC8738003BB06B /* DropboxPubTests.m in Sources */,
 				EA5370B61BFCD29000AD0A0D /* DPBEpubLibraryTableViewCell.m in Sources */,
 				EA5370A41BFCB4FF00AD0A0D /* DPBDropboxManager.m in Sources */,
+				EA1E6F121BFDE115001B9F22 /* DPBEpubLibraryCollectionView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -591,9 +617,11 @@
 				EA5370C31BFD222F00AD0A0D /* NSString+DPBExtension.m in Sources */,
 				EA53709D1BFCA32800AD0A0D /* DPBLoginPresenter.m in Sources */,
 				EAF680331BFC8BCF003BB06B /* DPBConfig.m in Sources */,
+				EA1E6F181BFDE17E001B9F22 /* DPBEpubLibraryCollectionViewCell.m in Sources */,
 				EAF6801C1BFC8738003BB06B /* DropboxPubUITests.m in Sources */,
 				EA5370B71BFCD29000AD0A0D /* DPBEpubLibraryTableViewCell.m in Sources */,
 				EA5370A51BFCB4FF00AD0A0D /* DPBDropboxManager.m in Sources */,
+				EA1E6F131BFDE115001B9F22 /* DPBEpubLibraryCollectionView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

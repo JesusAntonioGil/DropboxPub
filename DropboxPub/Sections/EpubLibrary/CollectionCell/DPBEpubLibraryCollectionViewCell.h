@@ -1,8 +1,8 @@
 //
-//  DPBEpubLibraryTableViewCell.h
+//  DPBEpubLibraryCollectionViewCell.h
 //  DropboxPub
 //
-//  Created by Jesus Antonio Gil on 18/11/15.
+//  Created by Jesus Antonio Gil on 19/11/15.
 //  Copyright © 2015 Jesus Antonio Gil. All rights reserved.
 //
 
@@ -10,7 +10,7 @@
 #import <DropboxSDK/DBMetadata.h>
 
 
-@interface DPBEpubLibraryTableViewCell : UITableViewCell
+@interface DPBEpubLibraryCollectionViewCell : UICollectionViewCell
 
 @property (strong, nonatomic) DBMetadata *metadata;
 

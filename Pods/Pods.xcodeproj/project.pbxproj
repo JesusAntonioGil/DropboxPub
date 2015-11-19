@@ -7,50 +7,50 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		007B402DA008811831DDDF5BD8B1328A /* NSString+DDXML.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C49D9750252FE1BAB031232B5EB82FB /* NSString+DDXML.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		07E4BBB4F293B917F96AFAF63561A9E5 /* SSZipArchive.m in Sources */ = {isa = PBXBuildFile; fileRef = FC005FADEE6FB3BA930DD47AAE19373D /* SSZipArchive.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		0D428FC430478897B68BD7697B558D11 /* KFEpubExtractor.h in Headers */ = {isa = PBXBuildFile; fileRef = 1EEA1399D82AF48E8437C7A6CE4B6700 /* KFEpubExtractor.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0F90CA348D4681463F7F10045B9EA3B1 /* KFEpubContentModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 7E0D8F44349573065FA8BA4DF9245072 /* KFEpubContentModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		12BF45EB00C4D61C0E588E9D4E93E3A0 /* SSZipArchive.h in Headers */ = {isa = PBXBuildFile; fileRef = D5B5110724B1BA55B111A2463C21BDA4 /* SSZipArchive.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1A784B053ADD0B802B418C0E0CA21A36 /* mztools.c in Sources */ = {isa = PBXBuildFile; fileRef = 1BC6873CC1E6E9716EAC3B1722085B4F /* mztools.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		1E0CBE3EEBE5DBCA855CD3E7B9D3728C /* DDXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = DEA9A31C8655BAD0E0A9204C915E9715 /* DDXMLNode.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		3121B16CA0A23E99412C02A6A2A1A04A /* KFEpubKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F8AB99B7423623B59161455F833EA5D /* KFEpubKit.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		3414840F2A9D22393CE8B358F942E5F1 /* DDXMLElementAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 02D6C5A05BBB2AD6E225F86F1CE22A6A /* DDXMLElementAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		38DBA423614D5E62F54A92C1CE5E27AE /* KFEpubExtractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 41E80B73AA0F86A4C271CE2132F17D2F /* KFEpubExtractor.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		41AD502809E613429C60CA260A4E3CC9 /* Common.h in Headers */ = {isa = PBXBuildFile; fileRef = BEECBDBF22AFA7F8DDC8C87BA19EE9FF /* Common.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		47FE046FCB032FEA08B964283F2FC85E /* Pods-DropboxPub-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F0DBA941E673BCCFFE25B54DDB11C4 /* Pods-DropboxPub-dummy.m */; };
-		4FF751DCFAC3B937EA122F83C0AEF51A /* DDXMLDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 610D8B2D7DDF5AFDF4FBE2DAE4944479 /* DDXMLDocument.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		55C7656F5A27DF902F1515235394B696 /* KFEpubParser.m in Sources */ = {isa = PBXBuildFile; fileRef = FF7CDEF00F8E723C70209739A2FAE7AD /* KFEpubParser.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		558CB3643A06BB1A2298490CAAA6A8F8 /* KFEpubParser.m in Sources */ = {isa = PBXBuildFile; fileRef = FF7CDEF00F8E723C70209739A2FAE7AD /* KFEpubParser.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		5878C89F4CE9F29D8F8D7A790386228E /* DDXMLElementAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 32FEEEA3705E385B64EB09ABEA491D72 /* DDXMLElementAdditions.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		5D1F4B939D3240BCFB88C9F5909FDC35 /* DDXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = DEA9A31C8655BAD0E0A9204C915E9715 /* DDXMLNode.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		6A38A8DF40E26F7FC8E124C3DD1D0E49 /* mztools.c in Sources */ = {isa = PBXBuildFile; fileRef = 1BC6873CC1E6E9716EAC3B1722085B4F /* mztools.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		6DC2E186FA3291F32E21C8E4AF06EABD /* KissXML-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 47D8662668E3B5B69B39A10ACC21B73D /* KissXML-dummy.m */; };
 		7239576781387D9F6340C4F9B272004B /* NSString+DDXML.h in Headers */ = {isa = PBXBuildFile; fileRef = A81C3353B573831249BABD644E480EF3 /* NSString+DDXML.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7B645A00DDC85ABF56527824C64D7EDB /* mztools.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B6B0AF1915FB572AAEE76E6D32949D3 /* mztools.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		7B8BF680E7F01CA753E148C5EBA3A302 /* KFEpubExtractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 41E80B73AA0F86A4C271CE2132F17D2F /* KFEpubExtractor.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		7C7F18DA7D909ECD0A06DF3B3AAF0F0D /* KFEpubConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = FC2C60C9D8BD6AE5667F35D786284863 /* KFEpubConstants.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		899A60899AC9D39D6EE05C4F680542E3 /* crypt.h in Headers */ = {isa = PBXBuildFile; fileRef = 201CF1B37D8779B262F823C3527525B4 /* crypt.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		8CA24E3A3C9D51B0AC53BAF27AEAF116 /* NSString+DDXML.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C49D9750252FE1BAB031232B5EB82FB /* NSString+DDXML.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		93E49ACB35F07DE12804FBCEEE5E2C00 /* ioapi.c in Sources */ = {isa = PBXBuildFile; fileRef = 70A06E0FA590F2A1C6C7164318E69058 /* ioapi.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		95BEF20D90037307F9E05E53C5ADE7FA /* DDXMLElement.m in Sources */ = {isa = PBXBuildFile; fileRef = B142EBC8E476B5A8FDD8B191F802BE83 /* DDXMLElement.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		967A8FDBA4C453EC527DA579AD4AFA74 /* KFEpubContentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ADEB4E4EAA7FE03D40450C60628689F /* KFEpubContentModel.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		979C17BE58DFDB749F92A16BA12AD5A5 /* DDXMLElement.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F03E770CF385898FEE0A5020A184347 /* DDXMLElement.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9977D5D45BE71DE75EC15DD26EC38F45 /* DDXMLPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 5C7A74BA20671BFCC371561BE4FA8771 /* DDXMLPrivate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		998298F1EF25BED2863CA6521CF4C55D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
 		9E0B02FC50CF7094F931717C61A4CC96 /* KFEpubConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D20B306A940029812E8FCF8DFC325BD /* KFEpubConstants.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A36D5B5591DC4EB23D1FA8F53D9C94E7 /* DDXMLElementAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 32FEEEA3705E385B64EB09ABEA491D72 /* DDXMLElementAdditions.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		A6C3BF37BB95C7A01918A20CBC0E82B9 /* DDXMLDocument.h in Headers */ = {isa = PBXBuildFile; fileRef = CBCF133E94BE9692D3A951CA7F065ABF /* DDXMLDocument.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AAC222513D9CEF7B5DDA67502881162B /* KFEpubController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6D7520E18EEEE8FC4CDAAA02F606FED /* KFEpubController.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		ACC06584114DE256BF0971041831EB29 /* KFEpubKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 15E3F115F9E68EDFEA36E3BCC0CEA5E3 /* KFEpubKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AF37A2D4F7C88C3614B89B046838AB32 /* SSZipArchive.m in Sources */ = {isa = PBXBuildFile; fileRef = FC005FADEE6FB3BA930DD47AAE19373D /* SSZipArchive.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		AF3C91010E7168B16D54E4592590A877 /* zip.c in Sources */ = {isa = PBXBuildFile; fileRef = 22F6FB1EE6B5AAEEB34609C877603B69 /* zip.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		AFE8C976D9444A19657A0F36EDC2C21A /* DDXML.h in Headers */ = {isa = PBXBuildFile; fileRef = FE9A667F6C7A6A65F9275C4971C80E0B /* DDXML.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B4117CD1EC18708EE55E162DE20D01C2 /* zip.c in Sources */ = {isa = PBXBuildFile; fileRef = 22F6FB1EE6B5AAEEB34609C877603B69 /* zip.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		B62408C8E743F38311ADD4ECBCEAEC22 /* KFEpubKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 05EAA65852CE17DB7553573B214DD382 /* KFEpubKit-dummy.m */; };
 		B76BD10671C2D85ACFCDE889A0BB230A /* KFEpubParser.h in Headers */ = {isa = PBXBuildFile; fileRef = BA29738F824E07F36EB5B202A7DCE882 /* KFEpubParser.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BAA2098A88BFBEBC27D9407E03AAD048 /* KFEpubController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6D7520E18EEEE8FC4CDAAA02F606FED /* KFEpubController.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		C7D2EC8EB1B99226EB7A50DD32F7BC1A /* ioapi.c in Sources */ = {isa = PBXBuildFile; fileRef = 70A06E0FA590F2A1C6C7164318E69058 /* ioapi.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		CE6245004A5D91BF73D450E90749743E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
 		CEF431D77803AF44702DBAF5EDAC9A44 /* DDXMLNode.h in Headers */ = {isa = PBXBuildFile; fileRef = 11B7F18D7EC78E020A203CCFDEB9C8E1 /* DDXMLNode.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D0B66372C932525C3D5E8C8521E356BD /* ioapi.h in Headers */ = {isa = PBXBuildFile; fileRef = 46884E0A318BB0D8176FE65BE628BC7E /* ioapi.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		D0B8E543C271FFC46D092BB086BDD297 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
 		D252571B89658ACFDF40F17F1FCEBD64 /* KFEpubController.h in Headers */ = {isa = PBXBuildFile; fileRef = 87B717F41715D456DE9F5D0227D4DF23 /* KFEpubController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DBAD1609FC2889B10D63787EA4642DDC /* KFEpubKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F8AB99B7423623B59161455F833EA5D /* KFEpubKit.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		DC57AD9CBCD0744A47049A3D0062BDBA /* DDXMLElement.m in Sources */ = {isa = PBXBuildFile; fileRef = B142EBC8E476B5A8FDD8B191F802BE83 /* DDXMLElement.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		DF703EA7B33B943F299C0704FB225B1A /* unzip.h in Headers */ = {isa = PBXBuildFile; fileRef = 26CECBE88B5BB7FB301E02C738247EE5 /* unzip.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		EBD07FB84B537F6D5F62C1DACE5DB6B4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
-		EC0C2EE956325CF8066339A07AEE3E1F /* KFEpubConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = FC2C60C9D8BD6AE5667F35D786284863 /* KFEpubConstants.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		F16FFD56DDC9873A2F901EBFC6BA4095 /* unzip.c in Sources */ = {isa = PBXBuildFile; fileRef = 53B63B876A911CCE339398A33DD6C123 /* unzip.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		F24E69D5B896FB0C3D32F4FE08F2FC23 /* SSZipArchive-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B26244F684B6900D438D881F91CD66CB /* SSZipArchive-dummy.m */; };
 		F461AEC489A9C2A7701AF076C8805273 /* zip.h in Headers */ = {isa = PBXBuildFile; fileRef = 28E833C1D455C5BD7AA805F1709CC194 /* zip.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		F91E88E06DA0D2D5680BF428BCFC2B98 /* KFEpubContentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ADEB4E4EAA7FE03D40450C60628689F /* KFEpubContentModel.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		FE6CA5DB48923E3C49A0ADFFB1F475E8 /* unzip.c in Sources */ = {isa = PBXBuildFile; fileRef = 53B63B876A911CCE339398A33DD6C123 /* unzip.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		F54F704DA2A755F9B23BAA173D9AAFC9 /* DDXMLDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 610D8B2D7DDF5AFDF4FBE2DAE4944479 /* DDXMLDocument.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-all-checks"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -591,12 +591,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4FF751DCFAC3B937EA122F83C0AEF51A /* DDXMLDocument.m in Sources */,
-				DC57AD9CBCD0744A47049A3D0062BDBA /* DDXMLElement.m in Sources */,
-				A36D5B5591DC4EB23D1FA8F53D9C94E7 /* DDXMLElementAdditions.m in Sources */,
-				1E0CBE3EEBE5DBCA855CD3E7B9D3728C /* DDXMLNode.m in Sources */,
+				F54F704DA2A755F9B23BAA173D9AAFC9 /* DDXMLDocument.m in Sources */,
+				95BEF20D90037307F9E05E53C5ADE7FA /* DDXMLElement.m in Sources */,
+				5878C89F4CE9F29D8F8D7A790386228E /* DDXMLElementAdditions.m in Sources */,
+				5D1F4B939D3240BCFB88C9F5909FDC35 /* DDXMLNode.m in Sources */,
 				6DC2E186FA3291F32E21C8E4AF06EABD /* KissXML-dummy.m in Sources */,
-				8CA24E3A3C9D51B0AC53BAF27AEAF116 /* NSString+DDXML.m in Sources */,
+				007B402DA008811831DDDF5BD8B1328A /* NSString+DDXML.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -604,13 +604,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC0C2EE956325CF8066339A07AEE3E1F /* KFEpubConstants.m in Sources */,
-				F91E88E06DA0D2D5680BF428BCFC2B98 /* KFEpubContentModel.m in Sources */,
-				AAC222513D9CEF7B5DDA67502881162B /* KFEpubController.m in Sources */,
-				38DBA423614D5E62F54A92C1CE5E27AE /* KFEpubExtractor.m in Sources */,
+				7C7F18DA7D909ECD0A06DF3B3AAF0F0D /* KFEpubConstants.m in Sources */,
+				967A8FDBA4C453EC527DA579AD4AFA74 /* KFEpubContentModel.m in Sources */,
+				BAA2098A88BFBEBC27D9407E03AAD048 /* KFEpubController.m in Sources */,
+				7B8BF680E7F01CA753E148C5EBA3A302 /* KFEpubExtractor.m in Sources */,
 				B62408C8E743F38311ADD4ECBCEAEC22 /* KFEpubKit-dummy.m in Sources */,
-				DBAD1609FC2889B10D63787EA4642DDC /* KFEpubKit.m in Sources */,
-				55C7656F5A27DF902F1515235394B696 /* KFEpubParser.m in Sources */,
+				3121B16CA0A23E99412C02A6A2A1A04A /* KFEpubKit.m in Sources */,
+				558CB3643A06BB1A2298490CAAA6A8F8 /* KFEpubParser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -618,12 +618,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				93E49ACB35F07DE12804FBCEEE5E2C00 /* ioapi.c in Sources */,
-				1A784B053ADD0B802B418C0E0CA21A36 /* mztools.c in Sources */,
+				C7D2EC8EB1B99226EB7A50DD32F7BC1A /* ioapi.c in Sources */,
+				6A38A8DF40E26F7FC8E124C3DD1D0E49 /* mztools.c in Sources */,
 				F24E69D5B896FB0C3D32F4FE08F2FC23 /* SSZipArchive-dummy.m in Sources */,
-				AF37A2D4F7C88C3614B89B046838AB32 /* SSZipArchive.m in Sources */,
-				FE6CA5DB48923E3C49A0ADFFB1F475E8 /* unzip.c in Sources */,
-				B4117CD1EC18708EE55E162DE20D01C2 /* zip.c in Sources */,
+				07E4BBB4F293B917F96AFAF63561A9E5 /* SSZipArchive.m in Sources */,
+				F16FFD56DDC9873A2F901EBFC6BA4095 /* unzip.c in Sources */,
+				AF3C91010E7168B16D54E4592590A877 /* zip.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

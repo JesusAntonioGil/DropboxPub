@@ -14,6 +14,6 @@ NSString * const DPBAppName = @"DropboxPub";
 NSString * const DPBAppVersion = @"1.0";
 
 //Dropbox
-NSString * const DPBDropbpxAppKey = @"zgcpv9dda7n3xb6";
-NSString * const DPBDropboxAppSecret = @"rhtaoq5oyyuwamw";
+NSString * const DPBDropbpxAppKey = @"fnoxnr64wkv4dlr";
+NSString * const DPBDropboxAppSecret = @"0r301rg4o7nhmhx";
 NSString * const DPBDropboxFileExtension = @"epub";

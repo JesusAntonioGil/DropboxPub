@@ -80,7 +80,6 @@
     }
 }
 
-
 - (void)didSwipeLeft:(UIGestureRecognizer *)recognizer
 {
     if (self.spineIndex < self.epubContentModel.spine.count)
@@ -133,7 +132,6 @@
 }
 
 #pragma mark - UIGestureRecognizer Delegate
-
 
 - (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer
 {

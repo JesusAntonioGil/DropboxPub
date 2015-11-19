@@ -52,7 +52,7 @@
 
 - (void)initDropboxSession
 {
-    DBSession *dbSession = [[DBSession alloc] initWithAppKey:DPBDropbpxAppKey appSecret:DPBDropboxAppSecret root:kDBRootAppFolder];
+    DBSession *dbSession = [[DBSession alloc] initWithAppKey:DPBDropbpxAppKey appSecret:DPBDropboxAppSecret root:kDBRootDropbox];
     [DBSession setSharedSession:dbSession];
 }
 

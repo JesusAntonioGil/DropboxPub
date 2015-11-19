@@ -7,126 +7,297 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		612E6E36B3D8C70A59FC9BB9759803EB /* Pods-DropboxPub-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F0DBA941E673BCCFFE25B54DDB11C4 /* Pods-DropboxPub-dummy.m */; };
-		9A7760100A918F55FFEB6C51905883D2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		0D428FC430478897B68BD7697B558D11 /* KFEpubExtractor.h in Headers */ = {isa = PBXBuildFile; fileRef = 1EEA1399D82AF48E8437C7A6CE4B6700 /* KFEpubExtractor.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0F90CA348D4681463F7F10045B9EA3B1 /* KFEpubContentModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 7E0D8F44349573065FA8BA4DF9245072 /* KFEpubContentModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		12BF45EB00C4D61C0E588E9D4E93E3A0 /* SSZipArchive.h in Headers */ = {isa = PBXBuildFile; fileRef = D5B5110724B1BA55B111A2463C21BDA4 /* SSZipArchive.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1A784B053ADD0B802B418C0E0CA21A36 /* mztools.c in Sources */ = {isa = PBXBuildFile; fileRef = 1BC6873CC1E6E9716EAC3B1722085B4F /* mztools.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		1E0CBE3EEBE5DBCA855CD3E7B9D3728C /* DDXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = DEA9A31C8655BAD0E0A9204C915E9715 /* DDXMLNode.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		3414840F2A9D22393CE8B358F942E5F1 /* DDXMLElementAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 02D6C5A05BBB2AD6E225F86F1CE22A6A /* DDXMLElementAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		38DBA423614D5E62F54A92C1CE5E27AE /* KFEpubExtractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 41E80B73AA0F86A4C271CE2132F17D2F /* KFEpubExtractor.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		41AD502809E613429C60CA260A4E3CC9 /* Common.h in Headers */ = {isa = PBXBuildFile; fileRef = BEECBDBF22AFA7F8DDC8C87BA19EE9FF /* Common.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		47FE046FCB032FEA08B964283F2FC85E /* Pods-DropboxPub-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F0DBA941E673BCCFFE25B54DDB11C4 /* Pods-DropboxPub-dummy.m */; };
+		4FF751DCFAC3B937EA122F83C0AEF51A /* DDXMLDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 610D8B2D7DDF5AFDF4FBE2DAE4944479 /* DDXMLDocument.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		55C7656F5A27DF902F1515235394B696 /* KFEpubParser.m in Sources */ = {isa = PBXBuildFile; fileRef = FF7CDEF00F8E723C70209739A2FAE7AD /* KFEpubParser.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		6DC2E186FA3291F32E21C8E4AF06EABD /* KissXML-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 47D8662668E3B5B69B39A10ACC21B73D /* KissXML-dummy.m */; };
+		7239576781387D9F6340C4F9B272004B /* NSString+DDXML.h in Headers */ = {isa = PBXBuildFile; fileRef = A81C3353B573831249BABD644E480EF3 /* NSString+DDXML.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7B645A00DDC85ABF56527824C64D7EDB /* mztools.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B6B0AF1915FB572AAEE76E6D32949D3 /* mztools.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		899A60899AC9D39D6EE05C4F680542E3 /* crypt.h in Headers */ = {isa = PBXBuildFile; fileRef = 201CF1B37D8779B262F823C3527525B4 /* crypt.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		8CA24E3A3C9D51B0AC53BAF27AEAF116 /* NSString+DDXML.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C49D9750252FE1BAB031232B5EB82FB /* NSString+DDXML.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		93E49ACB35F07DE12804FBCEEE5E2C00 /* ioapi.c in Sources */ = {isa = PBXBuildFile; fileRef = 70A06E0FA590F2A1C6C7164318E69058 /* ioapi.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		979C17BE58DFDB749F92A16BA12AD5A5 /* DDXMLElement.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F03E770CF385898FEE0A5020A184347 /* DDXMLElement.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9977D5D45BE71DE75EC15DD26EC38F45 /* DDXMLPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 5C7A74BA20671BFCC371561BE4FA8771 /* DDXMLPrivate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		998298F1EF25BED2863CA6521CF4C55D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		9E0B02FC50CF7094F931717C61A4CC96 /* KFEpubConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D20B306A940029812E8FCF8DFC325BD /* KFEpubConstants.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A36D5B5591DC4EB23D1FA8F53D9C94E7 /* DDXMLElementAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 32FEEEA3705E385B64EB09ABEA491D72 /* DDXMLElementAdditions.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		A6C3BF37BB95C7A01918A20CBC0E82B9 /* DDXMLDocument.h in Headers */ = {isa = PBXBuildFile; fileRef = CBCF133E94BE9692D3A951CA7F065ABF /* DDXMLDocument.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AAC222513D9CEF7B5DDA67502881162B /* KFEpubController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6D7520E18EEEE8FC4CDAAA02F606FED /* KFEpubController.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		ACC06584114DE256BF0971041831EB29 /* KFEpubKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 15E3F115F9E68EDFEA36E3BCC0CEA5E3 /* KFEpubKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AF37A2D4F7C88C3614B89B046838AB32 /* SSZipArchive.m in Sources */ = {isa = PBXBuildFile; fileRef = FC005FADEE6FB3BA930DD47AAE19373D /* SSZipArchive.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		AFE8C976D9444A19657A0F36EDC2C21A /* DDXML.h in Headers */ = {isa = PBXBuildFile; fileRef = FE9A667F6C7A6A65F9275C4971C80E0B /* DDXML.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B4117CD1EC18708EE55E162DE20D01C2 /* zip.c in Sources */ = {isa = PBXBuildFile; fileRef = 22F6FB1EE6B5AAEEB34609C877603B69 /* zip.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		B62408C8E743F38311ADD4ECBCEAEC22 /* KFEpubKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 05EAA65852CE17DB7553573B214DD382 /* KFEpubKit-dummy.m */; };
+		B76BD10671C2D85ACFCDE889A0BB230A /* KFEpubParser.h in Headers */ = {isa = PBXBuildFile; fileRef = BA29738F824E07F36EB5B202A7DCE882 /* KFEpubParser.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CE6245004A5D91BF73D450E90749743E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		CEF431D77803AF44702DBAF5EDAC9A44 /* DDXMLNode.h in Headers */ = {isa = PBXBuildFile; fileRef = 11B7F18D7EC78E020A203CCFDEB9C8E1 /* DDXMLNode.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D0B66372C932525C3D5E8C8521E356BD /* ioapi.h in Headers */ = {isa = PBXBuildFile; fileRef = 46884E0A318BB0D8176FE65BE628BC7E /* ioapi.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		D0B8E543C271FFC46D092BB086BDD297 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		D252571B89658ACFDF40F17F1FCEBD64 /* KFEpubController.h in Headers */ = {isa = PBXBuildFile; fileRef = 87B717F41715D456DE9F5D0227D4DF23 /* KFEpubController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DBAD1609FC2889B10D63787EA4642DDC /* KFEpubKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F8AB99B7423623B59161455F833EA5D /* KFEpubKit.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		DC57AD9CBCD0744A47049A3D0062BDBA /* DDXMLElement.m in Sources */ = {isa = PBXBuildFile; fileRef = B142EBC8E476B5A8FDD8B191F802BE83 /* DDXMLElement.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		DF703EA7B33B943F299C0704FB225B1A /* unzip.h in Headers */ = {isa = PBXBuildFile; fileRef = 26CECBE88B5BB7FB301E02C738247EE5 /* unzip.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		EBD07FB84B537F6D5F62C1DACE5DB6B4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		EC0C2EE956325CF8066339A07AEE3E1F /* KFEpubConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = FC2C60C9D8BD6AE5667F35D786284863 /* KFEpubConstants.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		F24E69D5B896FB0C3D32F4FE08F2FC23 /* SSZipArchive-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B26244F684B6900D438D881F91CD66CB /* SSZipArchive-dummy.m */; };
+		F461AEC489A9C2A7701AF076C8805273 /* zip.h in Headers */ = {isa = PBXBuildFile; fileRef = 28E833C1D455C5BD7AA805F1709CC194 /* zip.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		F91E88E06DA0D2D5680BF428BCFC2B98 /* KFEpubContentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ADEB4E4EAA7FE03D40450C60628689F /* KFEpubContentModel.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		FE6CA5DB48923E3C49A0ADFFB1F475E8 /* unzip.c in Sources */ = {isa = PBXBuildFile; fileRef = 53B63B876A911CCE339398A33DD6C123 /* unzip.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		12F0122EF7FA05961C652654A6675EB4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B83C60872A9B5AC3D48004DC490C5E4A;
+			remoteInfo = KFEpubKit;
+		};
+		25B32014470F2DD8F07B49A853DC3F8A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8C5B2301AC15E1E56AF646404F544AB7;
+			remoteInfo = SSZipArchive;
+		};
+		640D721BC66FEBECE2ACE34927BB7994 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8C5B2301AC15E1E56AF646404F544AB7;
+			remoteInfo = SSZipArchive;
+		};
+		97421391D1AEA52CEEA12B38904D26E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F14E06C2EE3CBE3660E712B7DDA6992C;
+			remoteInfo = KissXML;
+		};
+		B6400E598A117612CD3A307A6887BC0D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F14E06C2EE3CBE3660E712B7DDA6992C;
+			remoteInfo = KissXML;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
-		0091AB1D7303D7D691678153BC692E59 /* DBJsonBase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DBJsonBase.h; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/DBJsonBase.h"; sourceTree = "<group>"; };
+		0022917ADB8F63A94C58C9BD7284424A /* DBMetadata.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DBMetadata.h; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/DBMetadata.h"; sourceTree = "<group>"; };
 		023E07DBD165D17A3F9F767C3DF270B1 /* Pods-DropboxPub.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DropboxPub.release.xcconfig"; sourceTree = "<group>"; };
+		02D6C5A05BBB2AD6E225F86F1CE22A6A /* DDXMLElementAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDXMLElementAdditions.h; path = KissXML/Additions/DDXMLElementAdditions.h; sourceTree = "<group>"; };
 		032761D62F8432A632922CA9B958D9F2 /* Pods-DropboxPub.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DropboxPub.debug.xcconfig"; sourceTree = "<group>"; };
-		0774E1F82B19D38F5E33F849621F4388 /* NSObject+DBJSON.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+DBJSON.h"; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/NSObject+DBJSON.h"; sourceTree = "<group>"; };
+		05EAA65852CE17DB7553573B214DD382 /* KFEpubKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "KFEpubKit-dummy.m"; sourceTree = "<group>"; };
 		077D5B8DF4F82A47895BAFB274E4797E /* Pods-DropboxPub-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-DropboxPub-acknowledgements.markdown"; sourceTree = "<group>"; };
-		0CA186229449F9C2B31753B05B439D08 /* MPURLRequestParameter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MPURLRequestParameter.h; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/MPURLRequestParameter.h"; sourceTree = "<group>"; };
-		0D17E411663350B3FB6C0EFD0FF674D5 /* DBJsonParser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DBJsonParser.h; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/DBJsonParser.h"; sourceTree = "<group>"; };
-		0F89F06D53FD2E86ED0B881EE92FA740 /* DBLog.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DBLog.h; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/DBLog.h"; sourceTree = "<group>"; };
-		25874A10CB2CF04DB338E52FB2CBA276 /* DBDeltaEntry.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DBDeltaEntry.h; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/DBDeltaEntry.h"; sourceTree = "<group>"; };
-		2A7623457C67508028B5E7276F93E911 /* MPOAuthCredentialConcreteStore.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MPOAuthCredentialConcreteStore.h; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/MPOAuthCredentialConcreteStore.h"; sourceTree = "<group>"; };
-		3D164DB84AEB49109007DB9373D28392 /* DBAccountInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DBAccountInfo.h; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/DBAccountInfo.h"; sourceTree = "<group>"; };
+		09D9520C994ED7465DA4A452E7EA7B21 /* libKissXML.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libKissXML.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		10D1C7A397F8DFBB9812DEEA2B66DDD4 /* NSURLResponse+Encoding.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSURLResponse+Encoding.h"; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/NSURLResponse+Encoding.h"; sourceTree = "<group>"; };
+		11B7F18D7EC78E020A203CCFDEB9C8E1 /* DDXMLNode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDXMLNode.h; path = KissXML/DDXMLNode.h; sourceTree = "<group>"; };
+		12F8116CBD760BD578877C0E7EDA8FF0 /* DropboxSDK.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DropboxSDK.h; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/DropboxSDK.h"; sourceTree = "<group>"; };
+		15E3F115F9E68EDFEA36E3BCC0CEA5E3 /* KFEpubKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KFEpubKit.h; path = KFEpubKit/Sources/KFEpubKit.h; sourceTree = "<group>"; };
+		1BC6873CC1E6E9716EAC3B1722085B4F /* mztools.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = mztools.c; path = SSZipArchive/minizip/mztools.c; sourceTree = "<group>"; };
+		1EEA1399D82AF48E8437C7A6CE4B6700 /* KFEpubExtractor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KFEpubExtractor.h; path = KFEpubKit/Sources/KFEpubExtractor.h; sourceTree = "<group>"; };
+		1F03E770CF385898FEE0A5020A184347 /* DDXMLElement.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDXMLElement.h; path = KissXML/DDXMLElement.h; sourceTree = "<group>"; };
+		201CF1B37D8779B262F823C3527525B4 /* crypt.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = crypt.h; path = SSZipArchive/minizip/crypt.h; sourceTree = "<group>"; };
+		22027C2240F707C1E6127F19AAECFB30 /* SSZipArchive-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SSZipArchive-prefix.pch"; sourceTree = "<group>"; };
+		22F6FB1EE6B5AAEEB34609C877603B69 /* zip.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = zip.c; path = SSZipArchive/minizip/zip.c; sourceTree = "<group>"; };
+		26CECBE88B5BB7FB301E02C738247EE5 /* unzip.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = unzip.h; path = SSZipArchive/minizip/unzip.h; sourceTree = "<group>"; };
+		28E833C1D455C5BD7AA805F1709CC194 /* zip.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = zip.h; path = SSZipArchive/minizip/zip.h; sourceTree = "<group>"; };
+		2ADEB4E4EAA7FE03D40450C60628689F /* KFEpubContentModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KFEpubContentModel.m; path = KFEpubKit/Sources/KFEpubContentModel.m; sourceTree = "<group>"; };
+		2DF5877112707016BE8A1F1C9F7CC093 /* DBRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DBRequest.h; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/DBRequest.h"; sourceTree = "<group>"; };
+		2F8AB99B7423623B59161455F833EA5D /* KFEpubKit.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KFEpubKit.m; path = KFEpubKit/Sources/KFEpubKit.m; sourceTree = "<group>"; };
+		303990329955C90BC92B74186ACCC6EC /* MPOAuthSignatureParameter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MPOAuthSignatureParameter.h; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/MPOAuthSignatureParameter.h"; sourceTree = "<group>"; };
+		32FEEEA3705E385B64EB09ABEA491D72 /* DDXMLElementAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DDXMLElementAdditions.m; path = KissXML/Additions/DDXMLElementAdditions.m; sourceTree = "<group>"; };
+		33BD98931E1C9272E29186538C981B86 /* MPOAuthAPI.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MPOAuthAPI.h; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/MPOAuthAPI.h"; sourceTree = "<group>"; };
+		341C3BFD241715F125B856246FE5FED4 /* DBQuota.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DBQuota.h; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/DBQuota.h"; sourceTree = "<group>"; };
+		36FEB7571AED0C2F803D4B7ABFCBE0EB /* DBSession+iOS.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "DBSession+iOS.h"; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/DBSession+iOS.h"; sourceTree = "<group>"; };
 		3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		46F45A66B1F14D33ABD42751F15BFCD9 /* MPOAuthAPIRequestLoader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MPOAuthAPIRequestLoader.h; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/MPOAuthAPIRequestLoader.h"; sourceTree = "<group>"; };
-		4F4FE88EBCD01B15DA865AA31ECF25B7 /* MPDebug.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MPDebug.h; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/MPDebug.h"; sourceTree = "<group>"; };
-		55CC077BEA36ECEF097AE436BEC1D954 /* NSURL+MPURLParameterAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSURL+MPURLParameterAdditions.h"; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/NSURL+MPURLParameterAdditions.h"; sourceTree = "<group>"; };
-		5BD0707F2EE17B4FA10D71DE5A346A48 /* libPods-DropboxPub.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DropboxPub.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		5BDD140C632E59CF7447B3E556F5DDD2 /* NSString+URLEscapingAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+URLEscapingAdditions.h"; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/NSString+URLEscapingAdditions.h"; sourceTree = "<group>"; };
-		652C8265C3CCB407B89E125A60FD6E14 /* MPOAuthSignatureParameter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MPOAuthSignatureParameter.h; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/MPOAuthSignatureParameter.h"; sourceTree = "<group>"; };
-		6C4F06EA9F7B57593F6FEAC7ADC75AA7 /* MPOAuthCredentialConcreteStore+KeychainAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "MPOAuthCredentialConcreteStore+KeychainAdditions.h"; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/MPOAuthCredentialConcreteStore+KeychainAdditions.h"; sourceTree = "<group>"; };
-		6F153A02E777E99BD1BBA451D4E1B416 /* DBJSON.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DBJSON.h; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/DBJSON.h"; sourceTree = "<group>"; };
-		76E553CCE4EF8DE31176B9E49CF92B92 /* DBRestClient.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DBRestClient.h; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/DBRestClient.h"; sourceTree = "<group>"; };
-		7D6221570BDA35F4E747AFD3BF436EE3 /* DBBase64Transcoder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DBBase64Transcoder.h; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/DBBase64Transcoder.h"; sourceTree = "<group>"; };
-		80F51A1BD35C9AA8D1FD43A3F2A8D851 /* MPOAuthParameterFactory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MPOAuthParameterFactory.h; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/MPOAuthParameterFactory.h"; sourceTree = "<group>"; };
-		867014394ED056F250B5C0B91A8D4200 /* NSString+DBJSON.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+DBJSON.h"; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/NSString+DBJSON.h"; sourceTree = "<group>"; };
-		A141BA1B728BDF8CADB5491B6ABB1679 /* MPOAuthURLRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MPOAuthURLRequest.h; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/MPOAuthURLRequest.h"; sourceTree = "<group>"; };
+		41E80B73AA0F86A4C271CE2132F17D2F /* KFEpubExtractor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KFEpubExtractor.m; path = KFEpubKit/Sources/KFEpubExtractor.m; sourceTree = "<group>"; };
+		45DAC3408CC8FCCA927FDA484217DC54 /* NSString+DBJSON.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+DBJSON.h"; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/NSString+DBJSON.h"; sourceTree = "<group>"; };
+		46884E0A318BB0D8176FE65BE628BC7E /* ioapi.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ioapi.h; path = SSZipArchive/minizip/ioapi.h; sourceTree = "<group>"; };
+		47D8662668E3B5B69B39A10ACC21B73D /* KissXML-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "KissXML-dummy.m"; sourceTree = "<group>"; };
+		48769FD1819BBDD621CF054661EE3E65 /* MPOAuthConnection.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MPOAuthConnection.h; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/MPOAuthConnection.h"; sourceTree = "<group>"; };
+		488C3A8055A66463EFF427EA174CC332 /* NSString+URLEscapingAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+URLEscapingAdditions.h"; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/NSString+URLEscapingAdditions.h"; sourceTree = "<group>"; };
+		4D20B306A940029812E8FCF8DFC325BD /* KFEpubConstants.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KFEpubConstants.h; path = KFEpubKit/Sources/KFEpubConstants.h; sourceTree = "<group>"; };
+		4EE4DE380625FA5C42C6B7CD0CB45D37 /* JSON.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JSON.h; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/JSON.h"; sourceTree = "<group>"; };
+		53B63B876A911CCE339398A33DD6C123 /* unzip.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = unzip.c; path = SSZipArchive/minizip/unzip.c; sourceTree = "<group>"; };
+		53C9F9B32500BCB645836B16FDC2F086 /* MPOAuthCredentialStore.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MPOAuthCredentialStore.h; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/MPOAuthCredentialStore.h"; sourceTree = "<group>"; };
+		544EA31362A78E2C816A02F3170224E1 /* DBLog.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DBLog.h; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/DBLog.h"; sourceTree = "<group>"; };
+		59BFABF89055D0B907DD07750592BC8D /* DBAccountInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DBAccountInfo.h; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/DBAccountInfo.h"; sourceTree = "<group>"; };
+		5C7A74BA20671BFCC371561BE4FA8771 /* DDXMLPrivate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDXMLPrivate.h; path = KissXML/Private/DDXMLPrivate.h; sourceTree = "<group>"; };
+		610D8B2D7DDF5AFDF4FBE2DAE4944479 /* DDXMLDocument.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DDXMLDocument.m; path = KissXML/DDXMLDocument.m; sourceTree = "<group>"; };
+		64070D3FA582FEF1F627FE60EBC9B1C0 /* DBJSON.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DBJSON.h; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/DBJSON.h"; sourceTree = "<group>"; };
+		70A06E0FA590F2A1C6C7164318E69058 /* ioapi.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = ioapi.c; path = SSZipArchive/minizip/ioapi.c; sourceTree = "<group>"; };
+		7B8EE448EA1CAC8FD09F2DB8F7DB5C55 /* MPOAuth.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MPOAuth.h; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/MPOAuth.h"; sourceTree = "<group>"; };
+		7C49D9750252FE1BAB031232B5EB82FB /* NSString+DDXML.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+DDXML.m"; path = "KissXML/Categories/NSString+DDXML.m"; sourceTree = "<group>"; };
+		7D5AE1A45D0C65E5DAE2EA7D727A635F /* DBJsonWriter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DBJsonWriter.h; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/DBJsonWriter.h"; sourceTree = "<group>"; };
+		7E0D8F44349573065FA8BA4DF9245072 /* KFEpubContentModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KFEpubContentModel.h; path = KFEpubKit/Sources/KFEpubContentModel.h; sourceTree = "<group>"; };
+		87B717F41715D456DE9F5D0227D4DF23 /* KFEpubController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KFEpubController.h; path = KFEpubKit/Sources/KFEpubController.h; sourceTree = "<group>"; };
+		8B6B0AF1915FB572AAEE76E6D32949D3 /* mztools.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = mztools.h; path = SSZipArchive/minizip/mztools.h; sourceTree = "<group>"; };
+		937CFA8529645F0BAF5AC912FB32A44C /* DBSession.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DBSession.h; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/DBSession.h"; sourceTree = "<group>"; };
+		980DA618F587CE8F9BDF950D4D89936B /* SSZipArchive.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SSZipArchive.xcconfig; sourceTree = "<group>"; };
+		99655E1B0D36D839CDC21BFD8CB6E8E7 /* DBJsonBase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DBJsonBase.h; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/DBJsonBase.h"; sourceTree = "<group>"; };
+		9AC602BD6E6C80088F73AECF3676C6C4 /* MPOAuthURLResponse.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MPOAuthURLResponse.h; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/MPOAuthURLResponse.h"; sourceTree = "<group>"; };
+		9FC6E46C6D08BC982FF9648E8AD9F9E8 /* libSSZipArchive.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSSZipArchive.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		A0E37D78BD0B00746FDEDAFAE5F2E1B7 /* NSDictionary+Dropbox.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSDictionary+Dropbox.h"; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/NSDictionary+Dropbox.h"; sourceTree = "<group>"; };
+		A4F76768A58CB00CAEA20CB285836F12 /* DBDeltaEntry.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DBDeltaEntry.h; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/DBDeltaEntry.h"; sourceTree = "<group>"; };
+		A81C3353B573831249BABD644E480EF3 /* NSString+DDXML.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+DDXML.h"; path = "KissXML/Categories/NSString+DDXML.h"; sourceTree = "<group>"; };
+		A985F9A4BCADF672B600A49BBC0C28BB /* KFEpubKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KFEpubKit-prefix.pch"; sourceTree = "<group>"; };
+		AC4E8DC7529BDE35A6177EF870B2E1A3 /* DBBase64Transcoder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DBBase64Transcoder.h; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/DBBase64Transcoder.h"; sourceTree = "<group>"; };
 		AF62A9E09E8D763D591B621962A5D920 /* Pods-DropboxPub-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-DropboxPub-frameworks.sh"; sourceTree = "<group>"; };
-		B26B9CB27EF060A56C3282874257B3F2 /* DBRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DBRequest.h; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/DBRequest.h"; sourceTree = "<group>"; };
-		B54B58E771B09694455FAD1D5507350B /* MPOAuthCredentialStore.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MPOAuthCredentialStore.h; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/MPOAuthCredentialStore.h"; sourceTree = "<group>"; };
-		B67BAF198AA1E3DA9FAE1E96DA7EDFB6 /* MPOAuthConnection.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MPOAuthConnection.h; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/MPOAuthConnection.h"; sourceTree = "<group>"; };
-		B7EED869177024C9BE3CC256F14544E1 /* DBSession.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DBSession.h; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/DBSession.h"; sourceTree = "<group>"; };
+		B142EBC8E476B5A8FDD8B191F802BE83 /* DDXMLElement.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DDXMLElement.m; path = KissXML/DDXMLElement.m; sourceTree = "<group>"; };
+		B26244F684B6900D438D881F91CD66CB /* SSZipArchive-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SSZipArchive-dummy.m"; sourceTree = "<group>"; };
+		B440E6E22817E235A3CE568044EFBDB5 /* MPOAuthURLRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MPOAuthURLRequest.h; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/MPOAuthURLRequest.h"; sourceTree = "<group>"; };
+		B5B5760DD10404084CA5F16C3A419093 /* MPOAuthAuthenticationMethodOAuth.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MPOAuthAuthenticationMethodOAuth.h; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/MPOAuthAuthenticationMethodOAuth.h"; sourceTree = "<group>"; };
+		B6C7BD2D95D467ACDCCB263511668859 /* KissXML-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KissXML-prefix.pch"; sourceTree = "<group>"; };
+		B6D7520E18EEEE8FC4CDAAA02F606FED /* KFEpubController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KFEpubController.m; path = KFEpubKit/Sources/KFEpubController.m; sourceTree = "<group>"; };
+		B9FB9A9A37DAC6F0851D89A9657F7F0E /* MPOAuthCredentialConcreteStore.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MPOAuthCredentialConcreteStore.h; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/MPOAuthCredentialConcreteStore.h"; sourceTree = "<group>"; };
+		BA29738F824E07F36EB5B202A7DCE882 /* KFEpubParser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KFEpubParser.h; path = KFEpubKit/Sources/KFEpubParser.h; sourceTree = "<group>"; };
 		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		BE77C41B12F52E886E539FC8EA16F123 /* DBQuota.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DBQuota.h; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/DBQuota.h"; sourceTree = "<group>"; };
+		BB498E11A68307496725E6F3D1E12100 /* DBError.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DBError.h; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/DBError.h"; sourceTree = "<group>"; };
+		BDBAE4A55FE10CB7A6DFCF0EC77AC5F4 /* MPOAuthAuthenticationMethod.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MPOAuthAuthenticationMethod.h; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/MPOAuthAuthenticationMethod.h"; sourceTree = "<group>"; };
+		BEECBDBF22AFA7F8DDC8C87BA19EE9FF /* Common.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Common.h; path = SSZipArchive/Common.h; sourceTree = "<group>"; };
 		BF89B495194D982FE3107591F6BD8585 /* Pods-DropboxPub-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-DropboxPub-acknowledgements.plist"; sourceTree = "<group>"; };
 		C15853AA2E7D29B4F711E1AF7F784FD1 /* Pods-DropboxPub-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-DropboxPub-resources.sh"; sourceTree = "<group>"; };
-		C3FBB695A02BA6D57F0B00F456C2F1F5 /* DropboxSDK.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DropboxSDK.h; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/DropboxSDK.h"; sourceTree = "<group>"; };
-		CDB54B75E3FE110A2CE44C663F26E0CC /* DBError.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DBError.h; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/DBError.h"; sourceTree = "<group>"; };
-		CE6962B16B0E2DFF981E9870093C241C /* DBMetadata.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DBMetadata.h; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/DBMetadata.h"; sourceTree = "<group>"; };
+		C3B939B8BA75B025498BD5C240BAA4DE /* DBJsonParser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DBJsonParser.h; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/DBJsonParser.h"; sourceTree = "<group>"; };
+		CBCF133E94BE9692D3A951CA7F065ABF /* DDXMLDocument.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDXMLDocument.h; path = KissXML/DDXMLDocument.h; sourceTree = "<group>"; };
+		CD6E4C7EDD6DDB53AF849E7A94CD0E67 /* MPOAuthAPIRequestLoader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MPOAuthAPIRequestLoader.h; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/MPOAuthAPIRequestLoader.h"; sourceTree = "<group>"; };
+		CFF0B924A5F77CB0BAD02710D357A257 /* MPDebug.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MPDebug.h; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/MPDebug.h"; sourceTree = "<group>"; };
 		D0F0DBA941E673BCCFFE25B54DDB11C4 /* Pods-DropboxPub-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-DropboxPub-dummy.m"; sourceTree = "<group>"; };
-		D2CF246FD266A6615D9F6FDD7EF2B648 /* NSDictionary+Dropbox.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSDictionary+Dropbox.h"; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/NSDictionary+Dropbox.h"; sourceTree = "<group>"; };
-		D3878093F1300FD0479FD7F3658E3831 /* NSString+Dropbox.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+Dropbox.h"; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/NSString+Dropbox.h"; sourceTree = "<group>"; };
-		D512690B97A967FD7023DA1385FDC790 /* JSON.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JSON.h; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/JSON.h"; sourceTree = "<group>"; };
-		D7DAA0F3401C8A43EFA244DAA7148FFE /* MPOAuthAuthenticationMethod.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MPOAuthAuthenticationMethod.h; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/MPOAuthAuthenticationMethod.h"; sourceTree = "<group>"; };
-		E0A2E7AD971CD321A423355A144767FC /* DBJsonWriter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DBJsonWriter.h; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/DBJsonWriter.h"; sourceTree = "<group>"; };
-		E6E0EB6119D45D15B227D96A8E1CC08E /* MPOAuthAuthenticationMethodOAuth.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MPOAuthAuthenticationMethodOAuth.h; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/MPOAuthAuthenticationMethodOAuth.h"; sourceTree = "<group>"; };
-		EDC6491860B91B15DC4676B3BB6B02B5 /* MPOAuth.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MPOAuth.h; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/MPOAuth.h"; sourceTree = "<group>"; };
-		F17E8EE112CED687F8846B4F29583329 /* NSURLResponse+Encoding.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSURLResponse+Encoding.h"; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/NSURLResponse+Encoding.h"; sourceTree = "<group>"; };
-		F3FD17207CD418FD875C4036EBF43D3B /* MPOAuthURLResponse.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MPOAuthURLResponse.h; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/MPOAuthURLResponse.h"; sourceTree = "<group>"; };
-		F58C8B0F57FB82C815BCBA0FA99B76B1 /* DBSession+iOS.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "DBSession+iOS.h"; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/DBSession+iOS.h"; sourceTree = "<group>"; };
-		F9AF45C0538DFC3BA2FF0A2F36599D21 /* MPOAuthAPI.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MPOAuthAPI.h; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/MPOAuthAPI.h"; sourceTree = "<group>"; };
+		D24B1B02EA4B2C1A72BE8260F8F3603D /* libPods-DropboxPub.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DropboxPub.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2CF6FDECC71E1B556B4C1AD578261F1 /* libKFEpubKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libKFEpubKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		D5B5110724B1BA55B111A2463C21BDA4 /* SSZipArchive.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SSZipArchive.h; path = SSZipArchive/SSZipArchive.h; sourceTree = "<group>"; };
+		DD27EAB47C07299E6935DF5C9B70E7A7 /* KFEpubKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = KFEpubKit.xcconfig; sourceTree = "<group>"; };
+		DEA9A31C8655BAD0E0A9204C915E9715 /* DDXMLNode.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DDXMLNode.m; path = KissXML/DDXMLNode.m; sourceTree = "<group>"; };
+		DEFC04499B9C56270757EE12DB07AEAF /* MPOAuthCredentialConcreteStore+KeychainAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "MPOAuthCredentialConcreteStore+KeychainAdditions.h"; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/MPOAuthCredentialConcreteStore+KeychainAdditions.h"; sourceTree = "<group>"; };
+		E0E4D5F1890EF2B39CCB90520DF6FDE2 /* DBRestClient.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DBRestClient.h; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/DBRestClient.h"; sourceTree = "<group>"; };
+		E3CB9501FEB343BF4BFB69310000435D /* NSString+Dropbox.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+Dropbox.h"; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/NSString+Dropbox.h"; sourceTree = "<group>"; };
+		E623D465D3678730A7EFAC6B56FFA4B2 /* MPURLRequestParameter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MPURLRequestParameter.h; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/MPURLRequestParameter.h"; sourceTree = "<group>"; };
+		EAAF4929D3D10B5A651AD26C8DB0C53A /* KissXML.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = KissXML.xcconfig; sourceTree = "<group>"; };
+		F95AD2AAC4EEF4786D02F6785EF2F49A /* NSObject+DBJSON.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+DBJSON.h"; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/NSObject+DBJSON.h"; sourceTree = "<group>"; };
+		F95CA696CD8E31F3EC0D72D230D86FD7 /* MPOAuthParameterFactory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MPOAuthParameterFactory.h; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/MPOAuthParameterFactory.h"; sourceTree = "<group>"; };
+		FA6EC557E59FAC4B9A7C9518D2BBA02B /* NSURL+MPURLParameterAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSURL+MPURLParameterAdditions.h"; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/NSURL+MPURLParameterAdditions.h"; sourceTree = "<group>"; };
+		FC005FADEE6FB3BA930DD47AAE19373D /* SSZipArchive.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SSZipArchive.m; path = SSZipArchive/SSZipArchive.m; sourceTree = "<group>"; };
+		FC2C60C9D8BD6AE5667F35D786284863 /* KFEpubConstants.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KFEpubConstants.m; path = KFEpubKit/Sources/KFEpubConstants.m; sourceTree = "<group>"; };
+		FE9A667F6C7A6A65F9275C4971C80E0B /* DDXML.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDXML.h; path = KissXML/DDXML.h; sourceTree = "<group>"; };
+		FF7CDEF00F8E723C70209739A2FAE7AD /* KFEpubParser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KFEpubParser.m; path = KFEpubKit/Sources/KFEpubParser.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		3902FB13298672BAE0D8F76A80867078 /* Frameworks */ = {
+		1CFAB93FD13FD9769BC7058BCB2CD5A8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9A7760100A918F55FFEB6C51905883D2 /* Foundation.framework in Frameworks */,
+				EBD07FB84B537F6D5F62C1DACE5DB6B4 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		881908D1D082312D305EF24C1170BD4B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0B8E543C271FFC46D092BB086BDD297 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B4DCF7D3D2EBE8A4EE2F80E47ADA9E19 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE6245004A5D91BF73D450E90749743E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E4C8BAED7414732CF048B2EBF9D0895F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				998298F1EF25BED2863CA6521CF4C55D /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		107F4F336E5C898276DB80E2172D58F1 /* Dropbox-iOS-SDK */ = {
+		0324A6C84529B83D34A832A677C75346 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				3D164DB84AEB49109007DB9373D28392 /* DBAccountInfo.h */,
-				7D6221570BDA35F4E747AFD3BF436EE3 /* DBBase64Transcoder.h */,
-				25874A10CB2CF04DB338E52FB2CBA276 /* DBDeltaEntry.h */,
-				CDB54B75E3FE110A2CE44C663F26E0CC /* DBError.h */,
-				6F153A02E777E99BD1BBA451D4E1B416 /* DBJSON.h */,
-				0091AB1D7303D7D691678153BC692E59 /* DBJsonBase.h */,
-				0D17E411663350B3FB6C0EFD0FF674D5 /* DBJsonParser.h */,
-				E0A2E7AD971CD321A423355A144767FC /* DBJsonWriter.h */,
-				0F89F06D53FD2E86ED0B881EE92FA740 /* DBLog.h */,
-				CE6962B16B0E2DFF981E9870093C241C /* DBMetadata.h */,
-				BE77C41B12F52E886E539FC8EA16F123 /* DBQuota.h */,
-				B26B9CB27EF060A56C3282874257B3F2 /* DBRequest.h */,
-				76E553CCE4EF8DE31176B9E49CF92B92 /* DBRestClient.h */,
-				B7EED869177024C9BE3CC256F14544E1 /* DBSession.h */,
-				F58C8B0F57FB82C815BCBA0FA99B76B1 /* DBSession+iOS.h */,
-				C3FBB695A02BA6D57F0B00F456C2F1F5 /* DropboxSDK.h */,
-				D512690B97A967FD7023DA1385FDC790 /* JSON.h */,
-				4F4FE88EBCD01B15DA865AA31ECF25B7 /* MPDebug.h */,
-				EDC6491860B91B15DC4676B3BB6B02B5 /* MPOAuth.h */,
-				F9AF45C0538DFC3BA2FF0A2F36599D21 /* MPOAuthAPI.h */,
-				46F45A66B1F14D33ABD42751F15BFCD9 /* MPOAuthAPIRequestLoader.h */,
-				D7DAA0F3401C8A43EFA244DAA7148FFE /* MPOAuthAuthenticationMethod.h */,
-				E6E0EB6119D45D15B227D96A8E1CC08E /* MPOAuthAuthenticationMethodOAuth.h */,
-				B67BAF198AA1E3DA9FAE1E96DA7EDFB6 /* MPOAuthConnection.h */,
-				2A7623457C67508028B5E7276F93E911 /* MPOAuthCredentialConcreteStore.h */,
-				6C4F06EA9F7B57593F6FEAC7ADC75AA7 /* MPOAuthCredentialConcreteStore+KeychainAdditions.h */,
-				B54B58E771B09694455FAD1D5507350B /* MPOAuthCredentialStore.h */,
-				80F51A1BD35C9AA8D1FD43A3F2A8D851 /* MPOAuthParameterFactory.h */,
-				652C8265C3CCB407B89E125A60FD6E14 /* MPOAuthSignatureParameter.h */,
-				A141BA1B728BDF8CADB5491B6ABB1679 /* MPOAuthURLRequest.h */,
-				F3FD17207CD418FD875C4036EBF43D3B /* MPOAuthURLResponse.h */,
-				0CA186229449F9C2B31753B05B439D08 /* MPURLRequestParameter.h */,
-				D2CF246FD266A6615D9F6FDD7EF2B648 /* NSDictionary+Dropbox.h */,
-				0774E1F82B19D38F5E33F849621F4388 /* NSObject+DBJSON.h */,
-				867014394ED056F250B5C0B91A8D4200 /* NSString+DBJSON.h */,
-				D3878093F1300FD0479FD7F3658E3831 /* NSString+Dropbox.h */,
-				5BDD140C632E59CF7447B3E556F5DDD2 /* NSString+URLEscapingAdditions.h */,
-				55CC077BEA36ECEF097AE436BEC1D954 /* NSURL+MPURLParameterAdditions.h */,
-				F17E8EE112CED687F8846B4F29583329 /* NSURLResponse+Encoding.h */,
+				980DA618F587CE8F9BDF950D4D89936B /* SSZipArchive.xcconfig */,
+				B26244F684B6900D438D881F91CD66CB /* SSZipArchive-dummy.m */,
+				22027C2240F707C1E6127F19AAECFB30 /* SSZipArchive-prefix.pch */,
 			);
-			path = "Dropbox-iOS-SDK";
+			name = "Support Files";
+			path = "../Target Support Files/SSZipArchive";
 			sourceTree = "<group>";
 		};
-		16225AC034673282891849B229AFB435 /* Products */ = {
+		0455EE20CCE8F3A406CD931867BC528F /* KissXML */ = {
 			isa = PBXGroup;
 			children = (
-				5BD0707F2EE17B4FA10D71DE5A346A48 /* libPods-DropboxPub.a */,
+				FE9A667F6C7A6A65F9275C4971C80E0B /* DDXML.h */,
+				CBCF133E94BE9692D3A951CA7F065ABF /* DDXMLDocument.h */,
+				610D8B2D7DDF5AFDF4FBE2DAE4944479 /* DDXMLDocument.m */,
+				1F03E770CF385898FEE0A5020A184347 /* DDXMLElement.h */,
+				B142EBC8E476B5A8FDD8B191F802BE83 /* DDXMLElement.m */,
+				02D6C5A05BBB2AD6E225F86F1CE22A6A /* DDXMLElementAdditions.h */,
+				32FEEEA3705E385B64EB09ABEA491D72 /* DDXMLElementAdditions.m */,
+				11B7F18D7EC78E020A203CCFDEB9C8E1 /* DDXMLNode.h */,
+				DEA9A31C8655BAD0E0A9204C915E9715 /* DDXMLNode.m */,
+				5C7A74BA20671BFCC371561BE4FA8771 /* DDXMLPrivate.h */,
+				A81C3353B573831249BABD644E480EF3 /* NSString+DDXML.h */,
+				7C49D9750252FE1BAB031232B5EB82FB /* NSString+DDXML.m */,
+				45EBB5856D078968156DB60D50E0B1B0 /* Support Files */,
+			);
+			path = KissXML;
+			sourceTree = "<group>";
+		};
+		203B6494203D5F44519C74D6C9674928 /* SSZipArchive */ = {
+			isa = PBXGroup;
+			children = (
+				BEECBDBF22AFA7F8DDC8C87BA19EE9FF /* Common.h */,
+				201CF1B37D8779B262F823C3527525B4 /* crypt.h */,
+				70A06E0FA590F2A1C6C7164318E69058 /* ioapi.c */,
+				46884E0A318BB0D8176FE65BE628BC7E /* ioapi.h */,
+				1BC6873CC1E6E9716EAC3B1722085B4F /* mztools.c */,
+				8B6B0AF1915FB572AAEE76E6D32949D3 /* mztools.h */,
+				D5B5110724B1BA55B111A2463C21BDA4 /* SSZipArchive.h */,
+				FC005FADEE6FB3BA930DD47AAE19373D /* SSZipArchive.m */,
+				53B63B876A911CCE339398A33DD6C123 /* unzip.c */,
+				26CECBE88B5BB7FB301E02C738247EE5 /* unzip.h */,
+				22F6FB1EE6B5AAEEB34609C877603B69 /* zip.c */,
+				28E833C1D455C5BD7AA805F1709CC194 /* zip.h */,
+				0324A6C84529B83D34A832A677C75346 /* Support Files */,
+			);
+			path = SSZipArchive;
+			sourceTree = "<group>";
+		};
+		2C2FA13411E58B6C41B1505AE2CAB660 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D2CF6FDECC71E1B556B4C1AD578261F1 /* libKFEpubKit.a */,
+				09D9520C994ED7465DA4A452E7EA7B21 /* libKissXML.a */,
+				D24B1B02EA4B2C1A72BE8260F8F3603D /* libPods-DropboxPub.a */,
+				9FC6E46C6D08BC982FF9648E8AD9F9E8 /* libSSZipArchive.a */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		45EBB5856D078968156DB60D50E0B1B0 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				EAAF4929D3D10B5A651AD26C8DB0C53A /* KissXML.xcconfig */,
+				47D8662668E3B5B69B39A10ACC21B73D /* KissXML-dummy.m */,
+				B6C7BD2D95D467ACDCCB263511668859 /* KissXML-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/KissXML";
 			sourceTree = "<group>";
 		};
 		51D3458865EBA8D3635A95B48709A3B3 /* Pods-DropboxPub */ = {
@@ -144,13 +315,79 @@
 			path = "Target Support Files/Pods-DropboxPub";
 			sourceTree = "<group>";
 		};
+		70482D14FD2DE9A7C8DB3CDCE1A6D6B1 /* Dropbox-iOS-SDK */ = {
+			isa = PBXGroup;
+			children = (
+				59BFABF89055D0B907DD07750592BC8D /* DBAccountInfo.h */,
+				AC4E8DC7529BDE35A6177EF870B2E1A3 /* DBBase64Transcoder.h */,
+				A4F76768A58CB00CAEA20CB285836F12 /* DBDeltaEntry.h */,
+				BB498E11A68307496725E6F3D1E12100 /* DBError.h */,
+				64070D3FA582FEF1F627FE60EBC9B1C0 /* DBJSON.h */,
+				99655E1B0D36D839CDC21BFD8CB6E8E7 /* DBJsonBase.h */,
+				C3B939B8BA75B025498BD5C240BAA4DE /* DBJsonParser.h */,
+				7D5AE1A45D0C65E5DAE2EA7D727A635F /* DBJsonWriter.h */,
+				544EA31362A78E2C816A02F3170224E1 /* DBLog.h */,
+				0022917ADB8F63A94C58C9BD7284424A /* DBMetadata.h */,
+				341C3BFD241715F125B856246FE5FED4 /* DBQuota.h */,
+				2DF5877112707016BE8A1F1C9F7CC093 /* DBRequest.h */,
+				E0E4D5F1890EF2B39CCB90520DF6FDE2 /* DBRestClient.h */,
+				937CFA8529645F0BAF5AC912FB32A44C /* DBSession.h */,
+				36FEB7571AED0C2F803D4B7ABFCBE0EB /* DBSession+iOS.h */,
+				12F8116CBD760BD578877C0E7EDA8FF0 /* DropboxSDK.h */,
+				4EE4DE380625FA5C42C6B7CD0CB45D37 /* JSON.h */,
+				CFF0B924A5F77CB0BAD02710D357A257 /* MPDebug.h */,
+				7B8EE448EA1CAC8FD09F2DB8F7DB5C55 /* MPOAuth.h */,
+				33BD98931E1C9272E29186538C981B86 /* MPOAuthAPI.h */,
+				CD6E4C7EDD6DDB53AF849E7A94CD0E67 /* MPOAuthAPIRequestLoader.h */,
+				BDBAE4A55FE10CB7A6DFCF0EC77AC5F4 /* MPOAuthAuthenticationMethod.h */,
+				B5B5760DD10404084CA5F16C3A419093 /* MPOAuthAuthenticationMethodOAuth.h */,
+				48769FD1819BBDD621CF054661EE3E65 /* MPOAuthConnection.h */,
+				B9FB9A9A37DAC6F0851D89A9657F7F0E /* MPOAuthCredentialConcreteStore.h */,
+				DEFC04499B9C56270757EE12DB07AEAF /* MPOAuthCredentialConcreteStore+KeychainAdditions.h */,
+				53C9F9B32500BCB645836B16FDC2F086 /* MPOAuthCredentialStore.h */,
+				F95CA696CD8E31F3EC0D72D230D86FD7 /* MPOAuthParameterFactory.h */,
+				303990329955C90BC92B74186ACCC6EC /* MPOAuthSignatureParameter.h */,
+				B440E6E22817E235A3CE568044EFBDB5 /* MPOAuthURLRequest.h */,
+				9AC602BD6E6C80088F73AECF3676C6C4 /* MPOAuthURLResponse.h */,
+				E623D465D3678730A7EFAC6B56FFA4B2 /* MPURLRequestParameter.h */,
+				A0E37D78BD0B00746FDEDAFAE5F2E1B7 /* NSDictionary+Dropbox.h */,
+				F95AD2AAC4EEF4786D02F6785EF2F49A /* NSObject+DBJSON.h */,
+				45DAC3408CC8FCCA927FDA484217DC54 /* NSString+DBJSON.h */,
+				E3CB9501FEB343BF4BFB69310000435D /* NSString+Dropbox.h */,
+				488C3A8055A66463EFF427EA174CC332 /* NSString+URLEscapingAdditions.h */,
+				FA6EC557E59FAC4B9A7C9518D2BBA02B /* NSURL+MPURLParameterAdditions.h */,
+				10D1C7A397F8DFBB9812DEEA2B66DDD4 /* NSURLResponse+Encoding.h */,
+			);
+			path = "Dropbox-iOS-SDK";
+			sourceTree = "<group>";
+		};
+		7C6062C629E4C408F71C225FD884E3CD /* KFEpubKit */ = {
+			isa = PBXGroup;
+			children = (
+				4D20B306A940029812E8FCF8DFC325BD /* KFEpubConstants.h */,
+				FC2C60C9D8BD6AE5667F35D786284863 /* KFEpubConstants.m */,
+				7E0D8F44349573065FA8BA4DF9245072 /* KFEpubContentModel.h */,
+				2ADEB4E4EAA7FE03D40450C60628689F /* KFEpubContentModel.m */,
+				87B717F41715D456DE9F5D0227D4DF23 /* KFEpubController.h */,
+				B6D7520E18EEEE8FC4CDAAA02F606FED /* KFEpubController.m */,
+				1EEA1399D82AF48E8437C7A6CE4B6700 /* KFEpubExtractor.h */,
+				41E80B73AA0F86A4C271CE2132F17D2F /* KFEpubExtractor.m */,
+				15E3F115F9E68EDFEA36E3BCC0CEA5E3 /* KFEpubKit.h */,
+				2F8AB99B7423623B59161455F833EA5D /* KFEpubKit.m */,
+				BA29738F824E07F36EB5B202A7DCE882 /* KFEpubParser.h */,
+				FF7CDEF00F8E723C70209739A2FAE7AD /* KFEpubParser.m */,
+				C824B416C78960F579E634218F74293D /* Support Files */,
+			);
+			path = KFEpubKit;
+			sourceTree = "<group>";
+		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				9BCED93DBADE5A374D149B90417C9C4C /* Pods */,
-				16225AC034673282891849B229AFB435 /* Products */,
+				F27B6CCAFA603F07BACFA05E2DEEA99F /* Pods */,
+				2C2FA13411E58B6C41B1505AE2CAB660 /* Products */,
 				84FDDD59331D55BAFD10CB760B07F6E4 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
@@ -161,14 +398,6 @@
 				51D3458865EBA8D3635A95B48709A3B3 /* Pods-DropboxPub */,
 			);
 			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		9BCED93DBADE5A374D149B90417C9C4C /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				107F4F336E5C898276DB80E2172D58F1 /* Dropbox-iOS-SDK */,
-			);
-			name = Pods;
 			sourceTree = "<group>";
 		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
@@ -187,23 +416,145 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
+		C824B416C78960F579E634218F74293D /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				DD27EAB47C07299E6935DF5C9B70E7A7 /* KFEpubKit.xcconfig */,
+				05EAA65852CE17DB7553573B214DD382 /* KFEpubKit-dummy.m */,
+				A985F9A4BCADF672B600A49BBC0C28BB /* KFEpubKit-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/KFEpubKit";
+			sourceTree = "<group>";
+		};
+		F27B6CCAFA603F07BACFA05E2DEEA99F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				70482D14FD2DE9A7C8DB3CDCE1A6D6B1 /* Dropbox-iOS-SDK */,
+				7C6062C629E4C408F71C225FD884E3CD /* KFEpubKit */,
+				0455EE20CCE8F3A406CD931867BC528F /* KissXML */,
+				203B6494203D5F44519C74D6C9674928 /* SSZipArchive */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		6466BFC1BD3ABD63342BE8CD577ACC86 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9E0B02FC50CF7094F931717C61A4CC96 /* KFEpubConstants.h in Headers */,
+				0F90CA348D4681463F7F10045B9EA3B1 /* KFEpubContentModel.h in Headers */,
+				D252571B89658ACFDF40F17F1FCEBD64 /* KFEpubController.h in Headers */,
+				0D428FC430478897B68BD7697B558D11 /* KFEpubExtractor.h in Headers */,
+				ACC06584114DE256BF0971041831EB29 /* KFEpubKit.h in Headers */,
+				B76BD10671C2D85ACFCDE889A0BB230A /* KFEpubParser.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A19636FB918551E00901360C43F695CC /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				41AD502809E613429C60CA260A4E3CC9 /* Common.h in Headers */,
+				899A60899AC9D39D6EE05C4F680542E3 /* crypt.h in Headers */,
+				D0B66372C932525C3D5E8C8521E356BD /* ioapi.h in Headers */,
+				7B645A00DDC85ABF56527824C64D7EDB /* mztools.h in Headers */,
+				12BF45EB00C4D61C0E588E9D4E93E3A0 /* SSZipArchive.h in Headers */,
+				DF703EA7B33B943F299C0704FB225B1A /* unzip.h in Headers */,
+				F461AEC489A9C2A7701AF076C8805273 /* zip.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA4C65A34BC99C2EA88E700D8BDA8CFF /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AFE8C976D9444A19657A0F36EDC2C21A /* DDXML.h in Headers */,
+				A6C3BF37BB95C7A01918A20CBC0E82B9 /* DDXMLDocument.h in Headers */,
+				979C17BE58DFDB749F92A16BA12AD5A5 /* DDXMLElement.h in Headers */,
+				3414840F2A9D22393CE8B358F942E5F1 /* DDXMLElementAdditions.h in Headers */,
+				CEF431D77803AF44702DBAF5EDAC9A44 /* DDXMLNode.h in Headers */,
+				9977D5D45BE71DE75EC15DD26EC38F45 /* DDXMLPrivate.h in Headers */,
+				7239576781387D9F6340C4F9B272004B /* NSString+DDXML.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
-		18357342DD2E1DFC453410079E9A0E87 /* Pods-DropboxPub */ = {
+		10EC4FCD4FF8322240DFC6F82C7634A3 /* Pods-DropboxPub */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F55E2DABD33068C7E896AD1CEA5ADA63 /* Build configuration list for PBXNativeTarget "Pods-DropboxPub" */;
+			buildConfigurationList = FF07B167663D7F1FDBE6B20538E761D2 /* Build configuration list for PBXNativeTarget "Pods-DropboxPub" */;
 			buildPhases = (
-				7F99A98CF96E26F1B7628464D0C86CAC /* Sources */,
-				3902FB13298672BAE0D8F76A80867078 /* Frameworks */,
+				E949FFB255E4312BC97E26713863B1B9 /* Sources */,
+				881908D1D082312D305EF24C1170BD4B /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				84EC3774BC7C17DE8F9B32466B741A47 /* PBXTargetDependency */,
+				848015D7A493AAB48395F4136A16499B /* PBXTargetDependency */,
+				CC286C5567C580FE0D8B58CB47BC8F3B /* PBXTargetDependency */,
+			);
+			name = "Pods-DropboxPub";
+			productName = "Pods-DropboxPub";
+			productReference = D24B1B02EA4B2C1A72BE8260F8F3603D /* libPods-DropboxPub.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		8C5B2301AC15E1E56AF646404F544AB7 /* SSZipArchive */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9A7488EB8B6A6C2DDEEFC4430FB0C994 /* Build configuration list for PBXNativeTarget "SSZipArchive" */;
+			buildPhases = (
+				BBCF43EB16D2AAAADABB7BC8B8859ED0 /* Sources */,
+				B4DCF7D3D2EBE8A4EE2F80E47ADA9E19 /* Frameworks */,
+				A19636FB918551E00901360C43F695CC /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "Pods-DropboxPub";
-			productName = "Pods-DropboxPub";
-			productReference = 5BD0707F2EE17B4FA10D71DE5A346A48 /* libPods-DropboxPub.a */;
+			name = SSZipArchive;
+			productName = SSZipArchive;
+			productReference = 9FC6E46C6D08BC982FF9648E8AD9F9E8 /* libSSZipArchive.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		B83C60872A9B5AC3D48004DC490C5E4A /* KFEpubKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7AF867B9DC0708EEF84FEB4C8BAB2C60 /* Build configuration list for PBXNativeTarget "KFEpubKit" */;
+			buildPhases = (
+				5D6A04B03F8296ACD38B41CB3935B692 /* Sources */,
+				E4C8BAED7414732CF048B2EBF9D0895F /* Frameworks */,
+				6466BFC1BD3ABD63342BE8CD577ACC86 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C13BBB8DC7A1B789CF482DEE197A1033 /* PBXTargetDependency */,
+				B9894379C716DDD2F949F9C92A1CD0D4 /* PBXTargetDependency */,
+			);
+			name = KFEpubKit;
+			productName = KFEpubKit;
+			productReference = D2CF6FDECC71E1B556B4C1AD578261F1 /* libKFEpubKit.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		F14E06C2EE3CBE3660E712B7DDA6992C /* KissXML */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9949826C898041D4B1BA81ED4CDF5C31 /* Build configuration list for PBXNativeTarget "KissXML" */;
+			buildPhases = (
+				47884E1CD2C937D8248B636B28D99952 /* Sources */,
+				1CFAB93FD13FD9769BC7058BCB2CD5A8 /* Frameworks */,
+				FA4C65A34BC99C2EA88E700D8BDA8CFF /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KissXML;
+			productName = KissXML;
+			productReference = 09D9520C994ED7465DA4A452E7EA7B21 /* libKissXML.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -223,28 +574,140 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 16225AC034673282891849B229AFB435 /* Products */;
+			productRefGroup = 2C2FA13411E58B6C41B1505AE2CAB660 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				18357342DD2E1DFC453410079E9A0E87 /* Pods-DropboxPub */,
+				B83C60872A9B5AC3D48004DC490C5E4A /* KFEpubKit */,
+				F14E06C2EE3CBE3660E712B7DDA6992C /* KissXML */,
+				10EC4FCD4FF8322240DFC6F82C7634A3 /* Pods-DropboxPub */,
+				8C5B2301AC15E1E56AF646404F544AB7 /* SSZipArchive */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		7F99A98CF96E26F1B7628464D0C86CAC /* Sources */ = {
+		47884E1CD2C937D8248B636B28D99952 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				612E6E36B3D8C70A59FC9BB9759803EB /* Pods-DropboxPub-dummy.m in Sources */,
+				4FF751DCFAC3B937EA122F83C0AEF51A /* DDXMLDocument.m in Sources */,
+				DC57AD9CBCD0744A47049A3D0062BDBA /* DDXMLElement.m in Sources */,
+				A36D5B5591DC4EB23D1FA8F53D9C94E7 /* DDXMLElementAdditions.m in Sources */,
+				1E0CBE3EEBE5DBCA855CD3E7B9D3728C /* DDXMLNode.m in Sources */,
+				6DC2E186FA3291F32E21C8E4AF06EABD /* KissXML-dummy.m in Sources */,
+				8CA24E3A3C9D51B0AC53BAF27AEAF116 /* NSString+DDXML.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5D6A04B03F8296ACD38B41CB3935B692 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC0C2EE956325CF8066339A07AEE3E1F /* KFEpubConstants.m in Sources */,
+				F91E88E06DA0D2D5680BF428BCFC2B98 /* KFEpubContentModel.m in Sources */,
+				AAC222513D9CEF7B5DDA67502881162B /* KFEpubController.m in Sources */,
+				38DBA423614D5E62F54A92C1CE5E27AE /* KFEpubExtractor.m in Sources */,
+				B62408C8E743F38311ADD4ECBCEAEC22 /* KFEpubKit-dummy.m in Sources */,
+				DBAD1609FC2889B10D63787EA4642DDC /* KFEpubKit.m in Sources */,
+				55C7656F5A27DF902F1515235394B696 /* KFEpubParser.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BBCF43EB16D2AAAADABB7BC8B8859ED0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				93E49ACB35F07DE12804FBCEEE5E2C00 /* ioapi.c in Sources */,
+				1A784B053ADD0B802B418C0E0CA21A36 /* mztools.c in Sources */,
+				F24E69D5B896FB0C3D32F4FE08F2FC23 /* SSZipArchive-dummy.m in Sources */,
+				AF37A2D4F7C88C3614B89B046838AB32 /* SSZipArchive.m in Sources */,
+				FE6CA5DB48923E3C49A0ADFFB1F475E8 /* unzip.c in Sources */,
+				B4117CD1EC18708EE55E162DE20D01C2 /* zip.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E949FFB255E4312BC97E26713863B1B9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				47FE046FCB032FEA08B964283F2FC85E /* Pods-DropboxPub-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		848015D7A493AAB48395F4136A16499B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = KissXML;
+			target = F14E06C2EE3CBE3660E712B7DDA6992C /* KissXML */;
+			targetProxy = B6400E598A117612CD3A307A6887BC0D /* PBXContainerItemProxy */;
+		};
+		84EC3774BC7C17DE8F9B32466B741A47 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = KFEpubKit;
+			target = B83C60872A9B5AC3D48004DC490C5E4A /* KFEpubKit */;
+			targetProxy = 12F0122EF7FA05961C652654A6675EB4 /* PBXContainerItemProxy */;
+		};
+		B9894379C716DDD2F949F9C92A1CD0D4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SSZipArchive;
+			target = 8C5B2301AC15E1E56AF646404F544AB7 /* SSZipArchive */;
+			targetProxy = 640D721BC66FEBECE2ACE34927BB7994 /* PBXContainerItemProxy */;
+		};
+		C13BBB8DC7A1B789CF482DEE197A1033 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = KissXML;
+			target = F14E06C2EE3CBE3660E712B7DDA6992C /* KissXML */;
+			targetProxy = 97421391D1AEA52CEEA12B38904D26E3 /* PBXContainerItemProxy */;
+		};
+		CC286C5567C580FE0D8B58CB47BC8F3B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SSZipArchive;
+			target = 8C5B2301AC15E1E56AF646404F544AB7 /* SSZipArchive */;
+			targetProxy = 25B32014470F2DD8F07B49A853DC3F8A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
-		2B9844F05E589A4529895B06A2EF835C /* Debug */ = {
+		2FD5E4ADA58468F0A1FDD9788C8EF20D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EAAF4929D3D10B5A651AD26C8DB0C53A /* KissXML.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/KissXML/KissXML-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		38094A63EDFD3FD2F0A4BB2F7B037642 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DD27EAB47C07299E6935DF5C9B70E7A7 /* KFEpubKit.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/KFEpubKit/KFEpubKit-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		558406192A5C61D23C63F86DCAD78BBA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 032761D62F8432A632922CA9B958D9F2 /* Pods-DropboxPub.debug.xcconfig */;
 			buildSettings = {
@@ -261,7 +724,7 @@
 			};
 			name = Debug;
 		};
-		A3C61CA45F2F4972C5B5C0097B45361F /* Release */ = {
+		8FF78DA9B9BBF65D5811558B78C36A98 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 023E07DBD165D17A3F9F767C3DF270B1 /* Pods-DropboxPub.release.xcconfig */;
 			buildSettings = {
@@ -277,6 +740,42 @@
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
+		};
+		9FBA06D0FF2876D6BF6B59865566C931 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 980DA618F587CE8F9BDF950D4D89936B /* SSZipArchive.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SSZipArchive/SSZipArchive-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		A366F000E6500C8ED978102305A54309 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EAAF4929D3D10B5A651AD26C8DB0C53A /* KissXML.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/KissXML/KissXML-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
 		};
 		A70CDAD61F90AC503C7D04CC22DA2923 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -314,6 +813,42 @@
 				ONLY_ACTIVE_ARCH = YES;
 				STRIP_INSTALLED_PRODUCT = NO;
 				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		AA533434F1D7B29640201BF0D4AF7A47 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 980DA618F587CE8F9BDF950D4D89936B /* SSZipArchive.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SSZipArchive/SSZipArchive-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		AB7100DA77B5412AFAF55C13622A33FF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DD27EAB47C07299E6935DF5C9B70E7A7 /* KFEpubKit.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/KFEpubKit/KFEpubKit-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
 			};
 			name = Debug;
 		};
@@ -363,11 +898,38 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F55E2DABD33068C7E896AD1CEA5ADA63 /* Build configuration list for PBXNativeTarget "Pods-DropboxPub" */ = {
+		7AF867B9DC0708EEF84FEB4C8BAB2C60 /* Build configuration list for PBXNativeTarget "KFEpubKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2B9844F05E589A4529895B06A2EF835C /* Debug */,
-				A3C61CA45F2F4972C5B5C0097B45361F /* Release */,
+				AB7100DA77B5412AFAF55C13622A33FF /* Debug */,
+				38094A63EDFD3FD2F0A4BB2F7B037642 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9949826C898041D4B1BA81ED4CDF5C31 /* Build configuration list for PBXNativeTarget "KissXML" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A366F000E6500C8ED978102305A54309 /* Debug */,
+				2FD5E4ADA58468F0A1FDD9788C8EF20D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9A7488EB8B6A6C2DDEEFC4430FB0C994 /* Build configuration list for PBXNativeTarget "SSZipArchive" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA533434F1D7B29640201BF0D4AF7A47 /* Debug */,
+				9FBA06D0FF2876D6BF6B59865566C931 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FF07B167663D7F1FDBE6B20538E761D2 /* Build configuration list for PBXNativeTarget "Pods-DropboxPub" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				558406192A5C61D23C63F86DCAD78BBA /* Debug */,
+				8FF78DA9B9BBF65D5811558B78C36A98 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

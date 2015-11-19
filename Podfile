@@ -7,6 +7,7 @@ platform :ios, '8.0'
 target 'DropboxPub' do
 
 pod 'Dropbox-iOS-SDK'
+pod 'KFEpubKit', '~> 0.0'
 
 end
 

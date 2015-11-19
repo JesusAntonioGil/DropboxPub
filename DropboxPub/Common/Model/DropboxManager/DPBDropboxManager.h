@@ -7,10 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <DropboxSDK/DropboxSDK.h>
 
 
 typedef void (^DPBDropboxManagerFilesCompletion)(NSArray *files, NSError *error);
-
+typedef void (^DPBDropboxManagerDownloadFileCompletion)(NSString *localPath, NSString *contentType, DBMetadata *metadata, NSError *error);
 
 @interface DPBDropboxManager : NSObject
 
@@ -27,5 +28,6 @@ typedef void (^DPBDropboxManagerFilesCompletion)(NSArray *files, NSError *error)
 
 //Files
 - (void)loadFilesWithPathDirectory:(NSString *)pathDirectory completion:(DPBDropboxManagerFilesCompletion)completion;
+- (void)downloadFileWithPath:(NSString *)filePath completion:(DPBDropboxManagerDownloadFileCompletion)completion;
 
 @end

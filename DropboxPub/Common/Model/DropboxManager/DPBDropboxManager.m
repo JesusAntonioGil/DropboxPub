@@ -8,13 +8,13 @@
 
 #import "DPBDropboxManager.h"
 
-#import <DropboxSDK/DropboxSDK.h>
-
 
 @interface DPBDropboxManager  () <DBRestClientDelegate>
 
 @property (strong, nonatomic) DBRestClient *restClient;
-@property (copy, nonatomic) DPBDropboxManagerFilesCompletion completion;
+@property (copy, nonatomic) DPBDropboxManagerFilesCompletion metadataCompletion;
+@property (copy, nonatomic) DPBDropboxManagerDownloadFileCompletion downloadCompletion;
+@property (strong, nonatomic) NSString *localPath;
 
 @end
 
@@ -45,6 +45,7 @@
     
     return _restClient;
 }
+
 
 #pragma mark - PUBLIC
 #pragma mark - Configure
@@ -84,11 +85,26 @@
 
 - (void)loadFilesWithPathDirectory:(NSString *)pathDirectory completion:(DPBDropboxManagerFilesCompletion)completion
 {
-    self.completion = completion;
+    self.metadataCompletion = completion;
     [self.restClient loadMetadata:pathDirectory];
 }
 
+- (void)downloadFileWithPath:(NSString *)filePath completion:(DPBDropboxManagerDownloadFileCompletion)completion
+{
+    self.downloadCompletion = completion;
+    [self.restClient loadFile:filePath intoPath:[self generateLocalPathWithName:filePath]];
+}
+
+#pragma mark - PRIVATE
+
+- (NSString *)generateLocalPathWithName:(NSString *)name
+{
+    NSString *localDir = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
+    return [localDir stringByAppendingPathComponent:name];
+}
+
 #pragma mark - PROTOCOLS & DELEGATES
+#pragma mark - Metadata Delegate
 
 - (void)restClient:(DBRestClient *)client loadedMetadata:(DBMetadata *)metadata
 {
@@ -99,12 +115,25 @@
         if(metadataFile.isDirectory || [[metadataFile.filename getExtensionFileName] isEqualToString:DPBDropboxFileExtension]) [mutableMetadatas addObject:metadataFile];
     }
     
-    self.completion(mutableMetadatas, nil);
+    self.metadataCompletion(mutableMetadatas, nil);
 }
 
 - (void)restClient:(DBRestClient *)client loadMetadataFailedWithError:(NSError *)error
 {
-    self.completion(nil, error);
+    self.metadataCompletion(nil, error);
+}
+
+#pragma mark - Download Delegate
+
+- (void)restClient:(DBRestClient *)client loadedFile:(NSString *)localPath
+       contentType:(NSString *)contentType metadata:(DBMetadata *)metadata
+{
+    self.downloadCompletion(localPath, contentType, metadata, nil);
+}
+
+- (void)restClient:(DBRestClient *)client loadFileFailedWithError:(NSError *)error
+{
+    self.downloadCompletion(nil, nil, nil, error);
 }
 
 @end

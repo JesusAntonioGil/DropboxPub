@@ -119,6 +119,7 @@
 
 - (void)presenterFileList:(NSArray *)files error:(NSError *)error
 {
+    self.files = files;
     [self sortFileList:files];
 }
 

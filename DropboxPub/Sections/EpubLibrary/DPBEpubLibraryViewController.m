@@ -120,22 +120,12 @@
 
 - (void)segmentedControlWithFileShowType:(DPBFileShowType)showType
 {
-    switch (showType)
-    {
-        case DPBFileShowTypeTable:
-            self.collectionView.hidden = YES;
-            self.tableView.hidden = NO;
-            break;
-        case DPBFileShowTypeCollection:
-            self.tableView.hidden = YES;
-            self.collectionView.hidden = NO;
-            break;
-        default:
-            break;
-    }
-    
     self.fileShowType = showType;
     self.segmentedControl.selectedSegmentIndex = showType;
+    
+    BOOL fileShowBool = (showType == DPBFileShowTypeTable) ? YES : NO;
+    self.collectionView.hidden = fileShowBool;
+    self.tableView.hidden = !fileShowBool;
 }
 
 #pragma mark - PROTOCOLS & DELEGATES

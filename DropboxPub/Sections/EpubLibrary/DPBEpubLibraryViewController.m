@@ -17,8 +17,6 @@
 @property (weak, nonatomic) IBOutlet UISegmentedControl *segmentedControl;
 @property (weak, nonatomic) IBOutlet DPBEpubLibraryTableView *tableView;
 @property (weak, nonatomic) IBOutlet DPBEpubLibraryCollectionView *collectionView;
-@property (weak, nonatomic) IBOutlet UIButton *listButton;
-@property (weak, nonatomic) IBOutlet NSLayoutConstraint *segmentedHeightConstraint;
 @property (weak, nonatomic) IBOutlet UIButton *logoutButton;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *logoutHeightConstraint;
 
@@ -71,7 +69,7 @@
 
 - (IBAction)onSegmentedControlValueChanged:(id)sender
 {
-    NSLog(@"AQUI");
+    [self segmentedControlWithFileShowType:((UISegmentedControl *)sender).selectedSegmentIndex];
 }
 
 - (IBAction)onListButtonTap:(id)sender
@@ -87,12 +85,11 @@
     
     if(self.navigationController.viewControllers.firstObject != self)
     {
-        self.segmentedHeightConstraint.constant = 0.0f;
-        self.segmentedControl.hidden = YES;
         self.logoutHeightConstraint.constant = 0.0f;
         self.logoutButton.hidden = YES;
-        self.listButton.hidden = YES;
     }
+    
+    [self segmentedControlWithFileShowType:self.fileShowType];
 }
 
 #pragma mark - UIRefreshControl
@@ -119,6 +116,28 @@
     [self.refreshControl endRefreshing];
 }
 
+#pragma mark - Segmented Control
+
+- (void)segmentedControlWithFileShowType:(DPBFileShowType)showType
+{
+    switch (showType)
+    {
+        case DPBFileShowTypeTable:
+            self.collectionView.hidden = YES;
+            self.tableView.hidden = NO;
+            break;
+        case DPBFileShowTypeCollection:
+            self.tableView.hidden = YES;
+            self.collectionView.hidden = NO;
+            break;
+        default:
+            break;
+    }
+    
+    self.fileShowType = showType;
+    self.segmentedControl.selectedSegmentIndex = showType;
+}
+
 #pragma mark - PROTOCOLS & DELEGATES
 #pragma mark - Presenter Delegate
 
@@ -140,7 +159,7 @@
 {
     if(metadata.isDirectory)
     {
-        [self.presenter pushEpubLibraryWithPathDirectory:metadata.path order:self.fileOrder];
+        [self.presenter pushEpubLibraryWithPathDirectory:metadata.path order:self.fileOrder showType:self.fileShowType];
     }
 }
 

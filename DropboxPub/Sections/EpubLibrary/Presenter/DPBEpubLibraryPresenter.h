@@ -29,6 +29,6 @@
 - (void)getDropboxFileListFromPathDirectory:(NSString *)pathDirectory;
 - (void)showOrderActionController;
 - (NSArray *)sortList:(NSArray *)list order:(DPBFileOrder)fileOrder;
-- (void)pushEpubLibraryWithPathDirectory:(NSString *)pathDirectory order:(DPBFileOrder)fileOrder;
+- (void)pushEpubLibraryWithPathDirectory:(NSString *)pathDirectory order:(DPBFileOrder)fileOrder showType:(DPBFileShowType)showType;
 
 @end

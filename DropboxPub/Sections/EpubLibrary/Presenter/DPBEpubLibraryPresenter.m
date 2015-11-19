@@ -111,12 +111,13 @@
 
 #pragma mark - Directory
 
-- (void)pushEpubLibraryWithPathDirectory:(NSString *)pathDirectory order:(DPBFileOrder)fileOrder
+- (void)pushEpubLibraryWithPathDirectory:(NSString *)pathDirectory order:(DPBFileOrder)fileOrder showType:(DPBFileShowType)showType
 {
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
     DPBEpubLibraryViewController *epubLibraryViewController = [storyboard instantiateViewControllerWithIdentifier:@"DPBEpubLibraryViewController"];
     epubLibraryViewController.pathDirectory = pathDirectory;
     epubLibraryViewController.fileOrder = fileOrder;
+    epubLibraryViewController.fileShowType = showType;
     [self.viewController.navigationController pushViewController:epubLibraryViewController animated:YES];
 }
 

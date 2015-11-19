@@ -95,7 +95,7 @@
                                     <action selector="onSegmentedControlValueChanged:" destination="av7-Aq-b5l" eventType="valueChanged" id="Uuu-6Z-Z7Z"/>
                                 </connections>
                             </segmentedControl>
-                            <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="G4l-WZ-EwB" customClass="DPBEpubLibraryTableView">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="G4l-WZ-EwB" customClass="DPBEpubLibraryTableView">
                                 <rect key="frame" x="0.0" y="44" width="320" height="420"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -158,7 +158,7 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="NLE-DC-Vc9" customClass="DPBEpubLibraryCollectionView">
+                            <collectionView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="NLE-DC-Vc9" customClass="DPBEpubLibraryCollectionView">
                                 <rect key="frame" x="0.0" y="44" width="320" height="420"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -277,11 +277,9 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="collectionView" destination="NLE-DC-Vc9" id="zd1-MV-0fh"/>
-                        <outlet property="listButton" destination="2Bq-4J-tsG" id="WOS-Uz-awb"/>
                         <outlet property="logoutButton" destination="g3A-Ik-df6" id="aA8-sy-2WN"/>
                         <outlet property="logoutHeightConstraint" destination="uZG-Tv-iUk" id="QDe-Dv-0GQ"/>
-                        <outlet property="segmentedControl" destination="kvI-dg-80I" id="nfD-ZF-lar"/>
-                        <outlet property="segmentedHeightConstraint" destination="O4h-oW-LyM" id="ODD-mH-bQ0"/>
+                        <outlet property="segmentedControl" destination="kvI-dg-80I" id="gKf-4g-PTR"/>
                         <outlet property="tableView" destination="G4l-WZ-EwB" id="qbu-eY-WtC"/>
                     </connections>
                 </viewController>

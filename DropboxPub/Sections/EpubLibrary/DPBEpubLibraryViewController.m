@@ -22,7 +22,8 @@
 
 @property (strong, nonatomic) DPBEpubLibraryPresenter *presenter;
 @property (strong, nonatomic) NSArray *files;
-@property (strong, nonatomic) UIRefreshControl *refreshControl;
+@property (strong, nonatomic) UIRefreshControl *tableRefreshControl;
+@property (strong, nonatomic) UIRefreshControl *collectionRefreshControl;
 
 @end
 
@@ -96,11 +97,15 @@
 
 - (void)addRefreshControlToView
 {
-    self.refreshControl = [[UIRefreshControl alloc] init];
-    [self.refreshControl addTarget:self action:@selector(refreshControlValueChanged) forControlEvents:UIControlEventValueChanged];
-    [self.tableView addSubview:self.refreshControl];
-    [self.collectionView addSubview:self.refreshControl];
-    [self.refreshControl beginRefreshing];
+    self.tableRefreshControl = [[UIRefreshControl alloc] init];
+    [self.tableRefreshControl addTarget:self action:@selector(refreshControlValueChanged) forControlEvents:UIControlEventValueChanged];
+    [self.tableView addSubview:self.tableRefreshControl];
+    [self.tableRefreshControl beginRefreshing];
+    
+    self.collectionRefreshControl = [[UIRefreshControl alloc] init];
+    [self.collectionRefreshControl addTarget:self action:@selector(refreshControlValueChanged) forControlEvents:UIControlEventValueChanged];
+    [self.collectionView addSubview:self.collectionRefreshControl];
+    [self.collectionRefreshControl beginRefreshing];
 }
 
 - (void)refreshControlValueChanged
@@ -113,7 +118,8 @@
     NSArray *sortedFiles = [self.presenter sortList:files order:self.fileOrder];
     self.tableView.files = sortedFiles;
     self.collectionView.files = sortedFiles;
-    [self.refreshControl endRefreshing];
+    [self.tableRefreshControl endRefreshing];
+    [self.collectionRefreshControl endRefreshing];
 }
 
 #pragma mark - Segmented Control

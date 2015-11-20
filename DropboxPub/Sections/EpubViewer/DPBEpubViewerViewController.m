@@ -21,6 +21,7 @@
 @property (assign, nonatomic) NSUInteger spineIndex;
 
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 
 @end
 
@@ -82,10 +83,10 @@
 
 - (void)didSwipeLeft:(UIGestureRecognizer *)recognizer
 {
-    if (self.spineIndex < self.epubContentModel.spine.count)
+    if (self.spineIndex <= self.epubContentModel.spine.count - 1)
     {
-        self.spineIndex++;
         [self updateContentForSpineIndex:self.spineIndex];
+        self.spineIndex++;
     }
 }
 
@@ -120,6 +121,7 @@
 
 - (void)epubController:(KFEpubController *)controller didOpenEpub:(KFEpubContentModel *)contentModel
 {
+    self.activityIndicator.hidden = YES;
     self.epubContentModel = contentModel;
     self.spineIndex = 1;
     [self updateContentForSpineIndex:self.spineIndex];
@@ -128,6 +130,7 @@
 
 - (void)epubController:(KFEpubController *)controller didFailWithError:(NSError *)error
 {
+    self.activityIndicator.hidden = YES;
     [[DPBAlert defaultAlert] alert:error.description viewController:self];
 }
 

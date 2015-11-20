@@ -314,11 +314,21 @@
                                             <action selector="onCloseButtonTap:" destination="wIf-rz-dpL" eventType="touchUpInside" id="Dth-RS-Sid"/>
                                         </connections>
                                     </button>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="9JJ-h2-aJk">
+                                        <rect key="frame" x="8" y="26" width="20" height="20"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="20" id="GTs-zB-KsV"/>
+                                            <constraint firstAttribute="height" constant="20" id="Pf6-Vk-aqD"/>
+                                        </constraints>
+                                    </activityIndicatorView>
                                 </subviews>
                                 <animations/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="0.58823529409999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="VgR-oa-bwZ" secondAttribute="bottom" constant="13" id="L7P-1b-Fsf"/>
+                                    <constraint firstItem="9JJ-h2-aJk" firstAttribute="top" secondItem="F6k-ut-cJG" secondAttribute="top" constant="26" id="Oco-Sg-qku"/>
+                                    <constraint firstItem="9JJ-h2-aJk" firstAttribute="leading" secondItem="F6k-ut-cJG" secondAttribute="leading" constant="8" id="Smt-BK-gtt"/>
                                     <constraint firstAttribute="trailing" secondItem="VgR-oa-bwZ" secondAttribute="trailing" constant="8" id="W1X-Ue-MWo"/>
                                     <constraint firstAttribute="height" constant="60" id="wRz-Xa-2Zo"/>
                                 </constraints>
@@ -343,6 +353,7 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="9JJ-h2-aJk" id="QTd-OF-xux"/>
                         <outlet property="webView" destination="nvk-hP-NYH" id="49d-iY-zzE"/>
                     </connections>
                 </viewController>
